@@ -251,7 +251,7 @@ Copy below is drawn from the Mission Statement, Brand Guidelines and 2025 Impact
 ### 8.1 Home `/`
 1. **Hero** (7.2). Lead: "We partner with local churches in Kakamega County, Kenya to feed families, build places of worship, and bring lasting hope."
 2. **What we do** — eyebrow "Our mission", H2 "Practical help and spiritual hope.", Mission Statement paragraph 1. Then three pillar cards (Empower, Respond, Transform).
-3. **Our work** — H2 "Our work in action." Three program cards: Feeding Program (photo: feeding-program-serving-line), Church Building, Medical Clinic. Keep locations in the individual program details, not the section headline. Link to `/our-work`.
+3. **Our work** — H2 "Our work in action." Three program cards: Feeding Program (photo: feeding-program-serving-line), Church Building, Medical Clinic. Do not put a location eyebrow on the cards; keep locations in supporting details. Link to `/our-work`.
 4. **2025 at a glance** — impact stats row on navy: **2 meals daily** (students at the Kakamega School for the Deaf) · **1,000+** (people served at our medical clinic) · **~70** (people who accepted Jesus at our crusade) · **85** (mattresses and blankets for students). Link "Read the 2025 Impact Review →".
 5. **Story / quote** block (TODO: a real quote from a pastor, teacher or volunteer).
 6. **Donate CTA band** (7.10).

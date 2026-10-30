@@ -399,10 +399,6 @@ h3 {
   padding: var(--space-5);
 }
 
-.program-card__location {
-  margin-bottom: var(--space-2);
-}
-
 .program-card h3 {
   margin-bottom: var(--space-3);
 }

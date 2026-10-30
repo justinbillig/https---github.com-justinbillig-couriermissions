@@ -30,7 +30,6 @@ export const homePage = {
   programs: [
     {
       title: "Feeding Program",
-      location: "Kakamega County, Kenya",
       description:
         "Students at the Kakamega School for the Deaf receive two meals daily.",
       image: "feeding",
@@ -38,7 +37,6 @@ export const homePage = {
     },
     {
       title: "Church Building",
-      location: "Kakamega County, Kenya",
       description:
         "One church was completed in 2025, with more construction and renovation projects underway.",
       image: null,
@@ -46,7 +44,6 @@ export const homePage = {
     },
     {
       title: "Medical Clinic",
-      location: "Kakamega County, Kenya",
       description: "A multi-day medical clinic served over 1,000 people.",
       image: null,
       imageTodo: "TODO: Add an approved medical-clinic photo.",
