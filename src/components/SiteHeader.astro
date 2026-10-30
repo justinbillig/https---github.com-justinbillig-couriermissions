@@ -1,0 +1,352 @@
+---
+import logoLight from "../../assets/logo/logo-horizontal.png";
+import logoDark from "../../assets/logo/logo-horizontal-on-dark.png";
+import { site } from "../data/site.js";
+
+interface Props {
+  transparent?: boolean;
+}
+
+const { transparent = false } = Astro.props;
+---
+
+<header class:list={["site-header", { "site-header--transparent": transparent }]} data-site-header>
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="/" aria-label="Courier Missions home">
+      <img class="site-header__logo-light" src={logoLight.src} alt="Courier Missions" width="220" height="70" />
+      <img class="site-header__logo-dark" src={logoDark.src} alt="" aria-hidden="true" width="220" height="70" />
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__links">
+        {site.navigation.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <a class="site-header__donate button button--primary" href={site.donateHref} data-header-donate>Donate</a>
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      data-menu-toggle
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden data-mobile-menu>
+    <ul>
+      {site.navigation.map((item) => (
+        <li><a href={item.href}>{item.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    z-index: 100;
+    inset: 0 0 auto;
+    height: 64px;
+    background: var(--cm-white);
+    box-shadow: 0 2px 12px rgb(24 48 68 / 8%);
+    color: var(--cm-navy);
+    transition:
+      background-color 150ms ease,
+      box-shadow 150ms ease,
+      color 150ms ease;
+  }
+
+  .site-header--transparent {
+    background: transparent;
+    box-shadow: none;
+    color: var(--cm-white);
+  }
+
+  .site-header--transparent.is-scrolled {
+    background: var(--cm-navy);
+    box-shadow: 0 4px 18px rgb(0 0 0 / 16%);
+  }
+
+  .site-header.menu-open {
+    background: var(--cm-navy);
+    color: var(--cm-white);
+  }
+
+  .site-header__inner {
+    display: flex;
+    width: min(var(--container), calc(100% - var(--gutter) * 2));
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+    margin-inline: auto;
+  }
+
+  .site-header__logo {
+    position: relative;
+    display: block;
+    width: 150px;
+    flex: 0 0 auto;
+  }
+
+  .site-header__logo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .site-header__logo-dark {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+  }
+
+  .site-header--transparent .site-header__logo-light {
+    opacity: 0;
+  }
+
+  .site-header--transparent .site-header__logo-dark {
+    opacity: 1;
+    filter: drop-shadow(0 2px 10px rgb(24 48 68 / 45%));
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .site-header__donate {
+    min-height: 44px;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .site-header:not(.site-header--transparent) .site-header__donate:focus-visible {
+    outline-color: var(--cm-navy);
+  }
+
+  .menu-toggle {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 auto;
+    align-content: center;
+    justify-items: center;
+    gap: 5px;
+    border: 2px solid currentColor;
+    border-radius: var(--radius-pill);
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 18px;
+    height: 2px;
+    border-radius: var(--radius-pill);
+    background: currentColor;
+    transition:
+      transform 150ms ease,
+      opacity 150ms ease;
+  }
+
+  .menu-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .mobile-menu {
+    position: fixed;
+    z-index: 1;
+    inset: 64px 0 0;
+    overflow-y: auto;
+    background: var(--cm-navy);
+    padding: var(--space-6) var(--gutter) var(--space-8);
+    color: var(--cm-white);
+  }
+
+  .mobile-menu[hidden] {
+    display: none;
+  }
+
+  .mobile-menu ul {
+    display: grid;
+    gap: var(--space-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .mobile-menu a {
+    display: flex;
+    min-height: 56px;
+    align-items: center;
+    border-bottom: 1px solid rgb(255 255 255 / 20%);
+    color: var(--cm-white);
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .mobile-menu a:hover {
+    color: var(--cm-sky);
+  }
+
+  @media (min-width: 900px) {
+    .site-header {
+      height: 80px;
+    }
+
+    .site-header__logo {
+      width: 220px;
+    }
+
+    .site-header__donate {
+      padding: 0.6rem 1.1rem;
+      font-size: 1rem;
+    }
+
+    .site-nav {
+      display: block;
+      margin-left: auto;
+    }
+
+    .site-nav__links {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.75rem, 2vw, 1.75rem);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .site-nav a {
+      position: relative;
+      display: flex;
+      min-height: 48px;
+      align-items: center;
+      color: inherit;
+      font-family: var(--font-heading);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .site-nav a::after {
+      position: absolute;
+      right: 0;
+      bottom: 4px;
+      left: 0;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      background: var(--cm-orange);
+      content: "";
+      transition: transform 150ms ease;
+    }
+
+    .site-nav a:hover::after,
+    .site-nav a:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .menu-toggle,
+    .mobile-menu {
+      display: none !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .site-header,
+    .menu-toggle span,
+    .site-nav a::after {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const header = document.querySelector("[data-site-header]");
+  const toggle = document.querySelector("[data-menu-toggle]");
+  const menu = document.querySelector("[data-mobile-menu]");
+  const mainContent = document.querySelector("#main-content");
+  const footer = document.querySelector("#site-footer");
+
+  if (header instanceof HTMLElement && toggle instanceof HTMLButtonElement && menu instanceof HTMLElement) {
+    const closeMenu = (restoreFocus = false) => {
+      menu.hidden = true;
+      header.classList.remove("menu-open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open menu");
+      document.body.classList.remove("menu-open");
+      if (mainContent instanceof HTMLElement) mainContent.inert = false;
+      if (footer instanceof HTMLElement) footer.inert = false;
+      if (restoreFocus) toggle.focus();
+    };
+
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      if (isOpen) {
+        closeMenu(true);
+        return;
+      }
+
+      menu.hidden = false;
+      header.classList.add("menu-open");
+      toggle.setAttribute("aria-expanded", "true");
+      toggle.setAttribute("aria-label", "Close menu");
+      document.body.classList.add("menu-open");
+      if (mainContent instanceof HTMLElement) mainContent.inert = true;
+      if (footer instanceof HTMLElement) footer.inert = true;
+      menu.querySelector("a")?.focus();
+    });
+
+    menu.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLAnchorElement) closeMenu();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (toggle.getAttribute("aria-expanded") !== "true") return;
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeMenu(true);
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+      const links = Array.from(menu.querySelectorAll("a"));
+      const donateButton = header.querySelector("[data-header-donate]");
+      const focusable = [donateButton, toggle, ...links].filter(
+        (element): element is HTMLElement => element instanceof HTMLElement,
+      );
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
+    });
+
+    const updateHeader = () => header.classList.toggle("is-scrolled", window.scrollY > 40);
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+
+    window.matchMedia("(min-width: 900px)").addEventListener("change", (event) => {
+      if (event.matches && toggle.getAttribute("aria-expanded") === "true") closeMenu();
+    });
+  }
+</script>

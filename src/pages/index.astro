@@ -1,0 +1,146 @@
+---
+import { getImage, Picture } from "astro:assets";
+import SiteLayout from "../layouts/BaseLayout.astro";
+import heroSource from "../../assets/photos/hero-volunteer-with-students.jpg";
+import feedingPhoto from "../../assets/photos/feeding-program-serving-line.jpg";
+import { homePage } from "../data/home.js";
+import { site } from "../data/site.js";
+
+const heroPhoto = await getImage({
+  src: heroSource,
+  width: 1600,
+  format: "avif",
+  quality: 65,
+});
+---
+
+<SiteLayout
+  title="Home"
+  description={homePage.description}
+  transparentHeader={true}
+  heroImage={heroPhoto}
+>
+  <section class="hero" aria-labelledby="home-title">
+    <div class="hero__photo">
+      <img
+        src={heroPhoto.src}
+        alt="A Courier Missions volunteer smiling with students in Kakamega, Kenya."
+        width={heroPhoto.width}
+        height={heroPhoto.height}
+        fetchpriority="high"
+        loading="eager"
+      />
+    </div>
+    <div class="hero__content">
+      <p class="eyebrow hero__eyebrow">Kakamega County, Kenya</p>
+      <h1 id="home-title">{homePage.title}</h1>
+      <p class="hero__lead">{homePage.description}</p>
+      <div class="hero__actions">
+        <a class="button button--primary" href={site.donateHref}>Donate</a>
+        <a class="button button--dark" href="#our-work">See our work</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mission section" aria-labelledby="mission-title">
+    <div class="container">
+      <div class="mission__intro">
+        <p class="eyebrow">Our mission</p>
+        <h2 class="section-heading" id="mission-title">Practical help and spiritual hope.</h2>
+        <p class="section-lead">{homePage.mission}</p>
+      </div>
+      <ol class="pillars">
+        {homePage.pillars.map((pillar) => (
+          <li class="pillar-card">
+            <span class="pillar-card__number" aria-label={`Pillar ${pillar.number}`}>{pillar.number}</span>
+            <h3>{pillar.title}</h3>
+            <p>{pillar.description}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="programs section" id="our-work" aria-labelledby="programs-title">
+    <div class="container">
+      <p class="eyebrow">Our work</p>
+      <h2 class="section-heading" id="programs-title">Serving together in Kakamega County.</h2>
+      <p class="section-lead">We partner with local churches and leaders to meet practical needs and bring spiritual hope.</p>
+      <div class="program-grid">
+        {homePage.programs.map((program) => (
+          <article class="program-card">
+            <div class="program-card__image">
+              {program.image === "feeding" ? (
+                <Picture
+                  src={feedingPhoto}
+                  formats={["avif", "webp"]}
+                  widths={[480, 800]}
+                  sizes="(max-width: 599px) 100vw, (max-width: 899px) 50vw, 33vw"
+                  alt={program.alt}
+                  loading="lazy"
+                />
+              ) : (
+                <p class="program-card__placeholder" role="img" aria-label={program.imageTodo}>
+                  {program.title}<br /><small>{program.imageTodo}</small>
+                </p>
+              )}
+            </div>
+            <div class="program-card__body">
+              <p class="eyebrow program-card__location">{program.location}</p>
+              <h3>{program.title}</h3>
+              <p>{program.description}</p>
+              <a class="text-link" href="/our-work/">Learn more <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        ))}
+      </div>
+      <a class="text-link" href="/our-work/">Explore all our work <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="impact section" aria-labelledby="impact-title">
+    <div class="container">
+      <p class="eyebrow">2025 at a glance</p>
+      <h2 id="impact-title">A year of faith and impact.</h2>
+      <ul class="impact__grid">
+        {homePage.impact.map((stat) => (
+          <li class="impact-stat">
+            <span class="impact-stat__value">{stat.value}</span>
+            <p class="impact-stat__label">{stat.label}</p>
+            <p class="impact-stat__context">{stat.context}</p>
+          </li>
+        ))}
+      </ul>
+      <a class="text-link" href="/impact/">Read the 2025 Impact Review <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="story section" aria-labelledby="story-title">
+    <div class="container">
+      <div class="story__card">
+        <p class="eyebrow">A story from the field</p>
+        <p class="story__mark" aria-hidden="true">“</p>
+        <h2 id="story-title">The people and stories behind the work matter.</h2>
+        <p class="story__placeholder">{homePage.storyTodo}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="donate-cta section" aria-labelledby="donate-title">
+    <div class="container">
+      <div class="donate-cta__inner">
+        <div>
+          <h2 id="donate-title">Your gift delivers hope.</h2>
+          <p class="donate-cta__copy">Give to support practical help and spiritual hope in the communities and churches we serve.</p>
+        </div>
+        <div class="donate-cta__actions">
+          <a class="button button--primary" href={site.donateHref}>Donate</a>
+          <a class="text-link" href="/get-involved/">Other ways to give <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <p class="donate-placeholder" id="donation-link-todo">
+        TODO: Add the confirmed donation processor link before publishing. The current Donate buttons are placeholders and do not process gifts.
+      </p>
+    </div>
+  </section>
+</SiteLayout>
