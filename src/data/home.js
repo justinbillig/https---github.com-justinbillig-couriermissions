@@ -30,23 +30,27 @@ export const homePage = {
   programs: [
     {
       title: "Feeding Program",
-      description:
-        "Students at the Kakamega School for the Deaf receive two meals daily.",
+      description: "Students at the Kakamega School for the Deaf receive two meals daily.",
       image: "feeding",
-      alt: "Volunteers serving food together in Kakamega, Kenya.",
+      alt: "Volunteers serving a meal to students and an elder in Kenya.",
     },
     {
       title: "Church Building",
-      description:
-        "One church was completed in 2025, with more construction and renovation projects underway.",
-      image: null,
-      imageTodo: "TODO: Add an approved church-building photo.",
+      description: "One church was completed in 2025, with more construction and renovation projects underway.",
+      image: "church",
+      alt: "A completed church building with green trim and an access ramp.",
     },
     {
       title: "Medical Clinic",
       description: "A multi-day medical clinic served over 1,000 people.",
-      image: null,
-      imageTodo: "TODO: Add an approved medical-clinic photo.",
+      image: "medical",
+      alt: "A volunteer checking a woman's blood pressure at the medical camp.",
+    },
+    {
+      title: "Harvest of Hope Farm",
+      description: "Planting Seeds of Faith, Food & Future.",
+      image: "farm",
+      alt: "The Harvest of Hope farm sign standing in a maize field in Kakamega.",
     },
   ],
   impact: [

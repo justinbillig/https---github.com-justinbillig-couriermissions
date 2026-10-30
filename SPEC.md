@@ -21,7 +21,7 @@ This document is written to be handed to Claude Code (or any developer) to build
 
 **Audience:** individual donors (often church members, many on phones), partner churches and pastors, prospective trip volunteers.
 
-**Tone:** warm, hopeful, plainspoken, faith-forward without jargon. Short sentences. Talk about people, not "beneficiaries." Avoid pity imagery and savior language; the people in Kenya are partners, and local leaders are named as leaders. Keep locations out of page and section headlines; include them in supporting copy and specific program details.
+**Tone:** warm, hopeful, plainspoken, faith-forward without jargon. Short sentences. Talk about people, not "beneficiaries." Avoid pity imagery and savior language; the people in Kenya are partners, and local leaders are named as leaders.
 
 ---
 
@@ -170,11 +170,53 @@ Rules:
 
 **Photography** is the heart of the site. Use real photos from the field: people serving together, students, pastors, church builds, meals, the clinic. Prefer warm natural light, faces, and shared activity over posed handouts.
 
-Provided in `assets/photos/`:
-- `hero-volunteer-with-students.jpg` — volunteer smiling with students in school uniforms (current homepage hero).
-- `feeding-program-serving-line.jpg` — volunteers serving a meal to students and an elder.
+All photos live in `src/assets/photos/` (copy from `assets/photos/`). Photos named `courier-missions-*.jpg` were taken from the Courier Missions Facebook page at the largest size Facebook serves. Use Astro `<Image>`/`<Picture>` so each is resized and converted; never upscale.
 
-Needed (TODO): church construction/completed church, School for the Deaf students, medical clinic, pastoral training, mattress/blanket distribution, Bible distribution, team group shot, leadership headshots, a U.S. outreach image.
+**Size classes** (by original pixel width; the long edge matters for portrait shots):
+- **L — Large** (≥ 1,500px wide): full-bleed heroes, page headers, wide feature rows.
+- **M — Medium** (1,000–1,500px, or portrait): program cards, half-width feature rows, story blocks.
+- **S — Small** (< 1,000px, or a thin strip): thumbnails, grids, inline ≤ 480px only. Never as a hero or page header.
+
+**6.1 Photo library**
+
+| File | Subject | Size | Orientation | Use it for | Alt text |
+|---|---|---|---|---|---|
+| `hero-volunteer-with-students.jpg` | Volunteer smiling with students in school uniforms | L | landscape | Home hero (current live site) | A Courier Missions volunteer with students in Kakamega, Kenya |
+| `feeding-program-serving-line.jpg` | Volunteers serving a meal to students and an elder | L 1963×1192 | landscape | Home "Our work" Feeding card; Our Work › Feeding row | Volunteers serving a meal to students and an elder in Kenya |
+| `courier-missions-feeding-serving-line.jpg` | Same photo as above | L | landscape | Duplicate: keep only one copy | — |
+| `courier-missions-feeding-volunteers-serving-lunch.jpg` | Volunteers ladling lunch from buckets to children | L 2016×1512 | landscape | Get Involved › Go; Feeding gallery | Volunteers serving lunch to children from large buckets |
+| `courier-missions-feeding-food-delivery-to-school.jpg` | Food sacks and supplies delivered to students, Courier Missions banner, "Deaf" school sign | L 2048×1536 | landscape | Our Work › Feeding (lead image); Impact page | Sacks of food delivered to students at the Kakamega School for the Deaf |
+| `courier-missions-feeding-team-dishing-up-meals.jpg` | Team plating meals in a kitchen | M 1080×2340 | tall portrait | Feeding gallery; vertical story block (crop to 4:5) | Volunteers plating meals in a school kitchen |
+| `courier-missions-feeding-community-meal.jpg` | Crowded shared meal under a tin roof | S 540×1170 | portrait | Gallery thumbnail only | A community meal under a shelter |
+| `courier-missions-church-1-foundation-framing.jpg` | Block foundation with timber framing | L 2000×1500 | landscape | Church build sequence, step 1 | Foundation and timber framing for a new church |
+| `courier-missions-church-2-walls-going-up.jpg` | Worker on a ladder building walls | L 2000×1500 | landscape | Church build sequence, step 2 | A builder on a ladder raising the walls of a church |
+| `courier-missions-church-3-roof-trusses.jpg` | Wooden roof trusses on block walls | L 2000×1500 | landscape | Church build sequence, step 3 | Roof trusses going up on a new church |
+| `courier-missions-church-4-finished-church.jpg` | Completed church, green trim, access ramp | L 2000×1500 | landscape | Church build sequence, step 4; Our Work › Church Building lead; Home Church card | A completed church building with green trim and an access ramp |
+| `courier-missions-church-5-ribbon-cutting.jpg` | Ribbon-cutting with orange and teal balloons | M 1079×1442 | portrait | Church dedication moment; Impact page | A ribbon-cutting celebrating a new church |
+| `courier-missions-church-6-full-for-worship.jpg` | Packed church interior, cross window | S 1079×493 | thin panorama | Narrow banner strip or thumbnail only | A full church gathered for worship |
+| `courier-missions-medical-camp-banner-2026.jpg` | "Courier Missions Shikoti Medical Camp 2026" banner over tents | M 1280×960 | landscape | Our Work › Medical Clinic header card; Impact | The Courier Missions Shikoti Medical Camp 2026 banner |
+| `courier-missions-medical-blood-pressure-check.jpg` | Volunteer in hi-vis taking a blood pressure reading | L 1600×1200 | landscape | Our Work › Medical Clinic lead image; Home Medical card | A volunteer checking a woman's blood pressure at the medical camp |
+| `courier-missions-medical-patient-consult.jpg` | Patient consult at a table of medicines | M 1200×1600 | portrait | Medical gallery; story block | A patient consultation at the medical camp |
+| `courier-missions-medical-mother-and-baby.jpg` | Smiling mother holding her baby | M 1200×1600 | portrait | Story/quote block portrait; Give section | A mother and her baby at the medical camp |
+| `courier-missions-medical-pharmacy-table.jpg` | Table of medicines and supplies inside a church | L 3013×1392 | wide | Medical section wide band | Medicines and supplies laid out for the clinic |
+| `courier-missions-farm-harvest-of-hope-sign.jpg` | "Harvest of Hope — Planting Seeds of Faith, Food & Future" sign in maize | L 1536×1536 | square | Our Work › Harvest of Hope lead image; Home Farm card | The Harvest of Hope farm sign standing in a maize field in Kakamega |
+| `courier-missions-farm-workers-tending-crops.jpg` | Workers tending rows of young maize | L 2000×1500 | landscape | Farm section feature row; page header for the farm | Farm workers tending young maize at the Harvest of Hope farm |
+| `courier-missions-farm-tractor-plowing.jpg` | Tractor beside the Harvest of Hope sign | L 1599×899 | landscape | Farm section; "how the farm works" row | A tractor preparing the land at the Harvest of Hope farm |
+| `courier-missions-farm-picking-greens.jpg` | Woman harvesting leafy greens | M 1200×1200 | square | Farm gallery; card | A woman harvesting greens at the Harvest of Hope farm |
+| `courier-missions-farm-farmers-with-harvest.jpg` | Farmers holding freshly picked crops | S 899×899 | square | Farm gallery thumbnail; small card | Farmers holding their harvest |
+
+**6.2 Placement plan**
+- **Home › Our work cards (4):** Feeding = `feeding-program-serving-line`, Church Building = `church-4-finished-church`, Medical Clinic = `medical-blood-pressure-check`, Harvest of Hope Farm = `farm-harvest-of-hope-sign`. Use a 4-up grid on desktop (2×2 on tablet, 1 column on mobile).
+- **Our Work rows:** each program uses its lead image (as listed in 6.1) at 3:2, plus an optional 3-photo gallery strip of its other photos.
+- **Church build sequence:** a 4-step horizontal strip (stack on mobile): foundation → walls → roof → finished, captioned "Foundation", "Walls", "Roof", "Complete". This is the clearest "your gift builds this" story on the site.
+- **Impact page:** food delivery, ribbon-cutting, medical camp banner.
+- **Story/quote block:** `medical-mother-and-baby` (circle-cropped, per 7.8).
+
+**6.3 Captions.** Captions may state only what is known: "Kakamega School for the Deaf" (food delivery), "Shikoti Medical Camp, 2026", "Harvest of Hope farm, Kakamega". Don't add dates or place names to the other photos unless the team confirms them.
+
+**6.4 People in photos.** Most photos show children. Don't name children, add identifying captions, or use a child's photo for a story it isn't from. Choose dignified moments (serving together, smiling, working), never distress.
+
+Still needed (TODO): School for the Deaf students (beyond the delivery photo), pastoral training, mattress/blanket distribution, Bible distribution, the farm well (the Facebook post about it is a video; grab a still), team group shot, leadership headshots, a U.S. outreach image, and full-resolution originals of the community meal and full-church photos.
 
 **Photo treatments**
 - Full-bleed hero: photo with navy gradient overlays where text sits (see 7.2). Text never sits on unshaded photo.
@@ -187,7 +229,7 @@ Needed (TODO): church construction/completed church, School for the Deaf student
 - Rounded "ribbon" shape in pale orange in a top corner.
 - Keep motifs behind content, never behind body text.
 
-**Icons:** simple 2px-stroke line icons (e.g. Lucide) in navy or orange, 24–32px. Suggested: utensils (feeding), church, stethoscope (clinic), book-open (Bibles/training), heart-handshake (relief), bed (mattresses), users (discipleship).
+**Icons:** simple 2px-stroke line icons (e.g. Lucide) in navy or orange, 24–32px. Suggested: utensils (feeding), church, stethoscope (clinic), book-open (Bibles/training), heart-handshake (relief), bed (mattresses), users (discipleship), sprout (Harvest of Hope farm).
 
 ---
 
@@ -208,7 +250,7 @@ Matches the live temporary homepage, which the owner approved.
 - Full viewport height (`min-height: 100svh`, minimum 640px), navy background.
 - **≥ 900px:** photo occupies the right ~64% (`left:36%`), with overlays: left fade from solid navy to transparent over the first 30%, light navy at top 20% for the header, navy fade at the bottom 12%. Text column on the left on navy.
 - **< 900px:** photo on top at 62svh (`object-position` tuned so faces show), fading to navy; text below on navy.
-- Content: eyebrow "Working together" (sky), display headline "Delivering hope, serving with purpose." (white), lead paragraph (white 88%), primary Donate + secondary-on-dark "See our work" (or Facebook).
+- Content: eyebrow "Kakamega County, Kenya" (sky), display headline "Delivering hope, serving with purpose." (white), lead paragraph (white 88%), primary Donate + secondary-on-dark "See our work" (or Facebook).
 - Header sits transparent over the hero with the on-dark logo.
 
 ### 7.3 Page header (interior pages)
@@ -251,7 +293,7 @@ Copy below is drawn from the Mission Statement, Brand Guidelines and 2025 Impact
 ### 8.1 Home `/`
 1. **Hero** (7.2). Lead: "We partner with local churches in Kakamega County, Kenya to feed families, build places of worship, and bring lasting hope."
 2. **What we do** — eyebrow "Our mission", H2 "Practical help and spiritual hope.", Mission Statement paragraph 1. Then three pillar cards (Empower, Respond, Transform).
-3. **Our work** — H2 "Our work in action." Three program cards: Feeding Program (photo: feeding-program-serving-line), Church Building, Medical Clinic. Do not put a location eyebrow on the cards; keep locations in supporting details. Link to `/our-work`.
+3. **Our work** — H2 "Our work in action." Four photo cards: Feeding Program (`feeding-program-serving-line`), Church Building (`courier-missions-church-4-finished-church`), Medical Clinic (`courier-missions-medical-blood-pressure-check`), and Harvest of Hope Farm (`courier-missions-farm-harvest-of-hope-sign`). No location eyebrow on the cards. Use a 4-up grid on desktop, 2×2 on tablet, and 1 column on mobile. Link to `/our-work`.
 4. **2025 at a glance** — impact stats row on navy: **2 meals daily** (students at the Kakamega School for the Deaf) · **1,000+** (people served at our medical clinic) · **~70** (people who accepted Jesus at our crusade) · **85** (mattresses and blankets for students). Link "Read the 2025 Impact Review →".
 5. **Story / quote** block (TODO: a real quote from a pastor, teacher or volunteer).
 6. **Donate CTA band** (7.10).

@@ -3,8 +3,18 @@ import { getImage, Picture } from "astro:assets";
 import SiteLayout from "../layouts/BaseLayout.astro";
 import heroSource from "../../assets/photos/hero-volunteer-with-students.jpg";
 import feedingPhoto from "../../assets/photos/feeding-program-serving-line.jpg";
+import churchPhoto from "../../assets/photos/courier-missions-church-4-finished-church.jpg";
+import medicalPhoto from "../../assets/photos/courier-missions-medical-blood-pressure-check.jpg";
+import farmPhoto from "../../assets/photos/courier-missions-farm-harvest-of-hope-sign.jpg";
 import { homePage } from "../data/home.js";
 import { site } from "../data/site.js";
+
+const programPhotos = {
+  feeding: feedingPhoto,
+  church: churchPhoto,
+  medical: medicalPhoto,
+  farm: farmPhoto,
+};
 
 const heroPhoto = await getImage({
   src: heroSource,
@@ -70,20 +80,14 @@ const heroPhoto = await getImage({
         {homePage.programs.map((program) => (
           <article class="program-card">
             <div class="program-card__image">
-              {program.image === "feeding" ? (
-                <Picture
-                  src={feedingPhoto}
-                  formats={["avif", "webp"]}
-                  widths={[480, 800]}
-                  sizes="(max-width: 599px) 100vw, (max-width: 899px) 50vw, 33vw"
-                  alt={program.alt}
-                  loading="lazy"
-                />
-              ) : (
-                <p class="program-card__placeholder" role="img" aria-label={program.imageTodo}>
-                  {program.title}<br /><small>{program.imageTodo}</small>
-                </p>
-              )}
+              <Picture
+                src={programPhotos[program.image]}
+                formats={["avif", "webp"]}
+                widths={[320, 480, 640]}
+                sizes="(max-width: 599px) 100vw, (max-width: 899px) 50vw, 25vw"
+                alt={program.alt}
+                loading="lazy"
+              />
             </div>
             <div class="program-card__body">
               <h3>{program.title}</h3>
