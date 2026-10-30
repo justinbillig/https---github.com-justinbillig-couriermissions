@@ -21,7 +21,7 @@ This document is written to be handed to Claude Code (or any developer) to build
 
 **Audience:** individual donors (often church members, many on phones), partner churches and pastors, prospective trip volunteers.
 
-**Tone:** warm, hopeful, plainspoken, faith-forward without jargon. Short sentences. Talk about people, not "beneficiaries." Avoid pity imagery and savior language; the people in Kenya are partners, and local leaders are named as leaders.
+**Tone:** warm, hopeful, plainspoken, faith-forward without jargon. Short sentences. Talk about people, not "beneficiaries." Avoid pity imagery and savior language; the people in Kenya are partners, and local leaders are named as leaders. Keep locations out of page and section headlines; include them in supporting copy and specific program details.
 
 ---
 
@@ -208,7 +208,7 @@ Matches the live temporary homepage, which the owner approved.
 - Full viewport height (`min-height: 100svh`, minimum 640px), navy background.
 - **≥ 900px:** photo occupies the right ~64% (`left:36%`), with overlays: left fade from solid navy to transparent over the first 30%, light navy at top 20% for the header, navy fade at the bottom 12%. Text column on the left on navy.
 - **< 900px:** photo on top at 62svh (`object-position` tuned so faces show), fading to navy; text below on navy.
-- Content: eyebrow "Kakamega County, Kenya" (sky), display headline "Delivering hope, serving with purpose." (white), lead paragraph (white 88%), primary Donate + secondary-on-dark "See our work" (or Facebook).
+- Content: eyebrow "Working together" (sky), display headline "Delivering hope, serving with purpose." (white), lead paragraph (white 88%), primary Donate + secondary-on-dark "See our work" (or Facebook).
 - Header sits transparent over the hero with the on-dark logo.
 
 ### 7.3 Page header (interior pages)
@@ -251,7 +251,7 @@ Copy below is drawn from the Mission Statement, Brand Guidelines and 2025 Impact
 ### 8.1 Home `/`
 1. **Hero** (7.2). Lead: "We partner with local churches in Kakamega County, Kenya to feed families, build places of worship, and bring lasting hope."
 2. **What we do** — eyebrow "Our mission", H2 "Practical help and spiritual hope.", Mission Statement paragraph 1. Then three pillar cards (Empower, Respond, Transform).
-3. **Our work** — 3 program cards: Feeding Program (photo: feeding-program-serving-line), Church Building, Medical Clinic. Link to `/our-work`.
+3. **Our work** — H2 "Our work in action." Three program cards: Feeding Program (photo: feeding-program-serving-line), Church Building, Medical Clinic. Keep locations in the individual program details, not the section headline. Link to `/our-work`.
 4. **2025 at a glance** — impact stats row on navy: **2 meals daily** (students at the Kakamega School for the Deaf) · **1,000+** (people served at our medical clinic) · **~70** (people who accepted Jesus at our crusade) · **85** (mattresses and blankets for students). Link "Read the 2025 Impact Review →".
 5. **Story / quote** block (TODO: a real quote from a pastor, teacher or volunteer).
 6. **Donate CTA band** (7.10).
