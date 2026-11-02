@@ -2,8 +2,9 @@
 import SiteLayout from "../../layouts/BaseLayout.astro";
 import { site } from "../../data/site.js";
 import churchImage from "../../../assets/photos/courier-missions-church-4-finished-church.jpg";
-import ribbonImage from "../../../assets/photos/courier-missions-church-5-ribbon-cutting.jpg";
-import worshipImage from "../../../assets/photos/courier-missions-church-6-full-for-worship.jpg";
+import foundationImage from "../../../assets/photos/courier-missions-church-1-foundation-framing.jpg";
+import wallsImage from "../../../assets/photos/courier-missions-church-2-walls-going-up.jpg";
+import roofImage from "../../../assets/photos/courier-missions-church-3-roof-trusses.jpg";
 import { churchProjects } from "../../data/churches.js";
 ---
 
@@ -73,9 +74,33 @@ import { churchProjects } from "../../data/churches.js";
 
   <section class="page-section" style="background: var(--cm-sky);">
     <div class="container">
-      <div class="gallery-grid">
-        <figure><img src={ribbonImage.src} alt="A ribbon-cutting celebrating a new church." width={ribbonImage.width} height={ribbonImage.height} loading="lazy" /></figure>
-        <figure><img src={worshipImage.src} alt="A full church gathered for worship." width={worshipImage.width} height={worshipImage.height} loading="lazy" /></figure>
+      <p class="eyebrow">From foundation to finished church</p>
+      <h2 class="section-heading">One step at a time.</h2>
+      <p class="church-carousel__hint">Scroll to see all four stages.</p>
+      <div
+        class="church-carousel"
+        role="region"
+        aria-label="Church construction photo sequence"
+        tabindex="0"
+      >
+        <div class="church-carousel__track">
+          <figure>
+            <img src={foundationImage.src} alt="Foundation and timber framing for a new church." width={foundationImage.width} height={foundationImage.height} loading="lazy" />
+            <figcaption><strong>First, the foundation.</strong> Block foundation and timber framing.</figcaption>
+          </figure>
+          <figure>
+            <img src={wallsImage.src} alt="A builder on a ladder raising the walls of a church." width={wallsImage.width} height={wallsImage.height} loading="lazy" />
+            <figcaption><strong>Then, the walls.</strong> Local builders take the walls to lintel level.</figcaption>
+          </figure>
+          <figure>
+            <img src={roofImage.src} alt="Roof trusses going up on a new church." width={roofImage.width} height={roofImage.height} loading="lazy" />
+            <figcaption><strong>Next, the roof.</strong> Trusses go up and the floor is screeded.</figcaption>
+          </figure>
+          <figure>
+            <img src={churchImage.src} alt="A completed church building with green trim and an access ramp." width={churchImage.width} height={churchImage.height} loading="lazy" />
+            <figcaption><strong>At last, a finished church.</strong> Ready for the congregation to gather.</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </section>
