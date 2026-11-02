@@ -2,7 +2,9 @@ export const medicalClinics = {
   title: "Medical Clinics",
   eyebrow: "Kakamega, Kenya",
   summary:
-    "Quarterly outreach clinics offer consultations, medicines, screenings and health education. A 2025 multi-day clinic served more than 1,000 people.",
+    "Four times a year, a five-person local medical team offers consultations, medicines, screenings and health education in Kakamega. A multi-day clinic served more than 1,000 people in 2025.",
+  introduction:
+    "Four times a year, a five-person local team offers consultations, medicines, screenings and health education. A multi-day clinic served more than 1,000 people in 2025.",
   href: "/our-work/medical-clinics/",
   image: "courier-missions-medical-blood-pressure-check.jpg",
   alt: "A volunteer checking a community member's blood pressure at a medical clinic.",
@@ -18,6 +20,4 @@ export const medicalClinics = {
     "Screenings",
     "Health education",
   ],
-  team: "A five-person local medical team supports the clinics.",
-  cost: "A clinic costs about $1,200.",
 };

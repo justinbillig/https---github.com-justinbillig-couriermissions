@@ -45,7 +45,7 @@ const heroPhoto = await getImage({
       />
     </div>
     <div class="hero__content">
-      <p class="eyebrow hero__eyebrow">Working together</p>
+      <p class="eyebrow hero__eyebrow">Kenya · Sierra Leone · Indiana</p>
       <h1 id="home-title">{homePage.title}</h1>
       <p class="hero__lead">{homePage.description}</p>
       <div class="hero__actions">
@@ -59,7 +59,7 @@ const heroPhoto = await getImage({
     <div class="container">
       <div class="mission__intro">
         <p class="eyebrow">Our mission</p>
-        <h2 class="section-heading" id="mission-title">Practical help and spiritual hope.</h2>
+        <h2 class="section-heading" id="mission-title">Meals, churches and Bibles.</h2>
         <p class="section-lead">{homePage.mission}</p>
       </div>
       <ol class="pillars">
@@ -77,8 +77,8 @@ const heroPhoto = await getImage({
   <section class="programs section" id="our-work" aria-labelledby="programs-title">
     <div class="container">
       <p class="eyebrow">Our work</p>
-      <h2 class="section-heading" id="programs-title">Our work in action.</h2>
-      <p class="section-lead">We partner with local churches and leaders to meet practical needs and bring spiritual hope.</p>
+      <h2 class="section-heading" id="programs-title">The work we do together.</h2>
+      <p class="section-lead">375 students are part of school feeding programs in Kakamega. Alongside local churches and leaders, we also build churches, hold clinics and respond when disaster hits.</p>
       <div class="program-grid">
         {homePage.programs.map((program) => (
           <article class="program-card">
@@ -95,12 +95,12 @@ const heroPhoto = await getImage({
             <div class="program-card__body">
               <h3>{program.title}</h3>
               <p>{program.description}</p>
-              <a class="text-link" href={program.href}>Learn more <span aria-hidden="true">→</span></a>
+              <a class="text-link" href={program.href}>See this work <span aria-hidden="true">→</span></a>
             </div>
           </article>
         ))}
       </div>
-      <a class="text-link" href="/our-work/">Explore all our work <span aria-hidden="true">→</span></a>
+      <a class="text-link" href="/our-work/">See all the work <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -126,8 +126,8 @@ const heroPhoto = await getImage({
 
   <section class="impact section" aria-labelledby="impact-title">
     <div class="container">
-      <p class="eyebrow">As reported in 2026</p>
-      <h2 id="impact-title">Practical help, rooted in local partnership.</h2>
+      <p class="eyebrow">The work in numbers · 2026</p>
+      <h2 id="impact-title">Real work. Real people.</h2>
       <ul class="impact__grid">
         {homePage.impact.map((stat) => (
           <li class="impact-stat">
@@ -145,8 +145,8 @@ const heroPhoto = await getImage({
     <div class="container">
       <div class="donate-cta__inner">
         <div>
-          <h2 id="donate-title">Your gift delivers hope.</h2>
-          <p class="donate-cta__copy">Give to support practical help and spiritual hope in the communities and churches we serve.</p>
+          <h2 id="donate-title">You can help keep this work going.</h2>
+          <p class="donate-cta__copy">Your gift helps us come alongside local churches, schools and leaders. Gifts go to our general fund.</p>
         </div>
         <div class="donate-cta__actions">
           <a class="button button--primary" href={site.donateHref}>Donate</a>

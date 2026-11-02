@@ -3,14 +3,14 @@ import SiteLayout from "../layouts/BaseLayout.astro";
 import { site } from "../data/site.js";
 ---
 
-<SiteLayout title="Page not found" description="The page you were looking for is not here, but there are still ways to help and learn more about Courier Missions.">
+<SiteLayout title="Page not found" description="We couldn’t find that page. Come back to Courier Missions’ home page or make a gift.">
   <section class="page-section">
     <div class="container narrow">
       <p class="eyebrow">404</p>
       <h1>This page has gone on a mission.</h1>
-      <p class="section-lead">We couldn't find what you were looking for, but there are many ways to keep exploring.</p>
+      <p class="section-lead">Looks like this page took a wrong turn. Head home and we’ll help you find your way.</p>
       <div class="page-cta__links">
-        <a class="button button--primary" href="/">Back home</a>
+        <a class="button button--primary" href="/">Go to the home page</a>
         <a class="button button--light" href={site.donateHref}>Donate</a>
       </div>
     </div>
