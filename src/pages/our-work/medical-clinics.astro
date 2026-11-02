@@ -54,12 +54,14 @@ import pharmacyImage from "../../../assets/photos/courier-missions-medical-pharm
       <div>
         <p class="eyebrow">What clinics provide</p>
         <h2>Medical outreach in Kakamega.</h2>
-        <p>Quarterly outreach clinics bring a range of practical health services to the community.</p>
+        <p>Quarterly outreach clinics bring a range of practical health services to the community. {medicalClinics.team}</p>
       </div>
       <div class="info-card">
+        <p><strong>Approximate cost:</strong> {medicalClinics.cost}</p>
         <ul class="list-check">
           {medicalClinics.services.map((service) => <li>{service}</li>)}
         </ul>
+        <p>Gifts through our donation link support the general fund and are not restricted to a specific clinic.</p>
       </div>
     </div>
   </section>

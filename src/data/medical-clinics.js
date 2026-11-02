@@ -11,9 +11,13 @@ export const medicalClinics = {
     { value: "1,000+", label: "people served at a multi-day clinic in 2025" },
   ],
   services: [
+    "Wound care",
+    "Vision and dental checks",
     "Consultations",
     "Medicines",
     "Screenings",
     "Health education",
   ],
+  team: "A five-person local medical team supports the clinics.",
+  cost: "A clinic costs about $1,200.",
 };

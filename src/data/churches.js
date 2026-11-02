@@ -1,23 +1,16 @@
 export const churchProjects = [
   {
-    name: "Project TBD",
-    community: "To be confirmed",
+    name: "Five completed church projects",
+    community: "Kakamega County, Kenya",
     status: "Completed",
-    year: "2025",
-    summary: "One church was completed in 2025, with more construction and renovation projects underway.",
+    year: "As of 2026",
+    summary: "The directors reported five completed church projects as of November 2026.",
   },
   {
-    name: "Project TBD",
-    community: "To be confirmed",
+    name: "Shiango Church",
+    community: "Shiango, Kenya",
     status: "Under construction",
     year: "2026",
-    summary: "More construction and renovation projects are underway as new church partners are identified.",
-  },
-  {
-    name: "Project TBD",
-    community: "To be confirmed",
-    status: "Planned",
-    year: "2026",
-    summary: "New church building opportunities are being prayerfully considered and prepared with local leaders.",
+    summary: "After meeting in a temporary shelter, the congregation began work on a permanent church. Construction started with the foundation in October 2026.",
   },
 ];
