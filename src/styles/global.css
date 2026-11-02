@@ -661,6 +661,121 @@ h3 {
   object-fit: cover;
 }
 
+.get-involved-hero .page-hero__inner {
+  grid-template-columns: 1fr;
+}
+
+.get-involved-hero .page-hero__content {
+  max-width: 48rem;
+}
+
+.involvement-gallery {
+  overflow: hidden;
+  background: var(--cm-cream);
+}
+
+.involvement-gallery__intro {
+  max-width: 44rem;
+  margin: 0 auto var(--space-6);
+  text-align: center;
+}
+
+.involvement-gallery__intro .section-heading {
+  margin-bottom: 0;
+}
+
+.photo-carousel {
+  max-width: 76rem;
+  margin-inline: auto;
+}
+
+.photo-carousel__stage {
+  position: relative;
+}
+
+.photo-carousel__track {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.photo-carousel__slide {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--cm-white);
+  box-shadow: var(--shadow-card);
+}
+
+.photo-carousel__image {
+  width: 100%;
+  height: clamp(10rem, 19vw, 14rem);
+  object-fit: cover;
+}
+
+.photo-carousel__image--contain {
+  background: var(--cm-navy);
+  object-fit: contain;
+}
+
+.photo-carousel__slide figcaption {
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+
+.photo-carousel__arrows {
+  position: absolute;
+  inset: 0 -1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.photo-carousel__arrow {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border: 1px solid var(--cm-line);
+  border-radius: 50%;
+  background: var(--cm-white);
+  color: var(--cm-navy);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.5rem;
+  pointer-events: auto;
+}
+
+.photo-carousel__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+  color: var(--cm-navy-80);
+  font-size: var(--fs-small);
+}
+
+.photo-carousel__footer p {
+  margin: 0;
+}
+
+.photo-carousel__toggle {
+  min-height: 2.75rem;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--cm-navy);
+  color: var(--cm-white);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  padding: 0.5rem 0.85rem;
+}
+
 .ministry-card__visual {
   display: grid;
   min-height: 14rem;
@@ -1048,6 +1163,38 @@ h3 {
   flex-wrap: wrap;
   gap: var(--space-4);
   align-items: center;
+}
+
+@media (max-width: 899px) {
+  .photo-carousel__track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .photo-carousel__slide:nth-child(3) {
+    display: none;
+  }
+
+  .photo-carousel__arrows {
+    inset-inline: -1rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .photo-carousel__track {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-carousel__slide:nth-child(2) {
+    display: none;
+  }
+
+  .photo-carousel__arrows {
+    inset-inline: -0.5rem;
+  }
+
+  .photo-carousel__footer {
+    align-items: flex-start;
+  }
 }
 
 @media (min-width: 900px) {

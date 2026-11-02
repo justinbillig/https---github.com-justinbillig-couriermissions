@@ -1,19 +1,81 @@
 ---
 import SiteLayout from "../layouts/BaseLayout.astro";
 import { site } from "../data/site.js";
-import heroImage from "../../assets/photos/courier-missions-medical-mother-and-baby.jpg";
+import { getInvolvedPhotos } from "../data/get-involved.js";
+
+const carouselPhotos = getInvolvedPhotos.map(({ image, alt, caption, fit }) => ({
+  src: image.src,
+  alt,
+  caption,
+  fit: fit ?? "cover",
+}));
 ---
 
-<SiteLayout title="Get Involved" description="Pray with us, give, come to Kenya or invite your church to join the work. We’d be glad to talk." heroImage={heroImage}>
-  <section class="page-hero">
+<SiteLayout title="Get Involved" description="Pray with us, give, come to Kenya or invite your church to join the work. We’d be glad to talk." heroImage={getInvolvedPhotos[0].image}>
+  <section class="page-hero get-involved-hero">
     <div class="container page-hero__inner">
       <div class="page-hero__content">
         <p class="eyebrow">Get involved</p>
         <h1>Come be part of the work.</h1>
         <p class="section-lead">You can pray, give, come to Kenya or bring your church alongside local leaders. We’d be glad to talk with you.</p>
       </div>
-      <div class="page-hero__media">
-        <img src={heroImage.src} alt="A mother and her baby at the medical camp." width={heroImage.width} height={heroImage.height} loading="eager" />
+    </div>
+  </section>
+
+  <section class="involvement-gallery page-section" aria-labelledby="involvement-gallery-title">
+    <div class="container">
+      <div class="involvement-gallery__intro">
+        <p class="eyebrow">Around the work</p>
+        <h2 class="section-heading" id="involvement-gallery-title">A look at the people and places you can support.</h2>
+      </div>
+      <div
+        class="photo-carousel"
+        data-photo-carousel
+        data-photos={JSON.stringify(carouselPhotos)}
+        role="region"
+        aria-roledescription="carousel"
+        aria-live="off"
+        aria-label="Courier Missions photos"
+      >
+        <div class="photo-carousel__stage">
+          <div class="photo-carousel__track">
+            {getInvolvedPhotos.slice(0, 3).map((photo, index) => (
+              <figure
+                class="photo-carousel__slide"
+                data-carousel-slide
+                role="group"
+                aria-roledescription="slide"
+                aria-label={`${index + 1} of ${getInvolvedPhotos.length}`}
+              >
+                <img
+                  class:list={["photo-carousel__image", photo.fit === "contain" && "photo-carousel__image--contain"]}
+                  data-carousel-image
+                  src={photo.image.src}
+                  alt={photo.alt}
+                  width={photo.image.width}
+                  height={photo.image.height}
+                  loading="eager"
+                  decoding="async"
+                />
+                <figcaption data-carousel-caption>{photo.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div class="photo-carousel__arrows" aria-label="Carousel controls">
+            <button class="photo-carousel__arrow" type="button" data-carousel-previous aria-label="Show previous photos">
+              <span aria-hidden="true">&larr;</span>
+            </button>
+            <button class="photo-carousel__arrow" type="button" data-carousel-next aria-label="Show next photos">
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </div>
+        <div class="photo-carousel__footer">
+          <p>Ten snapshots from the work.</p>
+          <button class="photo-carousel__toggle" type="button" data-carousel-toggle aria-label="Pause automatic photo rotation">
+            Pause rotation
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -79,3 +141,114 @@ import heroImage from "../../assets/photos/courier-missions-medical-mother-and-b
     </div>
   </div>
 </SiteLayout>
+
+<script>
+  const carousel = document.querySelector("[data-photo-carousel]");
+
+  if (carousel instanceof HTMLElement) {
+    const photos = JSON.parse(carousel.dataset.photos ?? "[]");
+    const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
+    const previousButton = carousel.querySelector("[data-carousel-previous]");
+    const nextButton = carousel.querySelector("[data-carousel-next]");
+    const toggleButton = carousel.querySelector("[data-carousel-toggle]");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    if (
+      photos.length > slides.length &&
+      slides.every((slide) => slide instanceof HTMLElement) &&
+      previousButton instanceof HTMLButtonElement &&
+      nextButton instanceof HTMLButtonElement &&
+      toggleButton instanceof HTMLButtonElement
+    ) {
+      let firstPhoto = 0;
+      let manuallyPaused = reducedMotion.matches;
+      let pointerInside = false;
+      let focusInside = false;
+      let rotationTimer: number | undefined;
+
+      const updateToggle = () => {
+        toggleButton.textContent = manuallyPaused ? "Resume rotation" : "Pause rotation";
+        toggleButton.setAttribute(
+          "aria-label",
+          manuallyPaused ? "Resume automatic photo rotation" : "Pause automatic photo rotation",
+        );
+      };
+
+      const renderSlides = () => {
+        slides.forEach((slide, offset) => {
+          const photoIndex = (firstPhoto + offset) % photos.length;
+          const photo = photos[photoIndex];
+          const image = slide.querySelector("[data-carousel-image]");
+          const caption = slide.querySelector("[data-carousel-caption]");
+
+          if (image instanceof HTMLImageElement && caption instanceof HTMLElement) {
+            image.src = photo.src;
+            image.alt = photo.alt;
+            image.classList.toggle("photo-carousel__image--contain", photo.fit === "contain");
+            caption.textContent = photo.caption;
+            slide.setAttribute("aria-label", `${photoIndex + 1} of ${photos.length}`);
+          }
+        });
+      };
+
+      const syncRotation = () => {
+        window.clearInterval(rotationTimer);
+        if (manuallyPaused || pointerInside || focusInside || document.hidden) return;
+        rotationTimer = window.setInterval(() => {
+          firstPhoto = (firstPhoto + 1) % photos.length;
+          renderSlides();
+        }, 5000);
+      };
+
+      const showPrevious = () => {
+        firstPhoto = (firstPhoto - 1 + photos.length) % photos.length;
+        renderSlides();
+        syncRotation();
+      };
+
+      const showNext = () => {
+        firstPhoto = (firstPhoto + 1) % photos.length;
+        renderSlides();
+        syncRotation();
+      };
+
+      previousButton.addEventListener("click", showPrevious);
+      nextButton.addEventListener("click", showNext);
+      toggleButton.addEventListener("click", () => {
+        manuallyPaused = !manuallyPaused;
+        updateToggle();
+        syncRotation();
+      });
+
+      carousel.addEventListener("mouseenter", () => {
+        pointerInside = true;
+        syncRotation();
+      });
+      carousel.addEventListener("mouseleave", () => {
+        pointerInside = false;
+        syncRotation();
+      });
+      carousel.addEventListener("focusin", () => {
+        focusInside = true;
+        syncRotation();
+      });
+      carousel.addEventListener("focusout", (event) => {
+        if (!(event.relatedTarget instanceof Node) || !carousel.contains(event.relatedTarget)) {
+          focusInside = false;
+          syncRotation();
+        }
+      });
+
+      document.addEventListener("visibilitychange", syncRotation);
+      reducedMotion.addEventListener("change", (event) => {
+        if (event.matches) manuallyPaused = true;
+        updateToggle();
+        syncRotation();
+      });
+
+      renderSlides();
+      updateToggle();
+      syncRotation();
+    }
+  }
+</script>
