@@ -13,7 +13,7 @@ export const site = {
         { label: "Feeding Programs", href: "/our-work/feeding/" },
         { label: "School for the Deaf", href: "/our-work/school-for-the-deaf/" },
         { label: "Church Building", href: "/our-work/church-building/" },
-        { label: "Disaster Relief", href: "/our-work/disaster-relief/" },
+        { label: "Ministry Support", href: "/our-work/ministry-support/" },
       ],
     },
     { label: "Impact", href: "/impact/" },

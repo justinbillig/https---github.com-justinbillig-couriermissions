@@ -5,13 +5,11 @@ import { ministryAreas, moreWaysWeServe } from "../../data/our-work.js";
 import feedingImage from "../../../assets/photos/feeding-program-serving-line.jpg";
 import schoolImage from "../../../assets/photos/courier-missions-feeding-food-delivery-to-school.jpg";
 import churchImage from "../../../assets/photos/courier-missions-church-4-finished-church.jpg";
-import disasterImage from "../../../assets/photos/courier-missions-medical-blood-pressure-check.jpg";
 
 const areaPhotos = {
   "Feeding Programs": feedingImage,
   "Kakamega School for the Deaf": schoolImage,
   "Church Building": churchImage,
-  "Disaster Relief": disasterImage,
 };
 ---
 
@@ -34,7 +32,13 @@ const areaPhotos = {
       <div class="card-grid">
         {ministryAreas.map((area) => (
           <article class="mini-card">
-            <img src={areaPhotos[area.title].src} alt={area.alt} width="800" height="600" loading="lazy" />
+            {areaPhotos[area.title] ? (
+              <img src={areaPhotos[area.title].src} alt={area.alt} width={areaPhotos[area.title].width} height={areaPhotos[area.title].height} loading="lazy" />
+            ) : (
+              <div class="ministry-card__visual" aria-hidden="true">
+                <span>Ministry support</span>
+              </div>
+            )}
             <div style="padding-top: 1rem;">
               <h3>{area.title}</h3>
               <p>{area.summary}</p>
@@ -43,6 +47,7 @@ const areaPhotos = {
           </article>
         ))}
       </div>
+      <a class="text-link" href="/our-work/ministry-support/">Explore Ministry Support <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -56,6 +61,7 @@ const areaPhotos = {
             <span class="mini-card__icon">{index + 1}</span>
             <h3>{item.title}</h3>
             <p>{item.summary}</p>
+            <a class="text-link" href={item.href}>Learn more <span aria-hidden="true">→</span></a>
           </article>
         ))}
       </div>

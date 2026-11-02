@@ -4,3 +4,27 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+[[redirects]]
+  from = "/our-work/disaster-relief"
+  to = "/our-work/ministry-support/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/our-work/disaster-relief/"
+  to = "/our-work/ministry-support/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/harvest-of-hope"
+  to = "/our-work/feeding/#harvest-of-hope"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/harvest-of-hope/"
+  to = "/our-work/feeding/#harvest-of-hope"
+  status = 301
+  force = true

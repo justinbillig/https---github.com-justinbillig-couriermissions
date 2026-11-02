@@ -1,11 +1,11 @@
-# Courier Missions Website — Design & Build Spec
+# Courier Missions Website — Business & Design Spec
 
 Version 1.1 · November 2026
 Source material: Courier Missions Brand Guidelines, Final Mission Statement, 2025 Impact Review, the October 2026 grant application (organization overview, programs, leadership, Harvest of Hope), the Courier Missions Facebook page, and the temporary homepage currently live at couriermissions.com (`reference-temporary-homepage.html`).
 
 **Do not publish** anything from the grant application that isn't in this spec: no phone numbers, bank details, personal email addresses, the funder's name, grant amounts, or the organizational budget.
 
-This document is written to be handed to Claude Code (or any developer) to build the full site. Everything needed is in this folder. Where something is not known yet it is marked **TODO** and listed in section 12.
+This document defines the business content and design direction for the site. Open content decisions are marked **TODO** and listed in section 9. Implementation requirements are in [TECH-SPEC.md](./TECH-SPEC.md).
 
 ---
 
@@ -27,56 +27,31 @@ This document is written to be handed to Claude Code (or any developer) to build
 
 ---
 
-## 2. Technical approach
+## 2. Implementation handoff
 
-- **Framework:** Astro (static output). Simple pages, components, no client JS framework required. Plain HTML/CSS is an acceptable fallback if the owner prefers zero build step.
-- **Styling:** one global CSS file built on the design tokens in section 4 (CSS custom properties). No Tailwind needed; if used, map its theme to these tokens.
-- **Hosting:** Netlify (the domain is registered at WordPress.com and DNS already points to Netlify). Deploy from a Git repo so updates are a push. Include a `netlify.toml`.
-- **Fonts:** Montserrat (600, 700) and Roboto (400, 500) from Google Fonts, `display=swap`, with system-ui fallbacks. Self-hosting via `@fontsource` is preferred for performance and privacy.
-- **Images:** Astro `<Image>` / `<Picture>` for responsive AVIF/WebP with JPEG fallback. Every content image has meaningful alt text.
-- **Forms:** Netlify Forms for the contact form (no backend).
-- **Donations:** external processor (TODO, see section 12). The site links out; it never collects payment details itself.
-- **JS budget:** minimal. Only the mobile menu toggle and optional count-up on impact numbers (respect reduced motion).
-- **Content editing:** keep copy in Markdown/MDX or a single `src/data/*.ts` file per page so a non-developer can change text and numbers without touching layout.
+Framework, routing, hosting, data organization, form integration, accessibility implementation, SEO, and deployment requirements are in [TECH-SPEC.md](./TECH-SPEC.md).
 
-Suggested structure:
-```
-src/
-  layouts/BaseLayout.astro        # <head>, header, footer, skip link
-  components/                     # see section 7
-  pages/ index, about, our-work/ (index, feeding, school-for-the-deaf, church-building, disaster-relief), impact, get-involved, contact, 404
-  data/ site.ts (links, nav) · impact.ts (numbers) · programs.ts · churches.ts · relief.ts
-  styles/tokens.css · global.css
-public/ favicons, og image
-src/assets/ logo/*, photos/*
-```
+## 3. Website pages and navigation
 
----
-
-## 3. Sitemap & navigation
-
-| Page | Path | Purpose |
+| Page | Purpose |
 |---|---|---|
-| Home | `/` | Hero, what we do, impact snapshot, story, donate CTA |
-| About | `/about` | Mission, vision, philosophy (Empower, Respond, Transform), leadership, stewardship |
-| Our Work | `/our-work` | Overview of the four ministry areas, plus "More ways we serve" (8.3) |
-| Feeding Programs | `/our-work/feeding` | Kenya and Sierra Leone feeding, including the Harvest of Hope farm (8.4) |
-| Kakamega School for the Deaf | `/our-work/school-for-the-deaf` | Everything we do with the Deaf school (8.5) |
-| Church Building | `/our-work/church-building` | How we build churches, then the list of church projects (8.6) |
-| Disaster Relief | `/our-work/disaster-relief` | Relief for families hit by disasters (8.7) |
-| `/harvest-of-hope` | redirect | 301 to `/our-work/feeding#harvest-of-hope` (short link for print and social) |
-| Impact | `/impact` | 2025 Impact Review in web form, yearly updates over time |
-| Get Involved | `/get-involved` | Give, pray, go, partner as a church |
-| Contact | `/contact` | Contact form and Facebook |
-| Donate | external link | Opens processor (same tab) |
-| 404 | `/404` | Friendly not-found with links home and to Donate |
+| Home | Hero, mission, ministry areas, impact snapshot, Harvest of Hope, story, Donate CTA |
+| About | Mission, vision, philosophy (Empower, Respond, Transform), leadership, stewardship |
+| Our Work | Overview of the four ministry areas, plus "More ways we serve" (8.3) |
+| Feeding Programs | Kenya and Sierra Leone feeding, including the Harvest of Hope farm (8.4) |
+| Kakamega School for the Deaf | Everything we do with the Deaf school (8.5) |
+| Church Building | How we build churches, then the list of church projects (8.6) |
+| Ministry Support | Disaster response, student essentials, Bible and pastoral support, scholarships, and medical clinics (8.7) |
+| Impact | 2025 Impact Review in web form, yearly updates over time |
+| Get Involved | Give, pray, go, partner as a church |
+| Contact | Contact form and Facebook |
+| Not found | A friendly message with links home and to Donate |
 
-**Header nav (desktop):** logo left · About · Our Work ▾ · Impact · Get Involved · Contact · [Donate] button right. "Our Work" is a link to `/our-work` with a dropdown (opens on hover and on click/Enter) listing the four ministry areas.
-**Header nav (mobile, < 900px):** logo left · [Donate] small button · menu button. Menu opens a full-height navy panel with large links; the four ministry areas are listed indented under Our Work. Donate stays visible outside the menu.
+**Header navigation:** logo, About, Our Work with links to the four ministry areas, Impact, Get Involved, Contact, and a prominent Donate button. On mobile, keep Donate visible outside the menu and nest the ministry links under Our Work.
 
-**Primary domain:** couriermissions.org. couriermissions.com (and www of both) 301-redirect to https://couriermissions.org, preserving the path. Use .org in canonical URLs, sitemap, Open Graph and JSON-LD.
+All Donate buttons link to the confirmed Zeffy donation form: https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-2964.
 
-**Footer:** on-dark logo, one-line mission, nav links repeated, Facebook link to https://facebook.com/couriermissions, contact form link, "Courier Missions is a 501(c)(3) nonprofit organization, EIN 33-1569087. Gifts are tax-deductible as allowed by law.", © year.
+**Footer:** on-dark logo, one-line mission, repeated navigation, Facebook link to https://facebook.com/couriermissions, contact form link, "Courier Missions is a 501(c)(3) nonprofit organization, EIN 33-1569087. Gifts are tax-deductible as allowed by law.", copyright year, and tagline.
 
 ---
 
@@ -104,7 +79,7 @@ Derived tokens (not in the brand guide, added for usability and accessibility):
 | `--cm-navy-80` | `rgba(24,48,68,.8)` | Secondary text on light. |
 | `--cm-line` | `rgba(24,48,68,.12)` | Borders, dividers. |
 
-**Accessibility rules (WCAG AA), measured:**
+**Color contrast rules, measured:**
 - White on orange = 2.7:1 → **fails**. Never put white text on orange.
 - **Navy on orange = 5.1:1 → passes.** Primary buttons use navy text on orange.
 - Orange on white = 2.7:1 → fails for text. Use `--cm-orange-ink` for orange text on light backgrounds; brand orange is fine for large display numerals ≥ 32px bold only as decoration alongside a text label.
@@ -148,10 +123,6 @@ Body measure: max 68ch. Headlines max ~16ch on hero, ~22ch elsewhere. Headings a
 --shadow-cta:  0 8px 24px -10px rgba(233,134,0,.8)
 ```
 
-Breakpoints: `600px` (large phone), `900px` (tablet → desktop nav switch), `1200px` (wide).
-
-Motion: 150ms ease for hover; 400ms ease-out for fade/slide-in of sections (optional). Everything disabled under `prefers-reduced-motion: reduce`.
-
 ---
 
 ## 5. Logo usage (Brand Guidelines §2)
@@ -177,9 +148,7 @@ Rules:
 
 ## 6. Imagery & graphic motifs
 
-**Photography** is the heart of the site. Use real photos from the field: people serving together, students, pastors, church builds, meals, the clinic. Prefer warm natural light, faces, and shared activity over posed handouts.
-
-All photos live in `src/assets/photos/` (copy from `assets/photos/`). Photos named `courier-missions-*.jpg` were taken from the Courier Missions Facebook page at the largest size Facebook serves. Use Astro `<Image>`/`<Picture>` so each is resized and converted; never upscale.
+Use real field photos: people serving together, students, pastors, church builds, meals, and the clinic. Photos named `courier-missions-*.jpg` were taken from the Courier Missions Facebook page at the largest size Facebook serves. Never upscale images.
 
 **Size classes** (by original pixel width; the long edge matters for portrait shots):
 - **L — Large** (≥ 1,500px wide): full-bleed heroes, page headers, wide feature rows.
@@ -215,7 +184,7 @@ All photos live in `src/assets/photos/` (copy from `assets/photos/`). Photos nam
 | `courier-missions-farm-farmers-with-harvest.jpg` | Farmers holding freshly picked crops | S 899×899 | square | Farm gallery thumbnail; small card | Farmers holding their harvest |
 
 **6.2 Placement plan**
-- **Home and Our Work › ministry area cards (4):** Feeding Programs = `feeding-program-serving-line`, Kakamega School for the Deaf = `feeding-food-delivery-to-school`, Church Building = `church-4-finished-church`, Disaster Relief = TODO photo (until then, a navy card with a large line icon, no stock photo). 4-up grid on desktop, 2×2 on tablet, 1 column on mobile.
+- **Home and Our Work › ministry area cards (4):** Feeding Programs = `feeding-program-serving-line`, Kakamega School for the Deaf = `feeding-food-delivery-to-school`, Church Building = `church-4-finished-church`, Ministry Support = navy card (no stock photo). 4-up grid on desktop, 2×2 on tablet, 1 column on mobile.
 - **Ministry area pages:** page header uses the area's lead image; sections use the other photos for that area. Feeding page: serving line, volunteers serving lunch, and all farm photos in the Harvest of Hope section. Deaf school page: food delivery, team dishing up meals. Church page: build sequence, ribbon-cutting, full church. Medical photos go in the Medical Clinics card under "More ways we serve".
 - **Church build sequence:** a 4-step horizontal strip (stack on mobile): foundation → walls → roof → finished, captioned "Foundation", "Walls", "Roof", "Complete". This is the clearest "your gift builds this" story on the site.
 - **Impact page:** food delivery, ribbon-cutting, medical camp banner.
@@ -234,7 +203,7 @@ Still needed (TODO): School for the Deaf students (beyond the delivery photo), p
 
 **Graphic motifs** (from the Facebook cover designs):
 - Faded globe watermark: the globe from the logo at ~10–15% opacity in orange-soft on cream sections, partially cropped off an edge.
-- Solid orange circle partly off-canvas, paired with a thin navy circle outline (2px) offset from it. Use at most once per page, in a corner, decorative (`aria-hidden`).
+- Solid orange circle partly off-canvas, paired with a thin navy circle outline (2px) offset from it. Use at most once per page, in a corner, as a decorative element.
 - Rounded "ribbon" shape in pale orange in a top corner.
 - Keep motifs behind content, never behind body text.
 
@@ -257,8 +226,8 @@ All: min height 48px, visible focus ring `3px solid` navy (on light) or white (o
 ### 7.2 Hero (home)
 Matches the live temporary homepage, which the owner approved.
 - Full viewport height (`min-height: 100svh`, minimum 640px), navy background.
-- **≥ 900px:** photo occupies the right ~64% (`left:36%`), with overlays: left fade from solid navy to transparent over the first 30%, light navy at top 20% for the header, navy fade at the bottom 12%. Text column on the left on navy.
-- **< 900px:** photo on top at 62svh (`object-position` tuned so faces show), fading to navy; text below on navy.
+- **Desktop:** photo occupies the right ~64%, with overlays: left fade from solid navy to transparent over the first 30%, light navy at top 20% for the header, navy fade at the bottom 12%. Text column on the left on navy.
+- **Mobile:** photo on top at roughly 62% of the viewport height, cropped to keep faces visible and fading to navy; text below on navy.
 - Content: eyebrow "Kakamega County, Kenya" (sky), display headline "Delivering hope, serving with purpose." (white), lead paragraph (white 88%), primary Donate + secondary-on-dark "See our work" (or Facebook).
 - Header sits transparent over the hero with the on-dark logo.
 
@@ -266,7 +235,7 @@ Matches the live temporary homepage, which the owner approved.
 Navy band or shorter photo hero (40–50vh) with overlay, eyebrow + H1 + one-sentence lead. Breadcrumb not needed.
 
 ### 7.4 Site header
-Height 80px desktop / 64px mobile. Transparent over heroes, then on scroll (after 40px) becomes solid navy with a subtle shadow. On pages without a photo hero it is white with the navy logo and navy links, orange Donate. Sticky. Active nav item: 2px orange underline.
+Height 80px desktop / 64px mobile. Transparent over heroes, then becomes solid navy with a subtle shadow as the visitor scrolls. On pages without a photo hero it is white with the navy logo and navy links, orange Donate. Sticky. Active nav item: 2px orange underline.
 
 ### 7.5 Pillar cards (Empower · Respond · Transform)
 Three columns (stack on mobile). Each: large Montserrat number "01/02/03" in orange-soft, title (H3), 2–3 sentence description from the Mission Statement, icon. White card on cream background, `--radius-md`, `--shadow-card`.
@@ -276,7 +245,7 @@ Card: 4:3 photo, eyebrow (location), H3, 1–2 sentences, text link. Grid of 3 (
 Full section (Our Work page): alternating photo-left/text-right rows, each with eyebrow, H2, paragraph, "what your gift does" bullet list, and a Donate button that can deep-link to a fund (TODO if the processor supports designations).
 
 ### 7.7 Impact stat
-Number (`--fs-stat`, orange on navy or navy on cream) + label (Roboto 500, 1rem) + optional one-line context. Displayed in a 4-up row on navy. Optional count-up on first view (disabled for reduced motion; final number must be in the HTML for no-JS and screen readers).
+Number (`--fs-stat`, orange on navy or navy on cream) + label (Roboto 500, 1rem) + optional one-line context. Displayed in a 4-up row on navy.
 
 ### 7.8 Story / quote block
 Sky or cream background, large opening quote mark in orange, quote in Montserrat 600 `--fs-h3`, attribution in Roboto `--fs-small`. Optional portrait photo, circle-cropped with a 4px navy ring (echoes the globe).
@@ -288,7 +257,7 @@ Centered, narrow container, italic Roboto at `--fs-lead`, reference in Montserra
 Full-width navy section with faded globe motif. H2 "Your gift delivers hope.", one sentence, primary Donate button, secondary "Other ways to give" text link (sky). Appears near the bottom of every page except Contact.
 
 ### 7.11 Contact form
-Fields: Name, Email, "How would you like to help?" (select: General question / Give / Go on a trip / Partner as a church / Pray / Other), Message. Labels above inputs, 48px min height, 1px `--cm-line` border, `--radius-sm`, focus border navy 2px. Netlify Forms with honeypot. Success message inline.
+Fields: Name, Email, "How would you like to help?" (select: General question / Give / Go on a trip / Partner as a church / Pray / Other), Message. Labels above inputs, 48px min height, 1px `--cm-line` border, `--radius-sm`, focus border navy 2px. Show an inline success message after submission.
 
 ### 7.12 Footer
 Navy background, white/sky text. Columns: on-dark badge or horizontal logo + one-line mission; Explore links; Connect (Facebook, contact form); Give (Donate button). Bottom row: nonprofit statement, ©, "Delivering Hope, Serving with Purpose."
@@ -297,7 +266,7 @@ Navy background, white/sky text. Columns: on-dark badge or horizontal logo + one
 
 ## 8. Page content
 
-Copy below is drawn from the Mission Statement, Brand Guidelines, 2025 Impact Review, the October 2026 grant application, and Courier Missions' own Facebook posts. It may be edited for length, but facts and numbers must not change. Keep all numbers in `src/data/` (they change as programs grow) and label current figures "as of 2026" where the page might be read later.
+Copy below is drawn from the Mission Statement, Brand Guidelines, 2025 Impact Review, the October 2026 grant application, and Courier Missions' own Facebook posts. It may be edited for length, but facts and numbers must not change. Figures change as programs grow; label current figures "as of 2026" where the page might be read later.
 
 **Key facts (single source for numbers):**
 | Fact | Value | Source |
@@ -313,16 +282,16 @@ Copy below is drawn from the Mission Statement, Brand Guidelines, 2025 Impact Re
 | Volunteers | 12, plus 3 Co-Directors; no paid U.S. staff | Grant application |
 | School lunch giving figure | "$10 a month provides lunch for 2 students" (Shiongo school lunch program; Facebook spells it "Shihingo") | Facebook post |
 
-### 8.1 Home `/`
+### 8.1 Home
 1. **Hero** (7.2). Lead: "We partner with local leaders in Kenya, Sierra Leone and the U.S. to feed children, build churches, and bring help and hope when it's needed most."
 2. **What we do** — eyebrow "Our mission", H2 "Practical help and spiritual hope.", mission statement (8.2). Then three pillar cards (Empower, Respond, Transform).
-3. **Our work** — the 4 ministry area cards (8.3, photos per 6.2): Feeding Programs · Kakamega School for the Deaf · Church Building · Disaster Relief. Link "See all our work →" to `/our-work`.
+3. **Our work** — the 4 ministry area cards (8.3, photos per 6.2): Feeding Programs · Kakamega School for the Deaf · Church Building · Ministry Support. Link "See all our work →" to Our Work.
 4. **Right now** — stats row on navy: **375** students fed at school · **50** farm workers employed · **4** medical clinics a year · **3** countries served.
-5. **Harvest of Hope feature** — split row: farm sign photo; H2 "Food, jobs and a future, from the same field."; 2–3 sentences on the cycle (8.4); link to `/our-work/feeding#harvest-of-hope`.
+5. **Harvest of Hope feature** — split row: farm sign photo; H2 "Food, jobs and a future, from the same field."; 2–3 sentences on the cycle (8.4); link to the Harvest of Hope section on Feeding Programs.
 6. **Story / quote** block (TODO: a real quote from a pastor, teacher, farm worker or volunteer).
 7. **Donate CTA band** (7.10).
 
-### 8.2 About `/about`
+### 8.2 About
 - Page header: H1 "About Courier Missions".
 - **Who we are:** "Courier Missions is a U.S.-based 501(c)(3) Christian nonprofit serving vulnerable communities through humanitarian aid, education, sustainable development and community partnership. We serve in the United States, Kenya and Sierra Leone, with a focus on poverty, food insecurity, limited access to education, and essential resources."
 - **Mission** (current version, which adds "employment"): "Courier Missions exists to serve communities and churches in need around the world by providing practical help and spiritual hope. We partner with local leaders to bring lasting transformation through humanitarian aid, volunteer service, education, employment, and discipleship. Our mission is to deliver hope, meet real needs, and empower communities to grow stronger and more resilient for the future."
@@ -341,14 +310,14 @@ Copy below is drawn from the Mission Statement, Brand Guidelines, 2025 Impact Re
   4. Our Co-Directors visit Kenya every year to see the work firsthand.
 - Donate CTA band.
 
-### 8.3 Our Work `/our-work`
+### 8.3 Our Work
 - **Header:** H1 "Our work". Lead: "We work alongside trusted local leaders who know their communities best. Our goal isn't only to meet urgent needs, but to build lasting, locally led solutions."
 - **Four ministry areas:** large cards (photos per 6.2), each with a 1–2 sentence summary and a link to its page:
   1. **Feeding Programs:** school meals in Kenya and food for children and families in Sierra Leone, supplied in part by our own farm.
   2. **Kakamega School for the Deaf:** a long-term partnership caring for 100 deaf students, from daily meals to beds and blankets.
   3. **Church Building:** building churches with local congregations as centers for worship, fellowship and community help.
-  4. **Disaster Relief:** supplies and practical help for families hit by disasters such as flooding.
-- **More ways we serve:** a smaller row of 4 compact cards (icon, title, 1–2 sentences, no separate page):
+  4. **Ministry Support:** disaster relief, student essentials, scholarships, medical clinics, and Bible and pastoral support.
+- **More ways we serve:** a smaller row of 4 compact cards (icon, title, 1–2 sentences) linking to the matching section of Ministry Support:
   - **Medical clinics:** quarterly outreach clinics in Kakamega offering consultations, medicines, screenings and health education. A 2025 multi-day clinic served more than 1,000 people. (Photo: blood pressure check.)
   - **Scholarships:** educational help, including nursing school, for students facing financial hardship.
   - **Pastors and Bibles:** pastoral training, discipleship, and Bibles for pastors and families.
@@ -357,11 +326,11 @@ Copy below is drawn from the Mission Statement, Brand Guidelines, 2025 Impact Re
 
 Every ministry area page uses the same layout: page header (photo, eyebrow, H1, lead) → "Why it matters" → "What we do" → specifics → numbers (if any) → photo gallery → area-specific donate CTA ("Give to [area]", designated if the processor allows) → links to the other three areas.
 
-### 8.4 Feeding Programs `/our-work/feeding`
+### 8.4 Feeding Programs
 - **Header:** eyebrow "Feeding Programs · Kenya & Sierra Leone". H1 "No child should have to learn hungry." Lead: "We provide school meals in Kakamega, Kenya, support food programs in Sierra Leone, and grow food on our own farm to keep it going."
 - **Why it matters:** Many schools in Kakamega don't offer meals, so children come to school hungry and struggle to learn. Where our programs run, enrollment has grown because families know their children will eat.
 - **Kenya: school meals.** 375 students in two schools: 275 at Shiongo Primary School and 100 at the Kakamega School for the Deaf (link to 8.5). Giving line: "$10 a month provides lunch for 2 students."
-- **Harvest of Hope farm** (`id="harvest-of-hope"`, the largest section on the page): eyebrow "Harvest of Hope", H2 "Planting seeds of faith, food and future." (the farm's sign line).
+- **Harvest of Hope farm** (the largest section on the page): eyebrow "Harvest of Hope", H2 "Planting seeds of faith, food and future." (the farm's sign line).
   - Lead: "Instead of only buying food, we grow it. Our farm feeds students, employs people who need work, and earns income to keep going."
   - **How it works:** a 4-step cycle diagram (a circle, the one place numbered steps make sense here): 1 **Grow** corn, beans and vegetables on leased farmland → 2 **Feed** our school programs and families in need through local churches → 3 **Employ** 50 local day laborers, prioritizing people facing unemployment and hardship → 4 **Reinvest** by selling part of each harvest at local markets to pay for seed, labor, land and the next planting.
   - **So far:** 2 acres · 50 workers · a profitable first harvest · a hand-dug well.
@@ -372,7 +341,7 @@ Every ministry area page uses the same layout: page header (photo, eyebrow, H1, 
 - **Gallery:** serving line, volunteers serving lunch, farm photos.
 - **CTA:** "Help feed a child." Donate.
 
-### 8.5 Kakamega School for the Deaf `/our-work/school-for-the-deaf`
+### 8.5 Kakamega School for the Deaf
 - **Header:** photo = food delivery to the school. Eyebrow "Kakamega, Kenya". H1 "Kakamega School for the Deaf." Lead: "A school we've stood alongside since our first year, caring for 100 students' daily needs."
 - **Why it matters:** TODO one or two sentences from the team on the school and its students (don't invent).
 - **What we do** (list with icons):
@@ -383,7 +352,7 @@ Every ministry area page uses the same layout: page header (photo, eyebrow, H1, 
 - **Gallery:** food delivery, team dishing up meals.
 - **CTA:** "Support the students." Donate.
 
-### 8.6 Church Building `/our-work/church-building`
+### 8.6 Church Building
 - **Header:** photo = finished church. Eyebrow "Church Building". H1 "Building churches that serve whole communities." Lead: "We partner with local congregations to build churches that become centers for worship, fellowship, outreach and practical help."
 - **Why it matters:** many congregations meet in temporary or unfinished buildings. A finished church gives a community a lasting place to gather, serve and care for its neighbors.
 - **How we build** (the main section; 4-step build sequence strip from 6.2, each step with a 1-sentence caption):
@@ -392,18 +361,21 @@ Every ministry area page uses the same layout: page header (photo, eyebrow, H1, 
   3. **Roof:** trusses and roofing make the building usable in every season.
   4. **Complete:** finishing work, then the congregation dedicates the building.
   Then a short paragraph on the partnership: the congregation and local leaders lead the project, Courier Missions provides funding and support, and progress is documented with photos, video updates and receipts.
-- **Church projects:** a list of projects, not separate pages. Store each as an entry in `src/data/churches.ts` with: name, community/location, status (Planned / Under construction / Completed), year, 1–3 sentences, optional photos. Render as cards with a status badge; Completed first. Seed with "1 church completed in 2025" and "more construction and renovation projects underway" as TODO entries until the team supplies names, locations and status.
+- **Church projects:** a list of projects, not separate pages. Each project includes its name, community/location, status (Planned / Under construction / Completed), year, 1–3 sentences, and optional photos. Display projects as cards with a status badge; completed projects first. Until the team supplies names, locations and status, show "1 church completed in 2025" and "more construction and renovation projects underway" as clearly marked TODO entries.
 - **Gallery:** ribbon-cutting, full church.
 - **CTA:** "Help build a church." Donate.
 
-### 8.7 Disaster Relief `/our-work/disaster-relief`
-- **Header:** navy header with icon until a photo exists. Eyebrow "Disaster Relief". H1 "Help when disaster strikes." Lead: "When floods and other disasters hit, we work with local organizations and volunteers to get supplies and practical help to families."
-- **What we do:** collect and distribute essential supplies, and help families through emergencies and recovery. Example: flood relief donation drives.
-- **How to help right now:** a simple, editable "Current needs" block (in `src/data/relief.ts`) that the team can turn on during a disaster, with what's needed and where to drop it off; hidden when empty.
-- **Gallery:** TODO photos.
-- **CTA:** "Give to disaster relief." Donate.
+### 8.7 Ministry Support
+- **Header:** navy header until a suitable photo exists. Eyebrow "Practical care". H1 "Ministry Support." Lead: "We respond to urgent needs and support people, churches, students, and families through practical care in the U.S. and around the world."
+- **Disaster Relief:** When floods and other disasters hit, work with local organizations and volunteers to collect and distribute essential supplies and help families through emergencies and recovery.
+- **LHS Closet (Lawrenceburg, Indiana):** hygiene products, personal care items, snacks and essentials for students in need, so they can come to school with dignity and ready to learn.
+- **Pastors and Bibles:** pastoral training, discipleship, and Bibles for pastors and families.
+- **Scholarships:** educational help, including nursing school, for students facing financial hardship.
+- **Medical clinics:** quarterly outreach clinics in Kakamega offering consultations, medicines, screenings and health education. A 2025 multi-day clinic served more than 1,000 people.
+- **How to help right now:** a simple, editable "Current needs" block that the team can turn on during a disaster, with what's needed and where to drop it off; hidden when empty.
+- **CTA:** "Your gift delivers hope." Donate.
 
-### 8.8 Impact `/impact`
+### 8.8 Impact
 Web version of the 2025 Impact Review:
 - Header: eyebrow "2025 Impact Review", H1 "A year of growth, faith and impact."
 - Executive summary (paraphrase or full text).
@@ -411,10 +383,10 @@ Web version of the 2025 Impact Review:
 - International impact (Kenya) list, U.S. impact list, Spiritual impact list.
 - Closing gratitude paragraph.
 - Scripture block: Galatians 6:9.
-- Link to download the PDF (provided as `assets/docs/2025-impact-review.pdf`; serve from `public/files/`).
-- Structure the data in `src/data/impact.ts` by year so 2026 can be added without layout changes.
+- Link to download the provided 2025 Impact Review PDF.
+- Organize the impact review by year so future annual reviews can be added without redesigning the page.
 
-### 8.9 Get Involved `/get-involved`
+### 8.9 Get Involved
 Four cards/sections:
 - **Give** — one-time or monthly giving; primary Donate. Use only confirmed giving figures: "$10 a month provides lunch for 2 students." Add others only when the team confirms them.
 - **Pray** — invitation to pray; optional email signup for prayer updates (TODO provider).
@@ -422,53 +394,25 @@ Four cards/sections:
 - **Partner as a church** — invite churches to partner; contact form preselected to "Partner as a church".
 Plus "Follow along" with the Facebook button.
 
-### 8.10 Contact `/contact`
-H1 "Get in touch", short line, contact form (7.11), Facebook. Do not publish a contact email or direct email link; route inquiries through the form. Configure Netlify Forms email notifications to send to heather@couriermissions.org. No mailing address on the site.
+### 8.10 Contact
+H1 "Get in touch", short line, contact form (7.11), Facebook. Do not publish a contact email or direct email link; route inquiries through the form. No mailing address on the site.
 
-### 8.11 404
+### 8.11 Not found
 "This page has gone on a mission." · links Home and Donate.
 
 ---
 
-## 9. Accessibility (target WCAG 2.2 AA)
-- Contrast rules in 4.1 are mandatory.
-- Skip-to-content link; semantic landmarks (`header`, `nav`, `main`, `footer`); one H1 per page; logical heading order.
-- Mobile menu: button with `aria-expanded`, focus trapped while open, Esc closes, focus returns to button.
-- All interactive targets ≥ 44×44px.
-- Alt text describes people and place, e.g. "A Courier Missions volunteer with students in Kakamega, Kenya." Decorative motifs `alt=""` / `aria-hidden="true"`.
-- Respect `prefers-reduced-motion`.
-- Forms: visible labels, errors in text (not color alone), `autocomplete` attributes.
-
-## 10. Performance & SEO
-- Lighthouse ≥ 95 on all four categories (mobile).
-- Hero image preloaded, `fetchpriority="high"`, ≤ 250KB AVIF at 1600w; other images lazy-loaded.
-- Per-page `<title>` ("Page | Courier Missions") and meta description; canonical URLs; Open Graph + Twitter card image (1200×630: hero photo with on-dark logo, TODO generate); `sitemap.xml`; `robots.txt`.
-- JSON-LD `NGO` / `Organization` schema with name, url, logo, and sameAs (Facebook).
-- Favicons + `site.webmanifest` (theme color `#183044`).
-
-## 11. Acceptance checklist
-- [ ] Donate button visible without scrolling on every page at 390px and 1280px widths.
-- [ ] All pages built per section 8 with the provided copy; no invented facts or numbers.
-- [ ] No white text on orange anywhere; contrast spot-checked.
-- [ ] Header transparent-over-hero and solid-on-scroll behaviors work; mobile menu accessible.
-- [ ] Looks correct at 360, 390, 768, 1024, 1280, 1600px.
-- [ ] Contact form submits to Netlify and shows success.
-- [ ] Netlify Forms email notifications are configured to send contact submissions to heather@couriermissions.org; do not display this address on the site.
-- [ ] Lighthouse mobile ≥ 95 across the board.
-- [ ] Deployed to Netlify; couriermissions.org serves the site over HTTPS, and .com and www redirect to it.
-
-## 12. Open items (TODO before or during build)
+## 9. Open business and content items (TODO)
 | Item | Notes |
 |---|---|
-| Domain setup | couriermissions.org is primary (section 3). Connect it to Netlify and add the .com redirect. |
 | School name spelling | Using "Shiongo Primary School" (grant spelling). Double-check before launch. |
 | Leadership headshots and short bios | About page (names and roles are in 8.2). |
 | Kenya partner name | Grant uses "Courier Mission CBO". Confirm exact registered name. |
-| More field photos | See section 6 list, plus Sierra Leone feeding and Disaster Relief (both currently have none). |
+| More field photos | See section 6 list, plus Sierra Leone feeding and Ministry Support. |
 | Church project list | Names, communities, status and year for each church (8.6). |
 | Deaf school details | A short description of the school and any other support to list (8.5). |
 | A real story/quote | Home and Impact pages. |
 | Other giving amounts | Only if the team confirms figures. |
 | Trip dates / how to apply | Get Involved page. |
 | Vector (SVG) logo files | Ask the brand designer; PNGs work meanwhile. |
-| Email newsletter provider (optional) | Prayer/updates signup. |
+| Email newsletter provider (optional) | Prayer and updates signup. |

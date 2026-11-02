@@ -24,12 +24,10 @@ export const ministryAreas = [
     alt: "A completed church building with green trim and an access ramp.",
   },
   {
-    title: "Disaster Relief",
+    title: "Ministry Support",
     summary:
-      "Supplies and practical help for families hit by disasters such as flooding.",
-    href: "/our-work/disaster-relief/",
-    image: "courier-missions-medical-camp-banner-2026.jpg",
-    alt: "The Courier Missions Shikoti Medical Camp 2026 banner.",
+      "Practical care through disaster response, student essentials, education, medical clinics, and support for pastors and families.",
+    href: "/our-work/ministry-support/",
   },
 ];
 
@@ -38,20 +36,24 @@ export const moreWaysWeServe = [
     title: "Medical clinics",
     summary:
       "Quarterly outreach clinics in Kakamega offering consultations, medicines, screenings and health education. A 2025 multi-day clinic served more than 1,000 people.",
+    href: "/our-work/ministry-support/#medical-clinics",
   },
   {
     title: "Scholarships",
     summary:
       "Educational help, including nursing school, for students facing financial hardship.",
+    href: "/our-work/ministry-support/#scholarships",
   },
   {
     title: "Pastors and Bibles",
     summary:
       "Pastoral training, discipleship, and Bibles for pastors and families.",
+    href: "/our-work/ministry-support/#pastors-and-bibles",
   },
   {
     title: "LHS Closet",
     summary:
       "Hygiene products, personal care items, snacks and essentials for students in need, so they can come to school with dignity and ready to learn.",
+    href: "/our-work/ministry-support/#lhs-closet",
   },
 ];

@@ -619,6 +619,23 @@ h3 {
   background: var(--cm-cream);
 }
 
+.page-hero--navy {
+  background: var(--cm-navy);
+  color: var(--cm-white);
+}
+
+.page-hero--navy .eyebrow {
+  color: var(--cm-sky);
+}
+
+.page-hero--navy h1 {
+  color: var(--cm-white);
+}
+
+.page-hero--navy .section-lead {
+  color: rgb(255 255 255 / 88%);
+}
+
 .page-hero__inner {
   display: grid;
   gap: var(--space-6);
@@ -645,6 +662,43 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.ministry-card__visual {
+  display: grid;
+  min-height: 14rem;
+  aspect-ratio: 4 / 3;
+  place-items: center;
+  border-radius: var(--radius-md);
+  background: var(--cm-navy);
+  color: var(--cm-sky);
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.support-programs {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.support-program {
+  scroll-margin-top: 6rem;
+}
+
+.support-program .eyebrow {
+  margin-bottom: var(--space-2);
+}
+
+.support-program h2 {
+  margin-bottom: var(--space-3);
+}
+
+.support-program p:last-child {
+  margin-bottom: 0;
 }
 
 .page-section {

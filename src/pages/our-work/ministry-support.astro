@@ -1,0 +1,54 @@
+---
+import SiteLayout from "../../layouts/BaseLayout.astro";
+import { site } from "../../data/site.js";
+import { reliefNeeds, supportPrograms } from "../../data/relief.js";
+---
+
+<SiteLayout title="Ministry Support" description="Learn about Courier Missions' disaster relief, LHS Closet, Bible and pastoral support, scholarships, and medical clinics.">
+  <section class="page-hero page-hero--navy">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content">
+        <p class="eyebrow">Practical care</p>
+        <h1>Ministry Support</h1>
+        <p class="section-lead">We respond to urgent needs and support people, churches, students, and families through practical care in the U.S. and around the world.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="support-programs">
+        {supportPrograms.map((program) => (
+          <article class="info-card support-program" id={program.id}>
+            {program.eyebrow && <p class="eyebrow">{program.eyebrow}</p>}
+            <h2>{program.title}</h2>
+            <p>{program.summary}</p>
+            {program.id === "disaster-relief" && reliefNeeds.length > 0 && (
+              <div class="page-cta">
+                <h3>Current needs</h3>
+                <ul class="list-check">
+                  {reliefNeeds.map((need) => <li>{need.label}</li>)}
+                </ul>
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="donate-cta section">
+    <div class="container">
+      <div class="donate-cta__inner">
+        <div>
+          <h2>Your gift delivers hope.</h2>
+          <p class="donate-cta__copy">Support practical care for students, families, churches, and communities.</p>
+        </div>
+        <div class="donate-cta__actions">
+          <a class="button button--primary" href={site.donateHref}>Donate</a>
+          <a class="text-link" href="/our-work/">Explore all our work</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</SiteLayout>
