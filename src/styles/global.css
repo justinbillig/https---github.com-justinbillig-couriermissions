@@ -32,6 +32,7 @@ svg {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -768,6 +769,13 @@ h3 {
 
 .ministry-area-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ministry-area-grid > .mini-card > img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  object-fit: cover;
 }
 
 .mini-card {
