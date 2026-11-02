@@ -135,7 +135,15 @@ Target WCAG 2.2 AA.
 - Responsive design breakpoints: 600px (large phone), 900px (tablet/desktop navigation), and 1200px (wide layout).
 - Avoid unnecessary runtime dependencies and third-party scripts.
 
-## 10. Netlify deployment and validation
+## 10. Git branching and deployment workflow
+
+- `main` is the production branch; commits merged to `main` deploy automatically to the production site.
+- `dev` is the development integration branch; commits merged to `dev` deploy automatically to the dev site.
+- Start each work item on a feature branch created from the latest `dev`, and merge completed feature branches into `dev`.
+- Do not merge or push feature work to `main` unless the owner explicitly requests a production merge.
+- When merging work into `dev`, report the outstanding changes on `dev` that have not reached `main`, counting commits in `dev` that are not in `main` and summarizing the associated work.
+
+## 11. Netlify deployment and validation
 
 - `netlify.toml` configures the build command, Node version, publish directory, and permanent redirects.
 - Keep domain-level aliases/redirects and Netlify Forms notification recipients configured in the Netlify site settings; these cannot be fully configured by static site files alone.
@@ -145,7 +153,7 @@ Target WCAG 2.2 AA.
 - Confirm Donate remains visible without scrolling at 390px and 1280px widths.
 - Test keyboard-only navigation, mobile menu open/close/focus behavior, form validation, and reduced-motion behavior.
 
-## 11. Outstanding technical setup
+## 12. Outstanding technical setup
 
 | Item | Required action |
 |---|---|
