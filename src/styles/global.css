@@ -984,6 +984,7 @@ h3 {
 }
 
 .gallery-grid figure {
+  aspect-ratio: 4 / 3;
   margin: 0;
   overflow: hidden;
   border-radius: var(--radius-lg);
@@ -1150,6 +1151,10 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .photo-carousel__slide:nth-child(3) {
     display: none;
   }
@@ -1160,6 +1165,28 @@ h3 {
 }
 
 @media (max-width: 599px) {
+  .section,
+  .page-section {
+    padding-block: 3rem;
+  }
+
+  .page-hero {
+    padding-top: 5rem;
+  }
+
+  .page-hero__inner {
+    gap: var(--space-5);
+    padding-block: var(--space-5);
+  }
+
+  .page-hero__content .section-lead {
+    margin-bottom: 0;
+  }
+
+  .page-hero__media {
+    aspect-ratio: 16 / 10;
+  }
+
   .photo-carousel__track {
     grid-template-columns: 1fr;
   }
@@ -1253,10 +1280,24 @@ h3 {
   .program-grid,
   .ministry-area-grid,
   .get-involved-cards,
+  .content-grid--split,
   .impact__grid,
   .stat-band__grid--two,
   .site-footer__main {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-grid,
+  .stat-band__grid:not(.stat-band__grid--two) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .content-grid {
+    gap: var(--space-5);
+  }
+
+  .info-card {
+    padding: var(--space-5);
   }
 
   .impact-stat {
