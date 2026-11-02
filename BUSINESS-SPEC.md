@@ -1,6 +1,6 @@
 # Courier Missions Website — Business & Design Spec
 
-Version 1.1 · November 2026
+Version 1.3 · November 2026
 Source material: Courier Missions Brand Guidelines, Final Mission Statement, 2025 Impact Review, the October 2026 grant application (organization overview, programs, leadership, Harvest of Hope), the Courier Missions Facebook page, and the temporary homepage currently live at couriermissions.com (`reference-temporary-homepage.html`).
 
 **Do not publish** anything from the grant application that isn't in this spec: no phone numbers, bank details, personal email addresses, the funder's name, grant amounts, or the organizational budget.
@@ -149,7 +149,7 @@ Rules:
 
 ## 6. Imagery & graphic motifs
 
-Use real field photos: people serving together, students, pastors, church builds, meals, and the clinic. Photos named `courier-missions-*.jpg` were taken from the Courier Missions Facebook page at the largest size Facebook serves. Never upscale images.
+Use real field photos: people serving together, students, pastors, church builds, meals, and the clinic. Photos named `courier-missions-*.jpg` and the photos in 6.1a were taken from the Courier Missions Facebook page at the largest size Facebook serves. Never upscale images.
 
 **Size classes** (by original pixel width; the long edge matters for portrait shots):
 - **L — Large** (≥ 1,500px wide): full-bleed heroes, page headers, wide feature rows.
@@ -184,19 +184,64 @@ Use real field photos: people serving together, students, pastors, church builds
 | `courier-missions-farm-picking-greens.jpg` | Woman harvesting leafy greens | M 1200×1200 | square | Farm gallery; card | A woman harvesting greens at the Harvest of Hope farm |
 | `courier-missions-farm-farmers-with-harvest.jpg` | Farmers holding freshly picked crops | S 899×899 | square | Farm gallery thumbnail; small card | Farmers holding their harvest |
 
+**6.1a Photos added November 2, 2026 (approved)**
+
+**Approved for website use** on behalf of Courier Missions on November 2, 2026, including the photos showing children (🧒) and the School for the Deaf (⚠️). The flags remain as reminders: follow 6.4 for those photos (no names, no identifying captions, dignified framing).
+
+| File | Subject (visual only) | Size | Orientation | Use it for | Alt text | Flags |
+|---|---|---|---|---|---|---|
+| `kakamega-school-for-the-deaf-students-eating-in-meal-hall.jpg` | Students in blue uniforms eating at long tables | L 2048×1536 | landscape | School for the Deaf page header; "Daily meals" | Students sharing a meal at long tables in a school dining hall | 🧒 ⚠️ |
+| `kakamega-school-for-the-deaf-students-at-long-tables.jpg` | Wide view of a dining hall with students at long tables | L 2016×1134 | landscape | School for the Deaf gallery | A school dining hall with students seated at long tables | 🧒 ⚠️ |
+| `deaf-school-mattress-delivery.jpg` | Adult holding a small child behind a red patterned mattress; school building behind | M 1392×3013 | tall portrait | School for the Deaf "Beds and blankets" (crop 4:5) | A new mattress delivered to the Kakamega School for the Deaf | 🧒 ⚠️ |
+| `bible-campaign-men-holding-bibles.jpg` | Four men indoors, each holding a Bible | L 1600×1200 | landscape | Pastors and Bibles card (Our Work) and section (Ministry Support) | Men holding new Bibles from the Courier Missions Bible campaign | — |
+| `bible-campaign-man-holding-bible-by-banner.jpg` | Man holding a Bible beside a Courier Missions banner | M 1200×1600 | portrait | Pastors and Bibles (portrait option) | A man holding a Bible beside a Courier Missions banner | — |
+| `bible-campaign-crowd-holding-bibles.jpg` | Street crowd, several people holding up books | L 1600×1200 | landscape | Pastors and Bibles gallery; Impact page | A crowd holding up Bibles | 🧒 |
+| `team-group-with-luggage.jpg` | Eleven people in Courier Missions T-shirts behind rows of suitcases, between Courier Missions banners | S 1079×370 | wide strip | Get Involved › Go (wide strip only) | A Courier Missions mission team with their luggage | — |
+| `church-dedication-group-at-plaque.jpg` | Group of adults in front of a wall plaque and U.S. flag | M 1079×810 | landscape | Church Building "Complete" step or a project card | A group gathered at a church dedication plaque | — |
+| `imarira-church-roof-trusses.jpg` | Brick walls with wooden roof trusses; stacked bricks | L 1600×1204 | landscape | Church project card: Imarira Church | Roof trusses going up on Imarira Church | — |
+| `imarira-church-worker-on-roof.jpg` | Worker in a hi-vis vest on a roof truss | L 1600×1204 | landscape | Church build sequence "Roof" step or Imarira card | A builder working on the roof of Imarira Church | — |
+| `church-in-the-slums-exterior.jpg` | Blue church building; sign reads "The Mwamba Church, Believers Revival Mission" | L 1600×1200 | landscape | Church project card: completed church | The completed Mwamba Church | — |
+| `church-in-the-slums-congregation-outside.jpg` | Adults and children outside in front of a "Mwamba Church" banner | L 1600×1200 | landscape | Church project card or gallery | A congregation gathered outside their church | 🧒 |
+| `flood-relief-supply-table.jpg` | Courier Missions-branded table under a canopy, stacked with water and supplies | L 2048×1536 | landscape | Ministry Support page header and Our Work card; Disaster Relief section | A Courier Missions table stacked with donated water and supplies for flood victims | — |
+| `flood-relief-volunteers-group.jpg` | Six adults beside tables and bins of supplies | L 2048×1536 | landscape | Disaster Relief section | Courier Missions volunteers with donated flood relief supplies | — |
+| `flood-relief-volunteer-sorting-supplies.jpg` | Woman arranging cleaning supplies beside a Courier Missions banner | L 2048×1152 | landscape | Disaster Relief section (second image) | A volunteer organizing donated cleaning supplies | — |
+| `kibera-outreach-meal-serving.jpg` | Women serving food from large pots to a queue of children | S 718×1599 | tall portrait | Feeding Programs "Community meals" (card only) | Volunteers serving a meal at a community outreach in Nairobi | 🧒 |
+| `kibera-outreach-food-line.jpg` | Long queue of children and adults holding plates | S 718×1599 | tall portrait | Feeding Programs gallery (thumbnail) | People lining up for a community meal in Nairobi | 🧒 |
+
+**6.1b Church project photos (added November 2, 2026)**
+
+Downloaded from Courier Missions' own Facebook posts that name a specific church: every photo in each post, at the largest size Facebook serves, JPEG. Files are named `<church>-<post subject>-<post year>-<post month>-<nn>.jpg`, numbered in the post's own order. The month is the post date, not necessarily when the photo was taken. Approved for website use under the site owner's statement of November 2, 2026 that Courier Missions has approval for its photos. Some photos show children (🧒): follow 6.4.
+
+| Church (as spelled in the post) | Files | Facebook post | Post date | What the post says | Notes |
+|---|---|---|---|---|---|
+| Wetai Church | `wetai-church-completion-2026-07-01` … `-28` (28 photos, 1280–2048px wide) | [post](https://www.facebook.com/couriermissions/posts/pfbid02aqbzdWUDjdbRo51Y3dxCvKYBCxK2UvGPjUkseMhAJDoHa4VEhV4Hv63HZam8Lgj8l) | Jul 5, 2026 | "…just completed the fourth church building project in Kakamega, Kenya! Complete with new flushing restroom facilities! … Today we celebrate the completion of the Wetai Church!" | Before-and-after set: 01–03 show the earlier structures; the rest show construction and the finished building. **The existing `courier-missions-church-1` to `-4` files are from this post, so they show Wetai Church.** 🧒 in a few. |
+| Wetai Church | `wetai-church-phase-three-2026-05-01` … `-05` (5) | [post](https://www.facebook.com/couriermissions/posts/pfbid031jUJ8DTfYiZxQo2YJQf21xVtfoEupeJqwqJLzP5PzBP7XKR4igNQu5QyzczeChUGl) | May 13, 2026 | "…continued progress of the Wetai Church project… all of our church construction projects are completed in 3 phases, and we are now officially entering Phase 3…" | Building under construction; one shows stacked bricks. |
+| Imarira Church | `imarira-church-phase-one-2026-07-01` … `-10` (10; 01, 03, 04, 05 are under 900px on the short side) | [post](https://www.facebook.com/couriermissions/posts/pfbid029kNxkxdKD6ueP5zcbXYQwZJ6aMfJLSzKcTwsk9mqQbT41TfdjiQiGUavurYcsCLSl) | Jul 25, 2026 | "Phase One of Imarira Church is officially underway! The foundation has been laid, and the block walls began going up… (In the background you can see the current church building that will be torn down…)" | 01–04 show people marking out the site; 08–10 show block walls going up. |
+| Imarira Church | `imarira-church-roofing-2026-08-01` … `-10` (10) | [post](https://www.facebook.com/couriermissions/posts/pfbid02XTTpYkc6DnX2hWcAXPysqn3rFnVSKKWH7kycssuSihaoHgxQPSmwmGWbykQaYtdsl) | Aug 5, 2026 | "The roof is going on! Roofing at Imarira Church began on Monday…" | Roof trusses on block walls; stacked blocks. Same post as the existing `imarira-church-roof-trusses` and `imarira-church-worker-on-roof` (not re-downloaded). |
+| Emarira Church | `emarira-church-new-project-2026-07-01` … `-06` (6) | [post](https://www.facebook.com/couriermissions/posts/pfbid02Ruwya6fb72GvkJrHVHW8REuVV559wERuhdvh4HzTL14YMbQoB7WH3CscuKSteKf7l) | Jul 18, 2026 | "…we completed our third church in early June! … Courier Missions is taking on a new project: Emarira Church in Emarira Village, Kakamega County … established after a crusade held at Emusala Market in 2019 … more than 80 people call Emarira Church their church home…" | The congregation's existing mud-walled building and members. 🧒 in some. **Spelling:** a week later the posts say "Imarira Church" (Phase One); confirm whether Emarira and Imarira are the same church. |
+| Mayungu Church | `mayungu-church-dedication-2026-10-01` … `-11` (11) | [post](https://www.facebook.com/couriermissions/posts/pfbid02nuy9zTE1D4ZhtvvsQMPpGpjyfPkJf412k9pJrapdoAiWjiDq7Wnp9bScPDDE6Xpml) | Oct 4, 2026 | "…dedicating the newly completed Mayungu Church… We concluded the service by serving a meal in which over 600 were served. 130 were children!" | Service inside, congregation, crowd outdoors, meal serving. 🧒 in several. |
+| Mayungo Church | `mayungo-church-near-completion-2026-04-01`, `-02` (2) | [post](https://www.facebook.com/couriermissions/posts/pfbid02CrFNEkg8EWomewUT12W8JG1jXRcUNHWAbaoPFUXaJJc1UG6nqv7DvHfFJz1NrkoGl) | Apr 28, 2026 | "…their pastor announced that their church would be remodeled and completed… the Mayungo Church is almost complete…" | Building exteriors. **Spelling:** "Mayungo" here, "Mayungu" at the dedication; confirm whether they're the same church. |
+| Church in the Slums | `church-in-the-slums-completion-2026-04-01` … `-07` (7) | [post](https://www.facebook.com/couriermissions/posts/pfbid0N6FcWfpA771YKQ5PRQSuwbCZePb3UKvNVPqynh9N93oTmSGEsxecFox3ThK7jh5Hl) | Apr 10, 2026 | "…complete the Church in the Slums, but also to bring electricity to it … the people in the community have started calling it The City on the Hill." | Includes the earlier metal structure, worship, and the new electrical box. 🧒 in some. Same post as the existing `church-in-the-slums-exterior` and `-congregation-outside` (not re-downloaded); the sign there reads "The Mwamba Church". |
+| The Believers Revival Mission | `believers-revival-mission-church-2025-09-01` … `-04` (4, 1280px) | [post](https://www.facebook.com/couriermissions/posts/pfbid02vckK3Zr1AehhduDGuEf582UQwXdQKRNMYABPjy52AABbDsKR5p31TukqzvfEyexql) | Sep 24, 2025 | "…come alongside The Believers Revival Mission church and help complete their church building … the very first funds… went straight into progress—raising the roof, strengthening the walls…" | Unfinished building, interior roof structure. |
+| Eshiongo Church | `eshiongo-church-bible-delivery-01.jpg` (2048×1536) | [photo post](https://www.facebook.com/photo.php?fbid=122170724660731451) | Jul 30, 2026 | "…delivered 30 Bibles to Eshiongo Church in the interior of Kakamega, Kenya. (The church building is the structure in the background)" | A large group with a Courier Missions banner in front of a tarp-covered structure. 🧒. Bible delivery, not a building project: use it on Pastors and Bibles. |
+
+**Not downloaded:** posts that don't name the church (the Oct 6, 2025 dedication, the "church project we adopted" post, the Feb 12, 2026 visit to a small church in the slums, and general posts about churches in Kakamega); the Sep 18, 2025 post announcing Pastor Corey's visit to The Believers Revival Mission (its photos can't be tied to that church); posts that are video only (Imarira congregation song, Wetai children's message, Mayungo project video); a ministry van photo and a blurry window shot. "Harvest City Church" is a U.S. church where a volunteer spoke, not a project.
+
 **6.2 Placement plan**
-- **Our Work ministry area cards (5):** Feeding Programs = `feeding-program-serving-line`, Kakamega School for the Deaf = `feeding-food-delivery-to-school`, Church Building = `church-4-finished-church`, Medical Clinics = `medical-blood-pressure-check`, Ministry Support = navy card (no stock photo). Use equal-size cards in a 3-column desktop grid, 2 columns on tablet, and 1 column on mobile.
+- **Our Work ministry area cards (5):** Feeding Programs = `feeding-program-serving-line`, Kakamega School for the Deaf = `feeding-food-delivery-to-school`, Church Building = `church-4-finished-church`, Medical Clinics = `medical-blood-pressure-check`, Ministry Support = `flood-relief-supply-table`. Use equal-size cards in a 3-column desktop grid, 2 columns on tablet, and 1 column on mobile.
 - **Home program highlights:** include a Medical Clinic highlight with the blood-pressure-check photo and a direct link to the Medical Clinics page.
-- **Ministry area pages:** page header uses the area's lead image; sections use the other photos for that area. Feeding page: serving line, volunteers serving lunch, and all farm photos in the Harvest of Hope section. Deaf school page: food delivery, team dishing up meals. Church page: build sequence, ribbon-cutting, full church. Medical Clinics page: blood-pressure check, patient consultation, mother and baby, pharmacy table.
+- **Ministry area pages:** page header uses the area's lead image; sections use the other photos for that area. Feeding page: serving line, volunteers serving lunch, and all farm photos in the Harvest of Hope section. Deaf school page: food delivery, team dishing up meals; students eating in the meal hall (header), students at long tables, and the mattress delivery (Beds and blankets). Church page: build sequence (Wetai Church; see 6.3), ribbon-cutting, full church, the dedication plaque group, and one project card per church in 6.1b. Each card uses one lead photo and opens a small gallery of that church's other photos (max 8 shown; pick the clearest). Suggested leads: Wetai = `courier-missions-church-4-finished-church`; Imarira = `imarira-church-roof-trusses`; Emarira = `emarira-church-new-project-2026-07-01` (the existing building, as the "before"); Mayungu = a dedication photo of the congregation; Church in the Slums = `church-in-the-slums-exterior`; The Believers Revival Mission = `believers-revival-mission-church-2025-09-01`. Ministry Support page: flood relief photos in Disaster Relief and Bible campaign photos in Pastors and Bibles. Feeding page: a small "Community meals" row with the two Kibera outreach photos. Get Involved › Go: the team-with-luggage strip. Medical Clinics page: blood-pressure check, patient consultation, mother and baby, pharmacy table.
 - **Church build sequence:** a 4-step horizontal strip (stack on mobile): foundation → walls → roof → finished, captioned "Foundation", "Walls", "Roof", "Complete". This is the clearest "your gift builds this" story on the site.
 - **Impact page:** food delivery, ribbon-cutting, medical camp banner.
 - **Story/quote block:** `medical-mother-and-baby` (circle-cropped, per 7.8).
 
-**6.3 Captions.** Captions may state only what is known: "Kakamega School for the Deaf" (food delivery), "Shikoti Medical Camp, 2026", "Harvest of Hope farm, Kakamega". Don't add dates or place names to the other photos unless the team confirms them.
+**6.3 Captions.** Captions may state only what is known: "Kakamega School for the Deaf" (food delivery), "Shikoti Medical Camp, 2026", "Harvest of Hope farm, Kakamega". For church photos, the church name and stage from the post are known (e.g. "Wetai Church, completed 2026", "Imarira Church, roofing"); use the post's spelling until the team confirms otherwise. The existing build-sequence photos (`courier-missions-church-1` to `-4`) are from the Wetai Church completion post, so the strip may be captioned "Wetai Church". Don't add other dates or place names unless the team confirms them.
 
 **6.4 People in photos.** Most photos show children. Don't name children, add identifying captions, or use a child's photo for a story it isn't from. Choose dignified moments (serving together, smiling, working), never distress.
 
-Still needed (TODO): School for the Deaf students (beyond the delivery photo), pastoral training, mattress/blanket distribution, Bible distribution, the farm well (the Facebook post about it is a video; grab a still), team group shot, leadership headshots, a U.S. outreach image, and full-resolution originals of the community meal and full-church photos.
+Approved photos (6.1a) now cover: School for the Deaf students, mattress distribution, Bible distribution, a team group shot, U.S. outreach (flood relief), church construction and completed churches, and community meals.
+
+Still needed (TODO): Sierra Leone feeding (photos exist on Facebook but need the Sierra Leone partner's permission), pastoral training, the farm well (the Facebook post is a video; grab a still), LHS Closet, scholarships, leadership headshots, and full-resolution originals of the community meal and full-church photos.
 
 **Photo treatments**
 - Full-bleed hero: photo with navy gradient overlays where text sits (see 7.2). Text never sits on unshaded photo.
@@ -340,6 +385,7 @@ Every ministry area page uses the same layout: page header (photo, eyebrow, H1, 
   - **Who runs it:** Project Manager Mark Abungana and a local agricultural specialist trained in farming, advised by Co-Director Sam Fox, an experienced U.S. farmer.
   - **Where it's going (a goal):** grow from 2 to 12 acres, with more wells, irrigation and storage, to start lunch programs at two more schools (about 500 more children, about 875 in all), employ more people, and become self-sustaining.
 - **Sierra Leone.** Through local partners, we help provide nutritious meals to children and families facing poverty and food insecurity. (TODO: partner/location, numbers, photo.)
+- **Community meals:** a small row using the Kibera outreach photos. Per the Courier Missions post of Aug 21, 2026, Courier Missions took part in an outreach in Katwekera, Kibera (Nairobi), where 8 volunteers helped feed more than 600 people.
 - **Gallery:** serving line, volunteers serving lunch, farm photos.
 - **CTA:** "Help feed a child." Donate.
 
@@ -351,7 +397,7 @@ Every ministry area page uses the same layout: page header (photo, eyebrow, H1, 
   - **Monthly food deliveries,** including fresh vegetables from the Harvest of Hope farm and special meals with meat.
   - **Beds and blankets:** 85 mattresses and blankets provided in 2025.
   - TODO confirm with the team: any other support to list (e.g. help with school security).
-- **Gallery:** food delivery, team dishing up meals.
+- **Gallery:** food delivery, team dishing up meals, students at long tables and the mattress delivery.
 - **CTA:** "Support the students." Donate.
 
 ### 8.6 Church Building
@@ -363,15 +409,22 @@ Every ministry area page uses the same layout: page header (photo, eyebrow, H1, 
   3. **Roof:** trusses and roofing make the building usable in every season.
   4. **Complete:** finishing work, then the congregation dedicates the building.
   Then a short paragraph on the partnership: the congregation and local leaders lead the project, Courier Missions provides funding and support, and progress is documented with photos, video updates and receipts.
-- **Church projects:** a list of projects, not separate pages. Each project includes its name, community/location, status (Planned / Under construction / Completed), year, 1–3 sentences, and optional photos. Display projects as cards with a status badge; completed projects first. Until the team supplies names, locations and status, show "1 church completed in 2025" and "more construction and renovation projects underway" as clearly marked TODO entries.
-- **Gallery:** ribbon-cutting, full church.
+- **Church projects:** a list of projects, not separate pages. Each project includes its name, community/location, status (Planned / Under construction / Completed), year, 1–3 sentences, and optional photos. Display projects as cards with a status badge; completed projects first. Until the team supplies names, locations and status, show "1 church completed in 2025" and "more construction and renovation projects underway" as clearly marked TODO entries. Draft project entries from Courier Missions' own Facebook posts (photos in 6.1b); the team confirms names, spellings and status before publishing:
+  - **Wetai Church:** Completed, July 2026. The fourth church building project in Kakamega, with new flushing restroom facilities; built in three phases.
+  - **Mayungu Church:** Completed and dedicated October 4, 2026; a meal for over 600 people (130 children) followed. (An April 2026 post calls a church "Mayungo Church", remodeled and almost complete; confirm whether it's the same one.)
+  - **Church in the Slums:** Completed, April 2026, with electricity, inside lights and security lights; the community calls it "The City on the Hill". Its sign reads "The Mwamba Church".
+  - **Imarira Church:** Under construction. Phase One (foundation, block walls) began July 2026; roofing began August 2026. The congregation's current building will be replaced. (Possibly the same church as "Emarira Church" below; confirm.)
+  - **Emarira Church:** Announced July 2026 as a new project in Emarira Village, Kakamega County. Founded after a 2019 crusade at Emusala Market; the congregation first met under a tree; more than 80 members.
+  - **The Believers Revival Mission:** Courier Missions helped complete their building (roof and walls, September 2025). Whether the October 6, 2025 dedication was this church is unconfirmed.
+  - A July 2026 post says Courier Missions "completed our third church in early June" 2026; which church that is isn't stated.
+- **Gallery:** ribbon-cutting, full church, the dedication plaque group. Project galleries come from 6.1b.
 - **CTA:** "Help build a church." Donate.
 
 ### 8.7 Ministry Support
-- **Header:** navy header until a suitable photo exists. Eyebrow "Practical care". H1 "Ministry Support." Lead: "We respond to urgent needs and support people, churches, students, and families through practical care in the U.S. and around the world."
-- **Disaster Relief:** When floods and other disasters hit, work with local organizations and volunteers to collect and distribute essential supplies and help families through emergencies and recovery.
+- **Header:** photo = `flood-relief-supply-table`. Eyebrow "Practical care". H1 "Ministry Support." Lead: "We respond to urgent needs and support people, churches, students, and families through practical care in the U.S. and around the world."
+- **Disaster Relief:** When floods and other disasters hit, work with local organizations and volunteers to collect and distribute essential supplies and help families through emergencies and recovery. Example (per the Courier Missions post of Aug 19, 2026): donated supplies filled over 25 totes for residents affected by flooding in Connersville and Metamora, Indiana. Photos: flood relief (6.1a).
 - **LHS Closet (Lawrenceburg, Indiana):** hygiene products, personal care items, snacks and essentials for students in need, so they can come to school with dignity and ready to learn.
-- **Pastors and Bibles:** pastoral training, discipleship, and Bibles for pastors and families.
+- **Pastors and Bibles:** pastoral training, discipleship, and Bibles for pastors and families. Photo: `bible-campaign-men-holding-bibles`; also `eshiongo-church-bible-delivery-01` (30 Bibles delivered to Eshiongo Church, July 2026).
 - **Scholarships:** educational help, including nursing school, for students facing financial hardship.
 - **How to help right now:** a simple, editable "Current needs" block that the team can turn on during a disaster, with what's needed and where to drop it off; hidden when empty.
 - **CTA:** "Your gift delivers hope." Donate.
@@ -398,7 +451,7 @@ Web version of the 2025 Impact Review:
 Four cards/sections:
 - **Give** — one-time or monthly giving; primary Donate. Use only confirmed giving figures: "$10 a month provides lunch for 2 students." Add others only when the team confirms them.
 - **Pray** — invitation to pray; optional email signup for prayer updates (TODO provider).
-- **Go** — the annual mission trip to Kenya; contact form preselected to "Go on a trip". TODO trip dates.
+- **Go** — the annual mission trip to Kenya; contact form preselected to "Go on a trip". Photo: `team-group-with-luggage` (wide strip). TODO trip dates.
 - **Partner as a church** — invite churches to partner; contact form preselected to "Partner as a church".
 Plus "Follow along" with the Facebook button.
 
@@ -416,8 +469,11 @@ H1 "Get in touch", short line, contact form (7.11), Facebook. Do not publish a c
 | School name spelling | Using "Shiongo Primary School" (grant spelling). Double-check before launch. |
 | Leadership headshots and short bios | About page (names and roles are in 8.2). |
 | Kenya partner name | Grant uses "Courier Mission CBO". Confirm exact registered name. |
-| More field photos | See section 6 list, plus Sierra Leone feeding and Ministry Support. |
-| Church project list | Names, communities, status and year for each church (8.6). |
+| Photo caption facts | Which church the dedication-plaque photo shows; who took the Kibera photos; names for the team photo (if wanted). |
+| Facebook source links | Record the post URLs and dates for the photos in 6.1a. |
+| More field photos | See section 6 "Still needed": Sierra Leone (needs partner permission), pastoral training, farm well, LHS Closet, scholarships, leadership headshots. |
+| Church project list | Confirm the draft entries in 8.6: names, communities, status and year. |
+| Church name spellings | Imarira vs. Emarira (and "Imarira Believers Church"); Mayungo vs. Mayungu; "Church in the Slums" vs. "The Mwamba Church" on its sign. Which church was "our third church" (completed June 2026), and which was dedicated on Oct 6, 2025. |
 | Deaf school details | A short description of the school and any other support to list (8.5). |
 | A real story/quote | Home and Impact pages. |
 | Other giving amounts | Only if the team confirms figures. |
