@@ -8,3 +8,7 @@ This repo is the full Courier Missions website. BUSINESS-SPEC.md is the source o
 - Accessibility: no white text on orange; primary buttons are navy text on orange (BUSINESS-SPEC.md §4.1).
 - Keep editable copy and numbers in src/data/ so the owner can change them without touching layout.
 - The site owner is a developer. Keep responses concise and focus on executing the requested work; do not explain routine changes. Do not start the Astro dev server unless explicitly asked; the owner deploys to the dev site to review.
+## Brand voice
+All website copy (headings, paragraphs, buttons, captions, alt text, error messages) follows BRAND-VOICE.md. Read it before writing or editing any copy.
+- Treat the wording quoted in BUSINESS-SPEC.md as a draft: keep its facts, numbers and names exactly, but rewrite the words in the BRAND-VOICE.md voice.
+- Never add facts, scenes, quotes or numbers that aren't in BUSINESS-SPEC.md, BRAND-VOICE.md, or a source they cite.

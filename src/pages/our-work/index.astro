@@ -15,13 +15,13 @@ const areaPhotos = {
 };
 ---
 
-<SiteLayout title="Our Work" description="We work alongside trusted local leaders to feed children, build churches, provide medical clinics, and respond to disasters with practical help and spiritual hope.">
+<SiteLayout title="Our Work" description="From school meals in Kakamega to flood relief in Indiana, see the work Courier Missions does alongside local churches and leaders.">
   <section class="page-hero">
     <div class="container page-hero__inner">
       <div class="page-hero__content">
         <p class="eyebrow">Our work</p>
         <h1>Our work</h1>
-        <p class="section-lead">We work alongside trusted local leaders who know their communities best. Our goal isn't only to meet urgent needs, but to build lasting, locally led solutions.</p>
+        <p class="section-lead">In Kakamega, 375 students are part of school feeding programs, and work has begun on a permanent church in Shiango. From Kenya to Indiana, we come alongside local leaders to meet needs and share hope.</p>
       </div>
       <div class="page-hero__media">
         <img src={feedingImage.src} alt="Volunteers serving a meal to students and an elder in Kenya." width={feedingImage.width} height={feedingImage.height} loading="eager" />
@@ -44,26 +44,26 @@ const areaPhotos = {
             <div style="padding-top: 1rem;">
               <h3>{area.title}</h3>
               <p>{area.summary}</p>
-              <a class="text-link" href={area.href}>Learn more <span aria-hidden="true">→</span></a>
+              <a class="text-link" href={area.href}>See this work <span aria-hidden="true">→</span></a>
             </div>
           </article>
         ))}
       </div>
-      <a class="text-link" href="/our-work/ministry-support/">Explore Ministry Support <span aria-hidden="true">→</span></a>
+      <a class="text-link" href="/our-work/ministry-support/">See more ways we serve <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
   <section class="page-section" style="background: var(--cm-cream);">
     <div class="container">
       <p class="eyebrow">More ways we serve</p>
-      <h2 class="section-heading">Practical care in many forms.</h2>
+      <h2 class="section-heading">There’s more to the work.</h2>
       <div class="card-grid">
         {moreWaysWeServe.map((item, index) => (
           <article class="mini-card">
             <span class="mini-card__icon">{index + 1}</span>
             <h3>{item.title}</h3>
             <p>{item.summary}</p>
-            <a class="text-link" href={item.href}>Learn more <span aria-hidden="true">→</span></a>
+            <a class="text-link" href={item.href}>See this work <span aria-hidden="true">→</span></a>
           </article>
         ))}
       </div>
@@ -74,8 +74,8 @@ const areaPhotos = {
     <div class="container">
       <div class="donate-cta__inner">
         <div>
-          <h2>Your gift delivers hope.</h2>
-          <p class="donate-cta__copy">Give to support feeding, church building, education, and immediate relief.</p>
+          <h2>You can help carry the work forward.</h2>
+          <p class="donate-cta__copy">Your gift helps with meals, church building, school essentials and relief when disaster hits. Gifts go to our general fund.</p>
         </div>
         <div class="donate-cta__actions">
           <a class="button button--primary" href={site.donateHref}>Donate</a>

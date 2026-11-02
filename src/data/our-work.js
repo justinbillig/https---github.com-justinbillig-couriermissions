@@ -4,7 +4,7 @@ export const ministryAreas = [
   {
     title: "Feeding Programs",
     summary:
-      "School meals in Kenya and food for children and families in Sierra Leone, supplied in part by our own farm.",
+      "At two schools in Kakamega, 375 students are part of the feeding program. Harvest of Hope grows food for the meals, too.",
     href: "/our-work/feeding/",
     image: "feeding-program-serving-line.jpg",
     alt: "Volunteers serving a meal to students and an elder in Kenya.",
@@ -12,7 +12,7 @@ export const ministryAreas = [
   {
     title: "Kakamega School for the Deaf",
     summary:
-      "A long-term partnership caring for 100 deaf students, from daily meals to beds and blankets.",
+      "Every day, 100 students receive meals. Monthly food deliveries, mattresses and blankets help meet other daily needs.",
     href: "/our-work/school-for-the-deaf/",
     image: "courier-missions-feeding-food-delivery-to-school.jpg",
     alt: "Sacks of food delivered to students at the Kakamega School for the Deaf.",
@@ -20,7 +20,7 @@ export const ministryAreas = [
   {
     title: "Church Building",
     summary:
-      "Building churches with local congregations as centers for worship, fellowship and community help.",
+      "Five church projects were reported complete in 2026. Shiango is the current building project.",
     href: "/our-work/church-building/",
     image: "courier-missions-church-4-finished-church.jpg",
     alt: "A completed church building with green trim and an access ramp.",
@@ -29,7 +29,7 @@ export const ministryAreas = [
   {
     title: "Ministry Support",
     summary:
-      "Practical care through disaster response, student essentials, education, and support for pastors and families.",
+      "Flood relief in Indiana, school essentials in Lawrenceburg, Bibles and scholarships. Help for people close to home and farther away.",
     href: "/our-work/ministry-support/",
   },
 ];
@@ -38,19 +38,19 @@ export const moreWaysWeServe = [
   {
     title: "Scholarships",
     summary:
-      "Educational help, including nursing school, for students facing financial hardship.",
+      "A scholarship can help keep school in reach for students facing financial hardship, including those pursuing nursing.",
     href: "/our-work/ministry-support/#scholarships",
   },
   {
     title: "Pastors and Bibles",
     summary:
-      "Pastoral training, discipleship, and Bibles for pastors and families.",
+      "In July 2026, 30 Bibles were delivered to Eshiongo Church. We also support pastoral training and discipleship.",
     href: "/our-work/ministry-support/#pastors-and-bibles",
   },
   {
     title: "LHS Closet",
     summary:
-      "Hygiene products, personal care items, snacks and essentials for students in need, so they can come to school with dignity and ready to learn.",
+      "In Lawrenceburg, Indiana, students can find hygiene products, personal care items, snacks and other essentials for school.",
     href: "/our-work/ministry-support/#lhs-closet",
   },
 ];

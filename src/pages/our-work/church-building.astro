@@ -7,13 +7,13 @@ import worshipImage from "../../../assets/photos/courier-missions-church-6-full-
 import { churchProjects } from "../../data/churches.js";
 ---
 
-<SiteLayout title="Church Building" description="We partner with local congregations to build churches that become centers for worship, fellowship, and community help." heroImage={churchImage}>
+<SiteLayout title="Church Building" description="Five church projects were reported complete in 2026. Work began on a permanent church for the Shiango congregation in October." heroImage={churchImage}>
   <section class="page-hero">
     <div class="container page-hero__inner">
       <div class="page-hero__content">
         <p class="eyebrow">Church Building</p>
-        <h1>Building churches that serve whole communities.</h1>
-        <p class="section-lead">We partner with local congregations to build churches that become centers for worship, fellowship, outreach and practical help.</p>
+        <h1>Five churches finished. Shiango is underway.</h1>
+        <p class="section-lead">Congregations lead the work. We come alongside them as they build places to worship, gather and serve their neighbors.</p>
       </div>
       <div class="page-hero__media">
         <img src={churchImage.src} alt="A completed church building with green trim and an access ramp." width={churchImage.width} height={churchImage.height} loading="eager" />
@@ -25,16 +25,15 @@ import { churchProjects } from "../../data/churches.js";
     <div class="container content-grid content-grid--split">
       <div>
         <p class="eyebrow">Why it matters</p>
-        <h2>Many congregations meet in temporary or unfinished buildings.</h2>
-        <p>A finished church gives a community a lasting place to gather, serve and care for its neighbors.</p>
+        <h2>In Shiango, the congregation had been meeting under sticks and tarps.</h2>
+        <p>In October 2026, work began on a permanent church. The first step was the foundation.</p>
       </div>
       <div class="info-card">
-        <p class="eyebrow">How we build</p>
+        <p class="eyebrow">How a church takes shape</p>
         <ol>
-          <li><strong>Foundation:</strong> local leaders and builders lay the foundation and framing.</li>
-          <li><strong>Walls:</strong> walls go up, built by local workers.</li>
-          <li><strong>Roof:</strong> trusses and roofing make the building usable in every season.</li>
-          <li><strong>Complete:</strong> finishing work, then the congregation dedicates the building.</li>
+          <li><strong>First, the foundation and walls.</strong> Local builders take the walls to lintel level.</li>
+          <li><strong>Then, the roof and floor.</strong> The building takes shape and becomes more usable.</li>
+          <li><strong>Finally, the finishing work.</strong> Local workers add windows, doors, plaster and paint.</li>
         </ol>
       </div>
     </div>
@@ -43,12 +42,12 @@ import { churchProjects } from "../../data/churches.js";
   <section class="page-section" style="background: var(--cm-cream);">
     <div class="container">
       <p class="eyebrow">Our partnership</p>
-      <p class="section-lead">The congregation and local leaders lead the project, Courier Missions provides funding and support, and progress is documented with photos, video updates and receipts.</p>
+      <p class="section-lead">Local leaders and the congregation set the pace. We help fund the work and keep you up to date with photos, videos and receipts.</p>
       <div class="info-card" style="margin-top: 1.5rem;">
-        <h2>Built with local partners.</h2>
-        <p>A church and restroom facility costs about $15,000. A typical facility includes a water tank, lockable stalls with a sink, toilet and shower, handwashing stations, and electricity.</p>
-        <p>Local contractors and workers are hired for daily wages. Construction moves through three phases: foundation and walls; roofing and floor; then windows, doors, plastering and painting.</p>
-        <p>This is an approximate project cost, not a promise that a gift through our general donation link is restricted to a specific project.</p>
+        <h2>Built by local hands.</h2>
+        <p>A church and restroom facility costs about $15,000. A typical facility includes a water tank, two or three lockable stalls—each with a sink, toilet and shower head—handwashing stations, and electricity.</p>
+        <p>Local contractors and workers earn daily wages. Construction happens in three phases: foundation and walls; roof and floor; then windows, doors, plaster and paint.</p>
+        <p>That’s an approximate cost. Gifts through our donation link go to the general fund, not a specific project.</p>
       </div>
     </div>
   </section>
@@ -56,7 +55,7 @@ import { churchProjects } from "../../data/churches.js";
   <section class="page-section">
     <div class="container">
       <p class="eyebrow">Church projects</p>
-      <h2 class="section-heading">Current and completed church work.</h2>
+      <h2 class="section-heading">The work so far.</h2>
       <div class="project-grid">
         {churchProjects.map((project) => (
           <article class="project-card">
@@ -85,12 +84,12 @@ import { churchProjects } from "../../data/churches.js";
     <div class="container">
       <div class="donate-cta__inner">
         <div>
-          <h2>Help build a church.</h2>
-          <p class="donate-cta__copy">Your gift helps local congregations grow into welcoming places of worship, care, and hope.</p>
+          <h2>Come alongside a congregation.</h2>
+          <p class="donate-cta__copy">Your gift helps us work with congregations as they build. Gifts go to our general fund.</p>
         </div>
         <div class="donate-cta__actions">
           <a class="button button--primary" href={site.donateHref}>Donate</a>
-          <a class="text-link" href="/our-work/">Explore all ministry areas</a>
+          <a class="text-link" href="/our-work/">See all the work</a>
         </div>
       </div>
     </div>

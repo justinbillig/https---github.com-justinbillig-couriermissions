@@ -7,25 +7,25 @@ export const supportPrograms = [
     id: "disaster-relief",
     title: "Disaster Relief",
     summary:
-      "When floods and other disasters hit, we work with local organizations and volunteers to collect and distribute essential supplies and help families through emergencies and recovery.",
+      "In August 2026, more than 25 totes of donated supplies went to residents affected by flooding in Connersville and Metamora, Indiana. When disaster hits, we come alongside local people to help.",
   },
   {
     id: "lhs-closet",
     title: "LHS Closet",
     eyebrow: "Lawrenceburg, Indiana",
     summary:
-      "The LHS Closet provides hygiene products, personal care items, snacks and essentials for students in need, so they can come to school with dignity and ready to learn.",
+      "Students can find hygiene products, personal care items, snacks and other essentials at the LHS Closet. A little help can make it easier to come to school ready to learn.",
   },
   {
     id: "pastors-and-bibles",
     title: "Pastors and Bibles",
     summary:
-      "We support pastoral training and discipleship, and provide Bibles for pastors and families.",
+      "In July 2026, 30 Bibles were delivered to Eshiongo Church. We also support pastoral training and discipleship with local churches.",
   },
   {
     id: "scholarships",
     title: "Scholarships",
     summary:
-      "Educational help, including nursing school, for students facing financial hardship.",
+      "Scholarships help students facing financial hardship continue their education, including nursing school.",
   },
 ];
