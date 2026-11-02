@@ -45,7 +45,7 @@ src/
   layouts/BaseLayout.astro        # <head>, header, footer, skip link
   components/                     # see section 7
   pages/ index, about, our-work/ (index, feeding, school-for-the-deaf, church-building, disaster-relief), impact, get-involved, contact, 404
-  data/ site.ts (links, email, nav) · impact.ts (numbers) · programs.ts · churches.ts · relief.ts
+  data/ site.ts (links, nav) · impact.ts (numbers) · programs.ts · churches.ts · relief.ts
   styles/tokens.css · global.css
 public/ favicons, og image
 src/assets/ logo/*, photos/*
@@ -58,7 +58,7 @@ src/assets/ logo/*, photos/*
 | Page | Path | Purpose |
 |---|---|---|
 | Home | `/` | Hero, what we do, impact snapshot, story, donate CTA |
-| About | `/about` | Mission, vision, philosophy (Empower, Respond, Transform), beliefs, leadership |
+| About | `/about` | Mission, vision, philosophy (Empower, Respond, Transform), leadership, stewardship |
 | Our Work | `/our-work` | Overview of the four ministry areas, plus "More ways we serve" (8.3) |
 | Feeding Programs | `/our-work/feeding` | Kenya and Sierra Leone feeding, including the Harvest of Hope farm (8.4) |
 | Kakamega School for the Deaf | `/our-work/school-for-the-deaf` | Everything we do with the Deaf school (8.5) |
@@ -67,7 +67,7 @@ src/assets/ logo/*, photos/*
 | `/harvest-of-hope` | redirect | 301 to `/our-work/feeding#harvest-of-hope` (short link for print and social) |
 | Impact | `/impact` | 2025 Impact Review in web form, yearly updates over time |
 | Get Involved | `/get-involved` | Give, pray, go, partner as a church |
-| Contact | `/contact` | Form, email, Facebook |
+| Contact | `/contact` | Contact form and Facebook |
 | Donate | external link | Opens processor (same tab) |
 | 404 | `/404` | Friendly not-found with links home and to Donate |
 
@@ -76,7 +76,7 @@ src/assets/ logo/*, photos/*
 
 **Primary domain:** couriermissions.org. couriermissions.com (and www of both) 301-redirect to https://couriermissions.org, preserving the path. Use .org in canonical URLs, sitemap, Open Graph and JSON-LD.
 
-**Footer:** on-dark logo, one-line mission, nav links repeated, Facebook link, email, "Courier Missions is a 501(c)(3) nonprofit organization, EIN 33-1569087. Gifts are tax-deductible as allowed by law.", © year.
+**Footer:** on-dark logo, one-line mission, nav links repeated, Facebook link to https://facebook.com/couriermissions, contact form link, "Courier Missions is a 501(c)(3) nonprofit organization, EIN 33-1569087. Gifts are tax-deductible as allowed by law.", © year.
 
 ---
 
@@ -291,7 +291,7 @@ Full-width navy section with faded globe motif. H2 "Your gift delivers hope.", o
 Fields: Name, Email, "How would you like to help?" (select: General question / Give / Go on a trip / Partner as a church / Pray / Other), Message. Labels above inputs, 48px min height, 1px `--cm-line` border, `--radius-sm`, focus border navy 2px. Netlify Forms with honeypot. Success message inline.
 
 ### 7.12 Footer
-Navy background, white/sky text. Columns: on-dark badge or horizontal logo + one-line mission; Explore links; Connect (Facebook, email); Give (Donate button). Bottom row: nonprofit statement, ©, "Delivering Hope, Serving with Purpose."
+Navy background, white/sky text. Columns: on-dark badge or horizontal logo + one-line mission; Explore links; Connect (Facebook, contact form); Give (Donate button). Bottom row: nonprofit statement, ©, "Delivering Hope, Serving with Purpose."
 
 ---
 
@@ -339,7 +339,6 @@ Copy below is drawn from the Mission Statement, Brand Guidelines, 2025 Impact Re
   2. Regular video updates from the field showing the work as it happens.
   3. Receipts required for every purchase and every worker's wage.
   4. Our Co-Directors visit Kenya every year to see the work firsthand.
-- **Statement of faith:** TODO (optional).
 - Donate CTA band.
 
 ### 8.3 Our Work `/our-work`
@@ -424,7 +423,7 @@ Four cards/sections:
 Plus "Follow along" with the Facebook button.
 
 ### 8.10 Contact `/contact`
-H1 "Get in touch", short line, contact form (7.11), email, Facebook. No mailing address on the site.
+H1 "Get in touch", short line, contact form (7.11), Facebook. Do not publish a contact email or direct email link; route inquiries through the form. Configure Netlify Forms email notifications to send to heather@couriermissions.org. No mailing address on the site.
 
 ### 8.11 404
 "This page has gone on a mission." · links Home and Donate.
@@ -444,7 +443,7 @@ H1 "Get in touch", short line, contact form (7.11), email, Facebook. No mailing 
 - Lighthouse ≥ 95 on all four categories (mobile).
 - Hero image preloaded, `fetchpriority="high"`, ≤ 250KB AVIF at 1600w; other images lazy-loaded.
 - Per-page `<title>` ("Page | Courier Missions") and meta description; canonical URLs; Open Graph + Twitter card image (1200×630: hero photo with on-dark logo, TODO generate); `sitemap.xml`; `robots.txt`.
-- JSON-LD `NGO` / `Organization` schema with name, url, logo, sameAs (Facebook), email.
+- JSON-LD `NGO` / `Organization` schema with name, url, logo, and sameAs (Facebook).
 - Favicons + `site.webmanifest` (theme color `#183044`).
 
 ## 11. Acceptance checklist
@@ -454,16 +453,14 @@ H1 "Get in touch", short line, contact form (7.11), email, Facebook. No mailing 
 - [ ] Header transparent-over-hero and solid-on-scroll behaviors work; mobile menu accessible.
 - [ ] Looks correct at 360, 390, 768, 1024, 1280, 1600px.
 - [ ] Contact form submits to Netlify and shows success.
+- [ ] Netlify Forms email notifications are configured to send contact submissions to heather@couriermissions.org; do not display this address on the site.
 - [ ] Lighthouse mobile ≥ 95 across the board.
 - [ ] Deployed to Netlify; couriermissions.org serves the site over HTTPS, and .com and www redirect to it.
 
 ## 12. Open items (TODO before or during build)
 | Item | Notes |
 |---|---|
-| Donation link / processor | Same link as the live temporary site. Check whether it supports designated funds (feeding, farm, church building) and monthly giving. |
-| Facebook page URL | facebook.com/couriermissions |
 | Domain setup | couriermissions.org is primary (section 3). Connect it to Netlify and add the .com redirect. |
-| Public contact email | Undecided. Recommend a general inbox (e.g. info@couriermissions.org) rather than a personal address. Use a placeholder in `site.ts`. |
 | School name spelling | Using "Shiongo Primary School" (grant spelling). Double-check before launch. |
 | Leadership headshots and short bios | About page (names and roles are in 8.2). |
 | Kenya partner name | Grant uses "Courier Mission CBO". Confirm exact registered name. |

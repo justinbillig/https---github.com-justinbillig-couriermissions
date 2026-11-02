@@ -1,5 +1,6 @@
 ---
 import SiteLayout from "../../layouts/BaseLayout.astro";
+import { site } from "../../data/site.js";
 import { reliefNeeds } from "../../data/relief.js";
 ---
 
@@ -51,11 +52,10 @@ import { reliefNeeds } from "../../data/relief.js";
           <p class="donate-cta__copy">Your support helps families recover with food, supplies, and practical care in the middle of crisis.</p>
         </div>
         <div class="donate-cta__actions">
-          <a class="button button--primary" href="#donation-link-todo">Donate</a>
+          <a class="button button--primary" href={site.donateHref}>Donate</a>
           <a class="text-link" href="/our-work/">Other ministry areas</a>
         </div>
       </div>
-      <p class="donate-placeholder" id="donation-link-todo">TODO: Add the confirmed donation processor link before publishing. The current Donate buttons are placeholders and do not process gifts.</p>
     </div>
   </div>
 </SiteLayout>

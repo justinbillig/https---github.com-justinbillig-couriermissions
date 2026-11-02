@@ -22,10 +22,9 @@ import { site } from "../data/site.js";
     <div>
       <h2 class="site-footer__heading">Connect</h2>
       <ul class="site-footer__links">
-        <li><a href={site.facebookHref}>Facebook <span class="site-footer__todo"> (TODO)</span></a></li>
-        <li><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></li>
+        <li><a href={site.facebookHref} target="_blank" rel="noreferrer">Facebook</a></li>
+        <li><a href="/contact/">Contact form</a></li>
       </ul>
-      <p class="site-footer__todo" id="facebook-link-todo">TODO: Confirm the Facebook page URL and contact email.</p>
     </div>
     <div>
       <h2 class="site-footer__heading">Give</h2>

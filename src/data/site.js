@@ -2,8 +2,7 @@ export const site = {
   name: "Courier Missions",
   tagline: "Delivering Hope, Serving with Purpose.",
   url: "https://couriermissions.org",
-  contactEmail: "info@couriermissions.org",
-  donateHref: "#donation-link-todo",
+  donateHref: "https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-2964",
   facebookHref: "https://facebook.com/couriermissions",
   navigation: [
     { label: "About", href: "/about/" },

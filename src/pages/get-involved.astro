@@ -1,5 +1,6 @@
 ---
 import SiteLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site.js";
 import heroImage from "../../assets/photos/courier-missions-medical-mother-and-baby.jpg";
 ---
 
@@ -23,7 +24,7 @@ import heroImage from "../../assets/photos/courier-missions-medical-mother-and-b
         <p class="eyebrow">Give</p>
         <h3>One-time or monthly giving.</h3>
         <p>$10 a month provides lunch for 2 students.</p>
-        <a class="button button--primary" href="#donation-link-todo">Donate</a>
+        <a class="button button--primary" href={site.donateHref}>Donate</a>
       </article>
       <article class="mini-card">
         <p class="eyebrow">Pray</p>
@@ -62,11 +63,10 @@ import heroImage from "../../assets/photos/courier-missions-medical-mother-and-b
           <p class="donate-cta__copy">Support a meal, a church, a clinic, or a family in crisis.</p>
         </div>
         <div class="donate-cta__actions">
-          <a class="button button--primary" href="#donation-link-todo">Donate</a>
+          <a class="button button--primary" href={site.donateHref}>Donate</a>
           <a class="text-link" href="/contact/">Get in touch</a>
         </div>
       </div>
-      <p class="donate-placeholder" id="donation-link-todo">TODO: Add the confirmed donation processor link before publishing. The current Donate buttons are placeholders and do not process gifts.</p>
     </div>
   </div>
 </SiteLayout>

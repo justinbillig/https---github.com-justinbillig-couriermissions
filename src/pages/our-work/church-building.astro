@@ -1,5 +1,6 @@
 ---
 import SiteLayout from "../../layouts/BaseLayout.astro";
+import { site } from "../../data/site.js";
 import churchImage from "../../../assets/photos/courier-missions-church-4-finished-church.jpg";
 import ribbonImage from "../../../assets/photos/courier-missions-church-5-ribbon-cutting.jpg";
 import worshipImage from "../../../assets/photos/courier-missions-church-6-full-for-worship.jpg";
@@ -82,11 +83,10 @@ import { churchProjects } from "../../data/churches.js";
           <p class="donate-cta__copy">Your gift helps local congregations grow into welcoming places of worship, care, and hope.</p>
         </div>
         <div class="donate-cta__actions">
-          <a class="button button--primary" href="#donation-link-todo">Donate</a>
+          <a class="button button--primary" href={site.donateHref}>Donate</a>
           <a class="text-link" href="/our-work/">Explore all ministry areas</a>
         </div>
       </div>
-      <p class="donate-placeholder" id="donation-link-todo">TODO: Add the confirmed donation processor link before publishing. The current Donate buttons are placeholders and do not process gifts.</p>
     </div>
   </div>
 </SiteLayout>

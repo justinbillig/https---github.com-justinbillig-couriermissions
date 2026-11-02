@@ -1,8 +1,6 @@
 # Courier Missions website
 
 The site is built with Astro and configured to generate a static site for Netlify.
-The first review build includes the shared layout, responsive header, footer, and
-Home page. The remaining pages will be added after the Home page is reviewed.
 
 ## Run locally
 
@@ -15,6 +13,9 @@ The included `netlify.toml` configures Netlify to publish that folder.
 
 ## Before launch
 
-Replace the clearly marked TODOs with the confirmed donation processor URL,
-Facebook page URL, contact details, nonprofit wording, field photos, and an
-approved story. Copy and impact figures are kept in `src/data/` for easy edits.
+Replace the remaining clearly marked TODOs with confirmed nonprofit wording,
+field photos, and an approved story. The Facebook
+page is facebook.com/couriermissions. Contact visitors through the site form;
+configure Netlify Forms notifications to send submissions to
+heather@couriermissions.org. Copy and impact figures are kept in `src/data/` for
+easy edits.
