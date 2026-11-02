@@ -2,8 +2,6 @@
 import SiteLayout from "../../layouts/BaseLayout.astro";
 import { site } from "../../data/site.js";
 import farmImage from "../../../assets/photos/courier-missions-farm-harvest-of-hope-sign.jpg";
-import lunchImage from "../../../assets/photos/courier-missions-feeding-volunteers-serving-lunch.jpg";
-import schoolDeliveryImage from "../../../assets/photos/courier-missions-feeding-food-delivery-to-school.jpg";
 ---
 
 <SiteLayout title="Feeding Programs" description="375 students at two schools in Kakamega are part of the feeding program. Harvest of Hope grows food for school meals, pastors and families." heroImage={farmImage}>
@@ -90,10 +88,6 @@ import schoolDeliveryImage from "../../../assets/photos/courier-missions-feeding
       <p class="eyebrow">Sierra Leone</p>
       <h2 class="section-heading">Meals for children and families in Sierra Leone.</h2>
       <p>We work with local partners to help provide meals to children and families facing food insecurity.</p>
-      <div class="gallery-grid gallery-grid--two" style="margin-top: 2rem;">
-        <figure><img src={lunchImage.src} alt="Volunteers serving lunch to children from large buckets." width={lunchImage.width} height={lunchImage.height} loading="lazy" /></figure>
-        <figure><img src={schoolDeliveryImage.src} alt="Sacks of food delivered to students at the Kakamega School for the Deaf." width={schoolDeliveryImage.width} height={schoolDeliveryImage.height} loading="lazy" /></figure>
-      </div>
     </div>
   </section>
 

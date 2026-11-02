@@ -1,9 +1,9 @@
-import feedingVolunteers from "../../assets/photos/courier-missions-feeding-volunteers-serving-lunch.jpg";
 import schoolFoodDelivery from "../../assets/photos/courier-missions-feeding-food-delivery-to-school.jpg";
 import finishedChurch from "../../assets/photos/courier-missions-church-4-finished-church.jpg";
 import churchDedication from "../../assets/photos/church-dedication-group-at-plaque.jpg";
 import medicalClinic from "../../assets/photos/courier-missions-medical-blood-pressure-check.jpg";
 import farmWorkers from "../../assets/photos/courier-missions-farm-workers-tending-crops.jpg";
+import farmTractor from "../../assets/photos/courier-missions-farm-tractor-plowing.jpg";
 import farmHarvest from "../../assets/photos/courier-missions-farm-picking-greens.jpg";
 import floodReliefTeam from "../../assets/photos/flood-relief-volunteers-group.jpg";
 import floodReliefSupplies from "../../assets/photos/flood-relief-volunteer-sorting-supplies.jpg";
@@ -11,9 +11,9 @@ import missionTeam from "../../assets/photos/team-group-with-luggage.jpg";
 
 export const getInvolvedPhotos = [
   {
-    image: feedingVolunteers,
-    alt: "Volunteers serving lunch to children from large buckets",
-    caption: "Meals",
+    image: farmTractor,
+    alt: "A tractor preparing the land at the Harvest of Hope farm",
+    caption: "Growing food",
   },
   {
     image: schoolFoodDelivery,

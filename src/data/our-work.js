@@ -6,8 +6,8 @@ export const ministryAreas = [
     summary:
       "At two schools in Kakamega, 375 students are part of the feeding program. Harvest of Hope grows food for the meals, too.",
     href: "/our-work/feeding/",
-    image: "courier-missions-feeding-volunteers-serving-lunch.jpg",
-    alt: "Volunteers serving lunch to children from large buckets.",
+    image: "courier-missions-farm-workers-tending-crops.jpg",
+    alt: "Farm workers tending young maize at the Harvest of Hope farm.",
   },
   {
     title: "Kakamega School for the Deaf",
