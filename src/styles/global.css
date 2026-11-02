@@ -902,70 +902,49 @@ h3 {
   object-fit: cover;
 }
 
-.church-carousel {
-  overflow-x: auto;
-  padding: 0 0 var(--space-3);
-  scroll-snap-type: x mandatory;
-  scrollbar-color: var(--cm-navy) rgb(24 48 68 / 16%);
-  scrollbar-width: thin;
-}
-
-.church-carousel:focus-visible {
-  outline: 3px solid var(--cm-navy);
-  outline-offset: 4px;
-}
-
-.church-carousel__hint {
-  margin-bottom: var(--space-3);
-  color: var(--cm-navy-80);
-  font-size: var(--fs-small);
-}
-
-.church-carousel__track {
+.church-photo-grid {
   display: grid;
-  grid-auto-columns: calc((100% - var(--space-5) - var(--space-5)) / 3);
-  grid-auto-flow: column;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--space-5);
 }
 
-.church-carousel figure {
+.church-photo-grid figure {
   min-width: 0;
   margin: 0;
   overflow: hidden;
   border-radius: var(--radius-lg);
   background: var(--cm-white);
   box-shadow: var(--shadow-card);
-  scroll-snap-align: start;
 }
 
-.church-carousel img {
+.church-photo-grid img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
-.church-carousel figcaption {
+.church-photo-grid figcaption {
   padding: var(--space-4);
   color: var(--cm-navy);
   font-size: var(--fs-small);
   line-height: 1.5;
 }
 
-.church-carousel figcaption strong {
+.church-photo-grid figcaption strong {
   display: block;
   margin-bottom: var(--space-1);
   font-family: var(--font-heading);
 }
 
 @media (max-width: 899px) {
-  .church-carousel__track {
-    grid-auto-columns: calc((100% - var(--space-5)) / 2);
+  .church-photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 599px) {
-  .church-carousel__track {
-    grid-auto-columns: 85%;
+  .church-photo-grid {
+    grid-template-columns: 1fr;
   }
 }
 
