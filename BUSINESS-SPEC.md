@@ -401,7 +401,7 @@ Every ministry area page uses the same layout: page header (photo, eyebrow, H1, 
 - **Why it matters:** TODO one or two sentences from the team on the school and its students (don't invent).
 - **What we do** (list with icons):
   - **Daily meals:** a feeding program for the school's 100 students; in 2025 we began providing two meals a day.
-  - **School security:** Daily security guard coverage helps protect students and food when teachers are away; the agreed approximate cost is $150 a month. Do not describe this as 24/7 coverage.
+  - **School security:** Daily security guard coverage helps protect students and food when teachers are away; the agreed approximate cost is $150 a month.
   - **Monthly food deliveries,** including fresh vegetables from the Harvest of Hope farm and special meals with meat.
   - **Beds and blankets:** 85 mattresses and blankets provided in 2025.
   - Confirm with the team whether there is additional school support beyond meals, food deliveries, mattresses/blankets, and security.
