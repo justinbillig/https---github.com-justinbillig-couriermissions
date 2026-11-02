@@ -1,0 +1,63 @@
+---
+import SiteLayout from "../../layouts/BaseLayout.astro";
+import foodDeliveryImage from "../../../assets/photos/courier-missions-feeding-food-delivery-to-school.jpg";
+import mealPrepImage from "../../../assets/photos/courier-missions-feeding-team-dishing-up-meals.jpg";
+---
+
+<SiteLayout title="Kakamega School for the Deaf" description="A school partnership caring for 100 students through daily meals, food deliveries, beds, and blankets." heroImage={foodDeliveryImage}>
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content">
+        <p class="eyebrow">Kakamega, Kenya</p>
+        <h1>Kakamega School for the Deaf.</h1>
+        <p class="section-lead">A school we stand alongside, caring for 100 students' daily needs.</p>
+      </div>
+      <div class="page-hero__media">
+        <img src={foodDeliveryImage.src} alt="Sacks of food delivered to students at the Kakamega School for the Deaf." width={foodDeliveryImage.width} height={foodDeliveryImage.height} loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container content-grid content-grid--split">
+      <div>
+        <p class="eyebrow">Why it matters</p>
+        <h2>TODO: Add the team’s short description of the school and its students before launch.</h2>
+      </div>
+      <div class="info-card">
+        <p class="eyebrow">What we do</p>
+        <ul class="list-check">
+          <li><strong>Daily meals:</strong> A feeding program for the school's 100 students; in 2025 we began providing two meals a day.</li>
+          <li><strong>Monthly food deliveries:</strong> Including fresh vegetables from the Harvest of Hope farm and special meals with meat.</li>
+          <li><strong>Beds and blankets:</strong> 85 mattresses and blankets provided in 2025.</li>
+          <li>TODO: Confirm any other support to list, such as help with school security.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" style="background: var(--cm-cream);">
+    <div class="container">
+      <div class="gallery-grid">
+        <figure><img src={foodDeliveryImage.src} alt="Sacks of food delivered to students at the Kakamega School for the Deaf." width={foodDeliveryImage.width} height={foodDeliveryImage.height} loading="lazy" /></figure>
+        <figure><img src={mealPrepImage.src} alt="Volunteers plating meals in a school kitchen." width={mealPrepImage.width} height={mealPrepImage.height} loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="donate-cta section">
+    <div class="container">
+      <div class="donate-cta__inner">
+        <div>
+          <h2>Support the students.</h2>
+          <p class="donate-cta__copy">Your generosity helps provide daily meals, bedding, and practical care for students at the school.</p>
+        </div>
+        <div class="donate-cta__actions">
+          <a class="button button--primary" href="#donation-link-todo">Donate</a>
+          <a class="text-link" href="/our-work/">Other ministry areas</a>
+        </div>
+      </div>
+      <p class="donate-placeholder" id="donation-link-todo">TODO: Add the confirmed donation processor link before publishing. The current Donate buttons are placeholders and do not process gifts.</p>
+    </div>
+  </div>
+</SiteLayout>

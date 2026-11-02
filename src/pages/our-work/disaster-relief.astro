@@ -1,0 +1,61 @@
+---
+import SiteLayout from "../../layouts/BaseLayout.astro";
+import { reliefNeeds } from "../../data/relief.js";
+---
+
+<SiteLayout title="Disaster Relief" description="When floods and other disasters hit, we work with local organizations and volunteers to get supplies and practical help to families.">
+  <section class="page-hero" style="background: var(--cm-navy); color: var(--cm-white);">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content">
+        <p class="eyebrow" style="color: var(--cm-sky);">Disaster Relief</p>
+        <h1 style="color: var(--cm-white);">Help when disaster strikes.</h1>
+        <p class="section-lead" style="color: rgb(255 255 255 / 88%);">When floods and other disasters hit, we work with local organizations and volunteers to get supplies and practical help to families.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container content-grid content-grid--split">
+      <div>
+        <p class="eyebrow">What we do</p>
+        <h2>Collect and distribute essential supplies.</h2>
+        <p>We help families through emergencies and recovery by coordinating practical support and relief resources with local partners and volunteers.</p>
+      </div>
+      <div class="info-card">
+        <h3>How to help right now</h3>
+        {reliefNeeds.length > 0 ? (
+          <ul class="list-check">
+            {reliefNeeds.map((need) => (
+              <li>{need.label}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>No active disaster response is currently listed. Check back soon for the next community need or contact us to learn how to help.</p>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" style="background: var(--cm-cream);">
+    <div class="container narrow">
+      <p class="eyebrow">Gallery</p>
+      <p class="section-lead">TODO: Add field photos for disaster relief when they are available.</p>
+    </div>
+  </section>
+
+  <div class="donate-cta section">
+    <div class="container">
+      <div class="donate-cta__inner">
+        <div>
+          <h2>Give to disaster relief.</h2>
+          <p class="donate-cta__copy">Your support helps families recover with food, supplies, and practical care in the middle of crisis.</p>
+        </div>
+        <div class="donate-cta__actions">
+          <a class="button button--primary" href="#donation-link-todo">Donate</a>
+          <a class="text-link" href="/our-work/">Other ministry areas</a>
+        </div>
+      </div>
+      <p class="donate-placeholder" id="donation-link-todo">TODO: Add the confirmed donation processor link before publishing. The current Donate buttons are placeholders and do not process gifts.</p>
+    </div>
+  </div>
+</SiteLayout>

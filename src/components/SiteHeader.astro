@@ -19,7 +19,20 @@ const { transparent = false } = Astro.props;
     <nav class="site-nav" aria-label="Main navigation">
       <ul class="site-nav__links">
         {site.navigation.map((item) => (
-          <li><a href={item.href}>{item.label}</a></li>
+          item.children ? (
+            <li class="site-nav__dropdown">
+              <details>
+                <summary>{item.label}</summary>
+                <div class="site-nav__submenu">
+                  {item.children.map((child) => (
+                    <a href={child.href}>{child.label}</a>
+                  ))}
+                </div>
+              </details>
+            </li>
+          ) : (
+            <li><a href={item.href}>{item.label}</a></li>
+          )
         ))}
       </ul>
     </nav>
@@ -40,7 +53,18 @@ const { transparent = false } = Astro.props;
   <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden data-mobile-menu>
     <ul>
       {site.navigation.map((item) => (
-        <li><a href={item.href}>{item.label}</a></li>
+        item.children ? (
+          <li class="mobile-menu__group">
+            <a href={item.href}>{item.label}</a>
+            <ul class="mobile-menu__nested">
+              {item.children.map((child) => (
+                <li><a href={child.href}>{child.label}</a></li>
+              ))}
+            </ul>
+          </li>
+        ) : (
+          <li><a href={item.href}>{item.label}</a></li>
+        )
       ))}
     </ul>
   </nav>
@@ -199,6 +223,25 @@ const { transparent = false } = Astro.props;
     text-decoration: none;
   }
 
+  .mobile-menu__group {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .mobile-menu__nested {
+    display: grid;
+    gap: 0.15rem;
+    margin: 0;
+    padding: 0 0 0 1rem;
+    list-style: none;
+  }
+
+  .mobile-menu__nested a {
+    min-height: 44px;
+    font-size: 1.1rem;
+    border-bottom-color: rgb(255 255 255 / 12%);
+  }
+
   .mobile-menu a:hover {
     color: var(--cm-sky);
   }
@@ -229,6 +272,69 @@ const { transparent = false } = Astro.props;
       margin: 0;
       padding: 0;
       list-style: none;
+    }
+
+    .site-nav__dropdown {
+      position: relative;
+    }
+
+    .site-nav__dropdown details {
+      position: relative;
+    }
+
+    .site-nav__dropdown summary {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      list-style: none;
+      cursor: pointer;
+      color: inherit;
+      font-family: var(--font-heading);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .site-nav__dropdown summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .site-nav__dropdown summary::after {
+      display: inline-block;
+      margin-left: 0.4rem;
+      border: solid currentColor;
+      border-width: 0 2px 2px 0;
+      padding: 0.2rem;
+      transform: rotate(45deg) translateY(-1px);
+      content: "";
+    }
+
+    .site-nav__submenu {
+      position: absolute;
+      top: calc(100% + 0.75rem);
+      left: 50%;
+      transform: translateX(-50%);
+      display: grid;
+      min-width: 12rem;
+      gap: 0.25rem;
+      border: 1px solid var(--cm-line);
+      border-radius: var(--radius-sm);
+      background: var(--cm-white);
+      box-shadow: var(--shadow-card);
+      padding: 0.5rem;
+    }
+
+    .site-nav__submenu a {
+      display: block;
+      min-height: 40px;
+      align-content: center;
+      border-radius: 0.25rem;
+      padding: 0.4rem 0.75rem;
+      color: var(--cm-navy);
+    }
+
+    .site-nav__submenu a:hover {
+      background: var(--cm-cream);
     }
 
     .site-nav a {

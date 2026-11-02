@@ -1,0 +1,116 @@
+---
+import SiteLayout from "../../layouts/BaseLayout.astro";
+import farmImage from "../../../assets/photos/courier-missions-farm-harvest-of-hope-sign.jpg";
+import lunchImage from "../../../assets/photos/courier-missions-feeding-volunteers-serving-lunch.jpg";
+import servingLineImage from "../../../assets/photos/feeding-program-serving-line.jpg";
+import schoolDeliveryImage from "../../../assets/photos/courier-missions-feeding-food-delivery-to-school.jpg";
+---
+
+<SiteLayout title="Feeding Programs" description="We provide school meals in Kakamega, Kenya, support food programs in Sierra Leone, and grow food on our own farm to keep it going." heroImage={farmImage}>
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content">
+        <p class="eyebrow">Feeding Programs · Kenya &amp; Sierra Leone</p>
+        <h1>No child should have to learn hungry.</h1>
+        <p class="section-lead">We provide school meals in Kakamega, Kenya, support food programs in Sierra Leone, and grow food on our own farm to keep it going.</p>
+      </div>
+      <div class="page-hero__media">
+        <img src={farmImage.src} alt="The Harvest of Hope farm sign standing in a maize field in Kakamega." width={farmImage.width} height={farmImage.height} loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container content-grid">
+      <div>
+        <p class="eyebrow">Why it matters</p>
+        <h2>Many schools in Kakamega don't offer meals, so children come to school hungry and struggle to learn.</h2>
+        <p>Where our programs run, enrollment has grown because families know their children will eat.</p>
+      </div>
+      <div class="info-card">
+        <h3>Kenya: school meals</h3>
+        <p>375 students in two schools: 275 at Shiongo Primary School and 100 at the Kakamega School for the Deaf.</p>
+        <p><strong>Giving line:</strong> $10 a month provides lunch for 2 students.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="harvest-of-hope" style="background: var(--cm-cream);">
+    <div class="container content-grid content-grid--split">
+      <div>
+        <p class="eyebrow">Harvest of Hope</p>
+        <h2>Planting seeds of faith, food and future.</h2>
+        <p>Instead of only buying food, we grow it. Our farm feeds students, employs people who need work, and earns income to keep going.</p>
+      </div>
+      <div class="info-card">
+        <h3>How it works</h3>
+        <ol>
+          <li><strong>Grow</strong> corn, beans and vegetables on leased farmland.</li>
+          <li><strong>Feed</strong> our school programs and families in need through local churches.</li>
+          <li><strong>Employ</strong> 50 local day laborers, prioritizing people facing unemployment and hardship.</li>
+          <li><strong>Reinvest</strong> by selling part of each harvest to pay for seed, labor, land and the next planting.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="container stat-band" style="margin-top: 2rem;">
+      <ul class="stat-band__grid">
+        <li class="stat-band__item"><span class="stat-band__value">2</span><p class="stat-band__label">acres</p></li>
+        <li class="stat-band__item"><span class="stat-band__value">50</span><p class="stat-band__label">workers</p></li>
+        <li class="stat-band__item"><span class="stat-band__value">1</span><p class="stat-band__label">profitable first harvest</p></li>
+        <li class="stat-band__item"><span class="stat-band__value">14 ft</span><p class="stat-band__label">hand-dug well</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container content-grid content-grid--split">
+      <div class="info-card">
+        <p class="eyebrow">The well</p>
+        <h3>When the rains didn't come, we dug a well.</h3>
+        <p>A 14 ft, hand-dug, brick-lined well with a diesel pump keeps crops watered through dry seasons.</p>
+      </div>
+      <div>
+        <p class="eyebrow">Who runs it</p>
+        <h2>Local leadership and practical expertise.</h2>
+        <p>Project Manager Mark Abungana and a local agricultural specialist trained in farming lead the farm. Co-Director Sam Fox, an experienced U.S. farmer, advises the work.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" style="background: var(--cm-white);">
+    <div class="container">
+      <p class="eyebrow">Where it's going</p>
+      <h2 class="section-heading">Growing from 2 to 12 acres.</h2>
+      <p>The goal is to expand with more wells, irrigation and storage, start lunch programs at two more schools (about 500 more children, about 875 in all), employ more people, and become self-sustaining.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <p class="eyebrow">Sierra Leone</p>
+      <h2 class="section-heading">Through local partners, we help provide nutritious meals.</h2>
+      <p>We support food programs for children and families facing poverty and food insecurity in Sierra Leone. (TODO: partner/location, numbers, photo.)</p>
+      <div class="gallery-grid" style="margin-top: 2rem;">
+        <figure><img src={lunchImage.src} alt="Volunteers serving lunch to children from large buckets." width={lunchImage.width} height={lunchImage.height} loading="lazy" /></figure>
+        <figure><img src={servingLineImage.src} alt="Volunteers serving a meal to students and an elder in Kenya." width={servingLineImage.width} height={servingLineImage.height} loading="lazy" /></figure>
+        <figure><img src={schoolDeliveryImage.src} alt="Sacks of food delivered to students at the Kakamega School for the Deaf." width={schoolDeliveryImage.width} height={schoolDeliveryImage.height} loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="donate-cta section">
+    <div class="container">
+      <div class="donate-cta__inner">
+        <div>
+          <h2>Help feed a child.</h2>
+          <p class="donate-cta__copy">Your gift helps provide meals, support local farming, and keep school programs running.</p>
+        </div>
+        <div class="donate-cta__actions">
+          <a class="button button--primary" href="#donation-link-todo">Donate</a>
+          <a class="text-link" href="/our-work/">More ways we serve</a>
+        </div>
+      </div>
+      <p class="donate-placeholder" id="donation-link-todo">TODO: Add the confirmed donation processor link before publishing. The current Donate buttons are placeholders and do not process gifts.</p>
+    </div>
+  </div>
+</SiteLayout>

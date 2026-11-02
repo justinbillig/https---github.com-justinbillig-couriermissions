@@ -1,9 +1,9 @@
 export const homePage = {
   title: "Delivering hope, serving with purpose.",
   description:
-    "We partner with local churches in Kakamega County, Kenya to feed families, build places of worship, and bring lasting hope.",
+    "We partner with local leaders in Kenya, Sierra Leone and the U.S. to feed children, build churches, and bring help and hope when it's needed most.",
   mission:
-    "Courier Missions exists to serve communities and churches in need around the world by providing practical help and spiritual hope. We partner with local leaders to bring lasting transformation through humanitarian aid, volunteer service, education, and discipleship. Our mission is to deliver hope, meet real needs, and empower communities to grow stronger and more resilient for the future.",
+    "Courier Missions exists to serve communities and churches in need around the world by providing practical help and spiritual hope. We partner with local leaders to bring lasting transformation through humanitarian aid, volunteer service, education, employment, and discipleship. Our mission is to deliver hope, meet real needs, and empower communities to grow stronger and more resilient for the future.",
   pillars: [
     {
       number: "01",
