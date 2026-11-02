@@ -766,6 +766,10 @@ h3 {
   gap: var(--space-5);
 }
 
+.ministry-area-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .mini-card {
   padding: var(--space-5);
 }
@@ -794,6 +798,14 @@ h3 {
   color: var(--cm-white);
 }
 
+.stat-band .eyebrow {
+  color: var(--cm-sky);
+}
+
+.stat-band h2 {
+  color: var(--cm-white);
+}
+
 .stat-band__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -801,6 +813,12 @@ h3 {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.stat-band__grid--two {
+  max-width: 46rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-inline: auto;
 }
 
 .stat-band__item {
@@ -1026,7 +1044,8 @@ h3 {
 
 @media (max-width: 899px) {
   .pillars,
-  .program-grid {
+  .program-grid,
+  .ministry-area-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1055,7 +1074,9 @@ h3 {
 
   .pillars,
   .program-grid,
+  .ministry-area-grid,
   .impact__grid,
+  .stat-band__grid--two,
   .site-footer__main {
     grid-template-columns: 1fr;
   }

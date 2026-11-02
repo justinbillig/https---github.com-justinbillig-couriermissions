@@ -2,14 +2,6 @@ export const reliefNeeds = [
   // Keep this list empty until a disaster response is active.
 ];
 
-export const medicalClinics = {
-  id: "medical-clinics",
-  title: "Medical Clinics",
-  eyebrow: "Kakamega, Kenya",
-  summary:
-    "Quarterly outreach clinics offer consultations, medicines, screenings and health education. A 2025 multi-day clinic served more than 1,000 people.",
-};
-
 export const supportPrograms = [
   {
     id: "disaster-relief",
@@ -36,5 +28,4 @@ export const supportPrograms = [
     summary:
       "Educational help, including nursing school, for students facing financial hardship.",
   },
-  medicalClinics,
 ];
