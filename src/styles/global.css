@@ -611,10 +611,6 @@ h3 {
   margin: 0;
 }
 
-.site-footer__todo {
-  color: var(--cm-sky);
-}
-
 .page-hero {
   padding-top: 6.5rem;
   background: var(--cm-cream);
