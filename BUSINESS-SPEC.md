@@ -335,7 +335,7 @@ Copy below is drawn from the Mission Statement, Brand Guidelines, 2025 Impact Re
 | Bible cost | $12 per Bible | Director conversation, Nov 2, 2026 |
 | Church facility cost | About $15,000 for a church and restroom facility | Director conversation, Nov 2, 2026 |
 
-Use the agreed giving figures as approximate program-cost examples, not as a promise that a gift is restricted to that use. The current donation link goes to the general fund; only describe gifts as designated if the giving processor supports that designation.
+Use the agreed giving figures as approximate program-cost examples.
 
 ### 8.1 Home
 1. **Hero** (7.2). Lead: "We partner with local leaders in Kenya, Sierra Leone and the U.S. to feed children, build churches, and bring help and hope when it's needed most."
@@ -466,7 +466,7 @@ Web version of the 2025 Impact Review:
 
 ### 8.10 Get Involved
 Four cards/sections:
-- **Give** — one-time or monthly giving; primary Donate. Confirmed examples from the directors' Nov 2, 2026 discussion: $10/month supports one student with one meal a day; $50/month supports five students with one meal a day each; $150/month supports daily school security; about $1,200 funds a medical clinic; about $15,000 funds a church and restroom facility; $12 buys a Bible. Present these as approximate program costs, not restricted-fund promises, unless designated giving is available.
+- **Give** — one-time or monthly giving; primary Donate. Confirmed examples from the directors' Nov 2, 2026 discussion: $10/month supports one student with one meal a day; $50/month supports five students with one meal a day each; $150/month supports daily school security; about $1,200 funds a medical clinic; about $15,000 funds a church and restroom facility; $12 buys a Bible. Present these as approximate program costs.
 - Include a contact-form invitation for donors interested in stock or legacy gifts through donor-advised funds.
 - **Pray** — invitation to pray; optional email signup for prayer updates (TODO provider).
 - **Go** — the annual mission trip to Kenya; contact form preselected to "Go on a trip". Photo: `team-group-with-luggage` (wide strip). TODO trip dates.
