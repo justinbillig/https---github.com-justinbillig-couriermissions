@@ -317,8 +317,8 @@ Copy below is drawn from the Mission Statement, Brand Guidelines, 2025 Impact Re
   2. **Kakamega School for the Deaf:** a long-term partnership caring for 100 deaf students, from daily meals to beds and blankets.
   3. **Church Building:** building churches with local congregations as centers for worship, fellowship and community help.
   4. **Ministry Support:** disaster relief, student essentials, scholarships, medical clinics, and Bible and pastoral support.
-- **More ways we serve:** a smaller row of 4 compact cards (icon, title, 1–2 sentences) linking to the matching section of Ministry Support:
-  - **Medical clinics:** quarterly outreach clinics in Kakamega offering consultations, medicines, screenings and health education. A 2025 multi-day clinic served more than 1,000 people. (Photo: blood pressure check.)
+- **Medical clinics:** give this program its own full-width section on Our Work, with the approved blood-pressure-check photo, an overview, and a link to the matching section of Ministry Support. Quarterly outreach clinics in Kakamega offer consultations, medicines, screenings and health education. A 2025 multi-day clinic served more than 1,000 people.
+- **More ways we serve:** a smaller row of 3 compact cards (icon, title, 1–2 sentences) linking to the matching section of Ministry Support:
   - **Scholarships:** educational help, including nursing school, for students facing financial hardship.
   - **Pastors and Bibles:** pastoral training, discipleship, and Bibles for pastors and families.
   - **LHS Closet (Lawrenceburg, Indiana):** hygiene products, personal care items, snacks and essentials for students in need, so they can come to school with dignity and ready to learn.

@@ -33,12 +33,6 @@ export const ministryAreas = [
 
 export const moreWaysWeServe = [
   {
-    title: "Medical clinics",
-    summary:
-      "Quarterly outreach clinics in Kakamega offering consultations, medicines, screenings and health education. A 2025 multi-day clinic served more than 1,000 people.",
-    href: "/our-work/ministry-support/#medical-clinics",
-  },
-  {
     title: "Scholarships",
     summary:
       "Educational help, including nursing school, for students facing financial hardship.",
