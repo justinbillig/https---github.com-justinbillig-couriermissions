@@ -52,6 +52,7 @@ public/
 | Feeding Programs | `/our-work/feeding/` |
 | Kakamega School for the Deaf | `/our-work/school-for-the-deaf/` |
 | Church Building | `/our-work/church-building/` |
+| Medical Clinics | `/our-work/medical-clinics/` |
 | Ministry Support | `/our-work/ministry-support/` |
 | Impact | `/impact/` |
 | Get Involved | `/get-involved/` |
@@ -71,7 +72,7 @@ The primary domain is `https://couriermissions.org`. Set Astro's `site` value to
 ## 4. Shared navigation and donation
 
 - Desktop header: logo, About, Our Work dropdown, Impact, Get Involved, Contact, and a visible Donate button.
-- Our Work remains a link to the overview; its submenu lists Feeding Programs, Kakamega School for the Deaf, Church Building, and Ministry Support.
+- Our Work remains a link to the overview; its submenu lists Feeding Programs, Kakamega School for the Deaf, Church Building, Medical Clinics, and Ministry Support.
 - Dropdown opens on hover and by click/keyboard activation.
 - Mobile navigation switches below 900px. Keep Donate visible outside the menu. The menu is a full-height navy panel with ministry links indented under Our Work.
 - Header is transparent over the home hero, then becomes navy with a subtle shadow on scroll. On pages without a photo hero it starts white with the navy logo and navy links. Active navigation uses an orange underline.

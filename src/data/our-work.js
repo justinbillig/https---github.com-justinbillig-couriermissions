@@ -1,3 +1,5 @@
+import { medicalClinics } from "./medical-clinics.js";
+
 export const ministryAreas = [
   {
     title: "Feeding Programs",
@@ -23,10 +25,11 @@ export const ministryAreas = [
     image: "courier-missions-church-4-finished-church.jpg",
     alt: "A completed church building with green trim and an access ramp.",
   },
+  medicalClinics,
   {
     title: "Ministry Support",
     summary:
-      "Practical care through disaster response, student essentials, education, medical clinics, and support for pastors and families.",
+      "Practical care through disaster response, student essentials, education, and support for pastors and families.",
     href: "/our-work/ministry-support/",
   },
 ];

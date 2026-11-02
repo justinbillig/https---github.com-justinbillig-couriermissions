@@ -37,17 +37,18 @@ Framework, routing, hosting, data organization, form integration, accessibility 
 |---|---|---|
 | Home | Hero, mission, ministry areas, impact snapshot, Harvest of Hope, story, Donate CTA |
 | About | Mission, vision, philosophy (Empower, Respond, Transform), leadership, stewardship |
-| Our Work | Overview of the four ministry areas, plus "More ways we serve" (8.3) |
+| Our Work | Overview of five ministry areas, plus "More ways we serve" (8.3) |
 | Feeding Programs | Kenya and Sierra Leone feeding, including the Harvest of Hope farm (8.4) |
 | Kakamega School for the Deaf | Everything we do with the Deaf school (8.5) |
 | Church Building | How we build churches, then the list of church projects (8.6) |
-| Ministry Support | Disaster response, student essentials, Bible and pastoral support, scholarships, and medical clinics (8.7) |
-| Impact | 2025 Impact Review in web form, yearly updates over time |
+| Medical Clinics | Quarterly outreach clinics in Kakamega, with highlights, services, and photos (8.8) |
+| Ministry Support | Disaster response, student essentials, Bible and pastoral support, and scholarships (8.7) |
+| Impact | 2025 Impact Review in web form, yearly updates over time (8.9) |
 | Get Involved | Give, pray, go, partner as a church |
 | Contact | Contact form and Facebook |
 | Not found | A friendly message with links home and to Donate |
 
-**Header navigation:** logo, About, Our Work with links to the four ministry areas, Impact, Get Involved, Contact, and a prominent Donate button. On mobile, keep Donate visible outside the menu and nest the ministry links under Our Work.
+**Header navigation:** logo, About, Our Work with links to Feeding Programs, Kakamega School for the Deaf, Church Building, Medical Clinics, and Ministry Support, Impact, Get Involved, Contact, and a prominent Donate button. On mobile, keep Donate visible outside the menu and nest the ministry links under Our Work.
 
 All Donate buttons link to the confirmed Zeffy donation form: https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-2964.
 
@@ -173,7 +174,7 @@ Use real field photos: people serving together, students, pastors, church builds
 | `courier-missions-church-5-ribbon-cutting.jpg` | Ribbon-cutting with orange and teal balloons | M 1079×1442 | portrait | Church dedication moment; Impact page | A ribbon-cutting celebrating a new church |
 | `courier-missions-church-6-full-for-worship.jpg` | Packed church interior, cross window | S 1079×493 | thin panorama | Narrow banner strip or thumbnail only | A full church gathered for worship |
 | `courier-missions-medical-camp-banner-2026.jpg` | "Courier Missions Shikoti Medical Camp 2026" banner over tents | M 1280×960 | landscape | Impact page | The Courier Missions Shikoti Medical Camp 2026 banner |
-| `courier-missions-medical-blood-pressure-check.jpg` | Volunteer in hi-vis taking a blood pressure reading | L 1600×1200 | landscape | "Medical clinics" card under More ways we serve | A volunteer checking a woman's blood pressure at the medical camp |
+| `courier-missions-medical-blood-pressure-check.jpg` | Volunteer in hi-vis taking a blood pressure reading | L 1600×1200 | landscape | Medical Clinics card on Our Work and clinic page hero | A volunteer checking a community member's blood pressure at a medical clinic |
 | `courier-missions-medical-patient-consult.jpg` | Patient consult at a table of medicines | M 1200×1600 | portrait | Medical gallery; story block | A patient consultation at the medical camp |
 | `courier-missions-medical-mother-and-baby.jpg` | Smiling mother holding her baby | M 1200×1600 | portrait | Story/quote block portrait; Give section | A mother and her baby at the medical camp |
 | `courier-missions-medical-pharmacy-table.jpg` | Table of medicines and supplies inside a church | L 3013×1392 | wide | Spare; optional for Impact | Medicines and supplies laid out for the clinic |
@@ -184,8 +185,9 @@ Use real field photos: people serving together, students, pastors, church builds
 | `courier-missions-farm-farmers-with-harvest.jpg` | Farmers holding freshly picked crops | S 899×899 | square | Farm gallery thumbnail; small card | Farmers holding their harvest |
 
 **6.2 Placement plan**
-- **Home and Our Work › ministry area cards (4):** Feeding Programs = `feeding-program-serving-line`, Kakamega School for the Deaf = `feeding-food-delivery-to-school`, Church Building = `church-4-finished-church`, Ministry Support = navy card (no stock photo). 4-up grid on desktop, 2×2 on tablet, 1 column on mobile.
-- **Ministry area pages:** page header uses the area's lead image; sections use the other photos for that area. Feeding page: serving line, volunteers serving lunch, and all farm photos in the Harvest of Hope section. Deaf school page: food delivery, team dishing up meals. Church page: build sequence, ribbon-cutting, full church. Medical photos go in the Medical Clinics card under "More ways we serve".
+- **Our Work ministry area cards (5):** Feeding Programs = `feeding-program-serving-line`, Kakamega School for the Deaf = `feeding-food-delivery-to-school`, Church Building = `church-4-finished-church`, Medical Clinics = `medical-blood-pressure-check`, Ministry Support = navy card (no stock photo). Use equal-size cards in a 3-column desktop grid, 2 columns on tablet, and 1 column on mobile.
+- **Home program highlights:** include a Medical Clinic highlight with the blood-pressure-check photo and a direct link to the Medical Clinics page.
+- **Ministry area pages:** page header uses the area's lead image; sections use the other photos for that area. Feeding page: serving line, volunteers serving lunch, and all farm photos in the Harvest of Hope section. Deaf school page: food delivery, team dishing up meals. Church page: build sequence, ribbon-cutting, full church. Medical Clinics page: blood-pressure check, patient consultation, mother and baby, pharmacy table.
 - **Church build sequence:** a 4-step horizontal strip (stack on mobile): foundation → walls → roof → finished, captioned "Foundation", "Walls", "Roof", "Complete". This is the clearest "your gift builds this" story on the site.
 - **Impact page:** food delivery, ribbon-cutting, medical camp banner.
 - **Story/quote block:** `medical-mother-and-baby` (circle-cropped, per 7.8).
@@ -312,19 +314,19 @@ Copy below is drawn from the Mission Statement, Brand Guidelines, 2025 Impact Re
 
 ### 8.3 Our Work
 - **Header:** H1 "Our work". Lead: "We work alongside trusted local leaders who know their communities best. Our goal isn't only to meet urgent needs, but to build lasting, locally led solutions."
-- **Four ministry areas:** large cards (photos per 6.2), each with a 1–2 sentence summary and a link to its page:
+- **Five ministry areas:** large cards of equal prominence (photos per 6.2), each with a 1–2 sentence summary and a link to its page:
   1. **Feeding Programs:** school meals in Kenya and food for children and families in Sierra Leone, supplied in part by our own farm.
   2. **Kakamega School for the Deaf:** a long-term partnership caring for 100 deaf students, from daily meals to beds and blankets.
   3. **Church Building:** building churches with local congregations as centers for worship, fellowship and community help.
-  4. **Ministry Support:** disaster relief, student essentials, scholarships, medical clinics, and Bible and pastoral support.
-- **Medical clinics:** give this program its own full-width section on Our Work, with the approved blood-pressure-check photo, an overview, and a link to the matching section of Ministry Support. Quarterly outreach clinics in Kakamega offer consultations, medicines, screenings and health education. A 2025 multi-day clinic served more than 1,000 people.
+  4. **Medical Clinics:** quarterly outreach clinics in Kakamega offering consultations, medicines, screenings and health education. A 2025 multi-day clinic served more than 1,000 people. Use the approved blood-pressure-check photo.
+  5. **Ministry Support:** disaster relief, student essentials, scholarships, and Bible and pastoral support.
 - **More ways we serve:** a smaller row of 3 compact cards (icon, title, 1–2 sentences) linking to the matching section of Ministry Support:
   - **Scholarships:** educational help, including nursing school, for students facing financial hardship.
   - **Pastors and Bibles:** pastoral training, discipleship, and Bibles for pastors and families.
   - **LHS Closet (Lawrenceburg, Indiana):** hygiene products, personal care items, snacks and essentials for students in need, so they can come to school with dignity and ready to learn.
 - Donate CTA band.
 
-Every ministry area page uses the same layout: page header (photo, eyebrow, H1, lead) → "Why it matters" → "What we do" → specifics → numbers (if any) → photo gallery → area-specific donate CTA ("Give to [area]", designated if the processor allows) → links to the other three areas.
+Every ministry area page uses the same layout: page header (photo, eyebrow, H1, lead) → "Why it matters" → "What we do" → specifics → numbers (if any) → photo gallery → area-specific donate CTA ("Give to [area]", designated if the processor allows) → links to the other four areas.
 
 ### 8.4 Feeding Programs
 - **Header:** eyebrow "Feeding Programs · Kenya & Sierra Leone". H1 "No child should have to learn hungry." Lead: "We provide school meals in Kakamega, Kenya, support food programs in Sierra Leone, and grow food on our own farm to keep it going."
@@ -371,11 +373,17 @@ Every ministry area page uses the same layout: page header (photo, eyebrow, H1, 
 - **LHS Closet (Lawrenceburg, Indiana):** hygiene products, personal care items, snacks and essentials for students in need, so they can come to school with dignity and ready to learn.
 - **Pastors and Bibles:** pastoral training, discipleship, and Bibles for pastors and families.
 - **Scholarships:** educational help, including nursing school, for students facing financial hardship.
-- **Medical clinics:** quarterly outreach clinics in Kakamega offering consultations, medicines, screenings and health education. A 2025 multi-day clinic served more than 1,000 people.
 - **How to help right now:** a simple, editable "Current needs" block that the team can turn on during a disaster, with what's needed and where to drop it off; hidden when empty.
 - **CTA:** "Your gift delivers hope." Donate.
 
-### 8.8 Impact
+### 8.8 Medical Clinics
+- **Header:** photo = blood-pressure check. Eyebrow "Kakamega, Kenya". H1 "Medical clinics in Kakamega." Lead: quarterly outreach clinics offer consultations, medicines, screenings and health education; a 2025 multi-day clinic served more than 1,000 people.
+- **Highlights:** "Quarterly" outreach clinics in Kakamega; "1,000+" people served at a multi-day clinic in 2025.
+- **What clinics provide:** consultations, medicines, screenings, and health education.
+- **Gallery:** blood-pressure check, patient consultation, mother and baby, pharmacy table.
+- **CTA:** "Support medical clinics." Donate.
+
+### 8.9 Impact
 Web version of the 2025 Impact Review:
 - Header: eyebrow "2025 Impact Review", H1 "A year of growth, faith and impact."
 - Executive summary (paraphrase or full text).
@@ -386,7 +394,7 @@ Web version of the 2025 Impact Review:
 - Link to download the provided 2025 Impact Review PDF.
 - Organize the impact review by year so future annual reviews can be added without redesigning the page.
 
-### 8.9 Get Involved
+### 8.10 Get Involved
 Four cards/sections:
 - **Give** — one-time or monthly giving; primary Donate. Use only confirmed giving figures: "$10 a month provides lunch for 2 students." Add others only when the team confirms them.
 - **Pray** — invitation to pray; optional email signup for prayer updates (TODO provider).
@@ -394,10 +402,10 @@ Four cards/sections:
 - **Partner as a church** — invite churches to partner; contact form preselected to "Partner as a church".
 Plus "Follow along" with the Facebook button.
 
-### 8.10 Contact
+### 8.11 Contact
 H1 "Get in touch", short line, contact form (7.11), Facebook. Do not publish a contact email or direct email link; route inquiries through the form. No mailing address on the site.
 
-### 8.11 Not found
+### 8.12 Not found
 "This page has gone on a mission." · links Home and Donate.
 
 ---

@@ -1,0 +1,118 @@
+---
+import { Picture } from "astro:assets";
+import SiteLayout from "../../layouts/BaseLayout.astro";
+import { site } from "../../data/site.js";
+import { medicalClinics } from "../../data/medical-clinics.js";
+import bloodPressureImage from "../../../assets/photos/courier-missions-medical-blood-pressure-check.jpg";
+import consultImage from "../../../assets/photos/courier-missions-medical-patient-consult.jpg";
+import motherBabyImage from "../../../assets/photos/courier-missions-medical-mother-and-baby.jpg";
+import pharmacyImage from "../../../assets/photos/courier-missions-medical-pharmacy-table.jpg";
+---
+
+<SiteLayout
+  title={medicalClinics.title}
+  description={medicalClinics.summary}
+  heroImage={bloodPressureImage}
+>
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content">
+        <p class="eyebrow">{medicalClinics.eyebrow}</p>
+        <h1>Medical clinics in Kakamega.</h1>
+        <p class="section-lead">{medicalClinics.summary}</p>
+      </div>
+      <div class="page-hero__media">
+        <Picture
+          src={bloodPressureImage}
+          formats={["avif", "webp"]}
+          widths={[480, 720, 960]}
+          sizes="(max-width: 899px) 100vw, 50vw"
+          alt={medicalClinics.alt}
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="stat-band" aria-labelledby="clinic-highlights">
+    <div class="container">
+      <p class="eyebrow">Medical clinic highlights</p>
+      <h2 class="section-heading" id="clinic-highlights">Care through regular outreach.</h2>
+      <ul class="stat-band__grid stat-band__grid--two">
+        {medicalClinics.highlights.map((highlight) => (
+          <li class="stat-band__item">
+            <span class="stat-band__value">{highlight.value}</span>
+            <p class="stat-band__label">{highlight.label}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container content-grid content-grid--split">
+      <div>
+        <p class="eyebrow">What clinics provide</p>
+        <h2>Medical outreach in Kakamega.</h2>
+        <p>Quarterly outreach clinics bring a range of practical health services to the community.</p>
+      </div>
+      <div class="info-card">
+        <ul class="list-check">
+          {medicalClinics.services.map((service) => <li>{service}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" style="background: var(--cm-cream);">
+    <div class="container">
+      <div class="gallery-grid">
+        <figure>
+          <Picture
+            src={consultImage}
+            formats={["avif", "webp"]}
+            widths={[320, 480, 640]}
+            sizes="(max-width: 599px) 100vw, 50vw"
+            alt="A community member speaks with a medical professional during a clinic consultation."
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <Picture
+            src={motherBabyImage}
+            formats={["avif", "webp"]}
+            widths={[320, 480, 640]}
+            sizes="(max-width: 599px) 100vw, 50vw"
+            alt="A mother holds her baby at a medical clinic."
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <Picture
+            src={pharmacyImage}
+            formats={["avif", "webp"]}
+            widths={[320, 480, 640]}
+            sizes="(max-width: 599px) 100vw, 50vw"
+            alt="Medicines arranged on a table at a community medical clinic."
+            loading="lazy"
+          />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="donate-cta section">
+    <div class="container">
+      <div class="donate-cta__inner">
+        <div>
+          <h2>Support medical clinics.</h2>
+          <p class="donate-cta__copy">Your gift supports practical care and health education in Kakamega.</p>
+        </div>
+        <div class="donate-cta__actions">
+          <a class="button button--primary" href={site.donateHref}>Donate</a>
+          <a class="text-link" href="/our-work/">Explore all our work</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</SiteLayout>
