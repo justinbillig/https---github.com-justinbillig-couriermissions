@@ -22,12 +22,8 @@ const carouselPhotos = getInvolvedPhotos.map(({ image, alt, caption, fit }) => (
     </div>
   </section>
 
-  <section class="involvement-gallery page-section" aria-labelledby="involvement-gallery-title">
+  <section class="involvement-gallery page-section">
     <div class="container">
-      <div class="involvement-gallery__intro">
-        <p class="eyebrow">Around the work</p>
-        <h2 class="section-heading" id="involvement-gallery-title">A look at the people and places you can support.</h2>
-      </div>
       <div
         class="photo-carousel"
         data-photo-carousel
@@ -69,12 +65,6 @@ const carouselPhotos = getInvolvedPhotos.map(({ image, alt, caption, fit }) => (
               <span aria-hidden="true">&rarr;</span>
             </button>
           </div>
-        </div>
-        <div class="photo-carousel__footer">
-          <p>Ten snapshots from the work.</p>
-          <button class="photo-carousel__toggle" type="button" data-carousel-toggle aria-label="Pause automatic photo rotation">
-            Pause rotation
-          </button>
         </div>
       </div>
     </div>
@@ -150,29 +140,19 @@ const carouselPhotos = getInvolvedPhotos.map(({ image, alt, caption, fit }) => (
     const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
     const previousButton = carousel.querySelector("[data-carousel-previous]");
     const nextButton = carousel.querySelector("[data-carousel-next]");
-    const toggleButton = carousel.querySelector("[data-carousel-toggle]");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     if (
       photos.length > slides.length &&
       slides.every((slide) => slide instanceof HTMLElement) &&
       previousButton instanceof HTMLButtonElement &&
-      nextButton instanceof HTMLButtonElement &&
-      toggleButton instanceof HTMLButtonElement
+      nextButton instanceof HTMLButtonElement
     ) {
       let firstPhoto = 0;
       let manuallyPaused = reducedMotion.matches;
       let pointerInside = false;
       let focusInside = false;
       let rotationTimer: number | undefined;
-
-      const updateToggle = () => {
-        toggleButton.textContent = manuallyPaused ? "Resume rotation" : "Pause rotation";
-        toggleButton.setAttribute(
-          "aria-label",
-          manuallyPaused ? "Resume automatic photo rotation" : "Pause automatic photo rotation",
-        );
-      };
 
       const renderSlides = () => {
         slides.forEach((slide, offset) => {
@@ -214,11 +194,6 @@ const carouselPhotos = getInvolvedPhotos.map(({ image, alt, caption, fit }) => (
 
       previousButton.addEventListener("click", showPrevious);
       nextButton.addEventListener("click", showNext);
-      toggleButton.addEventListener("click", () => {
-        manuallyPaused = !manuallyPaused;
-        updateToggle();
-        syncRotation();
-      });
 
       carousel.addEventListener("mouseenter", () => {
         pointerInside = true;
@@ -241,13 +216,11 @@ const carouselPhotos = getInvolvedPhotos.map(({ image, alt, caption, fit }) => (
 
       document.addEventListener("visibilitychange", syncRotation);
       reducedMotion.addEventListener("change", (event) => {
-        if (event.matches) manuallyPaused = true;
-        updateToggle();
+        manuallyPaused = event.matches;
         syncRotation();
       });
 
       renderSlides();
-      updateToggle();
       syncRotation();
     }
   }
