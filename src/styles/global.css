@@ -850,6 +850,14 @@ h3 {
   gap: var(--space-5);
 }
 
+.get-involved-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.get-involved-cards__give {
+  grid-column: 1 / -1;
+}
+
 .ministry-area-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1214,6 +1222,10 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .get-involved-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .impact__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     row-gap: var(--space-6);
@@ -1240,6 +1252,7 @@ h3 {
   .pillars,
   .program-grid,
   .ministry-area-grid,
+  .get-involved-cards,
   .impact__grid,
   .stat-band__grid--two,
   .site-footer__main {
