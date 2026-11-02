@@ -32,7 +32,7 @@ export const homePage = {
       title: "Feeding Programs",
       description: "375 students at two schools in Kakamega are part of the feeding program. Harvest of Hope grows food for the meals, too.",
       image: "feeding",
-      alt: "Volunteers serving a meal to students and an elder in Kenya.",
+      alt: "Volunteers serving lunch to children from large buckets.",
       href: "/our-work/feeding/",
     },
     {

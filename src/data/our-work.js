@@ -6,8 +6,8 @@ export const ministryAreas = [
     summary:
       "At two schools in Kakamega, 375 students are part of the feeding program. Harvest of Hope grows food for the meals, too.",
     href: "/our-work/feeding/",
-    image: "feeding-program-serving-line.jpg",
-    alt: "Volunteers serving a meal to students and an elder in Kenya.",
+    image: "courier-missions-feeding-volunteers-serving-lunch.jpg",
+    alt: "Volunteers serving lunch to children from large buckets.",
   },
   {
     title: "Kakamega School for the Deaf",
@@ -31,6 +31,7 @@ export const ministryAreas = [
     summary:
       "Flood relief in Indiana, school essentials in Lawrenceburg, Bibles and scholarships. Help for people close to home and farther away.",
     href: "/our-work/ministry-support/",
+    alt: "A Courier Missions table stacked with donated water and supplies for flood victims.",
   },
 ];
 

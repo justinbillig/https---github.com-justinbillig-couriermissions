@@ -983,6 +983,10 @@ h3 {
   gap: var(--space-5);
 }
 
+.gallery-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .gallery-grid figure {
   aspect-ratio: 4 / 3;
   margin: 0;

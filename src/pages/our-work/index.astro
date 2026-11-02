@@ -2,16 +2,18 @@
 import SiteLayout from "../../layouts/BaseLayout.astro";
 import { site } from "../../data/site.js";
 import { ministryAreas, moreWaysWeServe } from "../../data/our-work.js";
-import feedingImage from "../../../assets/photos/feeding-program-serving-line.jpg";
+import feedingImage from "../../../assets/photos/courier-missions-feeding-volunteers-serving-lunch.jpg";
 import schoolImage from "../../../assets/photos/courier-missions-feeding-food-delivery-to-school.jpg";
 import churchImage from "../../../assets/photos/courier-missions-church-4-finished-church.jpg";
 import clinicImage from "../../../assets/photos/courier-missions-medical-blood-pressure-check.jpg";
+import supportImage from "../../../assets/photos/flood-relief-supply-table.jpg";
 
 const areaPhotos = {
   "Feeding Programs": feedingImage,
   "Kakamega School for the Deaf": schoolImage,
   "Church Building": churchImage,
   "Medical Clinics": clinicImage,
+  "Ministry Support": supportImage,
 };
 ---
 
@@ -24,7 +26,7 @@ const areaPhotos = {
         <p class="section-lead">In Kakamega, 375 students are part of school feeding programs, and work has begun on a permanent church in Shiango. From Kenya to Indiana, we come alongside local leaders to meet needs and share hope.</p>
       </div>
       <div class="page-hero__media">
-        <img src={feedingImage.src} alt="Volunteers serving a meal to students and an elder in Kenya." width={feedingImage.width} height={feedingImage.height} loading="eager" />
+        <img src={feedingImage.src} alt="Volunteers serving lunch to children from large buckets." width={feedingImage.width} height={feedingImage.height} loading="eager" />
       </div>
     </div>
   </section>
