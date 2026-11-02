@@ -661,9 +661,13 @@ h3 {
   object-fit: cover;
 }
 
+.get-involved-hero {
+  padding-top: 5rem;
+}
+
 .get-involved-hero .page-hero__inner {
   grid-template-columns: 1fr;
-  padding-bottom: var(--space-4);
+  padding-block: var(--space-3) var(--space-2);
 }
 
 .get-involved-hero .page-hero__content {
@@ -672,10 +676,10 @@ h3 {
   text-align: center;
 }
 
-.involvement-gallery {
+.involvement-gallery.page-section {
   overflow: hidden;
   background: var(--cm-cream);
-  padding-top: var(--space-4);
+  padding-block: var(--space-3) var(--space-5);
 }
 
 .photo-carousel {
@@ -703,7 +707,7 @@ h3 {
 
 .photo-carousel__image {
   width: 100%;
-  height: clamp(10rem, 19vw, 14rem);
+  height: clamp(8rem, 15vw, 11rem);
   object-fit: cover;
 }
 
