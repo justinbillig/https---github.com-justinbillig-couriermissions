@@ -1,7 +1,7 @@
 # Courier Missions Website — Business & Design Spec
 
-Version 1.3 · November 2026
-Source material: Courier Missions Brand Guidelines, Final Mission Statement, 2025 Impact Review, the October 2026 grant application (organization overview, programs, leadership, Harvest of Hope), the Courier Missions Facebook page, and the temporary homepage currently live at couriermissions.com (`reference-temporary-homepage.html`).
+Version 1.4 · November 2026
+Source material: Courier Missions Brand Guidelines, Final Mission Statement, 2025 Impact Review, the October 2026 grant application (organization overview, programs, leadership, Harvest of Hope), the November 2, 2026 director conversation (`assets/docs/Initial Business Conversation.pdf`; use the transcript where generated notes conflict), the Courier Missions Facebook page, and the temporary homepage currently live at couriermissions.com (`reference-temporary-homepage.html`).
 
 **Do not publish** anything from the grant application that isn't in this spec: no phone numbers, bank details, personal email addresses, the funder's name, grant amounts, or the organizational budget.
 
@@ -52,7 +52,7 @@ Framework, routing, hosting, data organization, form integration, accessibility 
 
 All Donate buttons link to the confirmed Zeffy donation form: https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-2964.
 
-**Footer:** on-dark logo, one-line mission, repeated navigation, Facebook link to https://facebook.com/couriermissions, contact form link, "Courier Missions is a 501(c)(3) nonprofit organization, EIN 33-1569087. Gifts are tax-deductible as allowed by law.", copyright year, and tagline.
+**Footer:** on-dark logo, one-line mission, repeated navigation, Facebook link to https://facebook.com/couriermissions, contact form link, "Courier Missions is a 501(c)(3) nonprofit organization. Gifts are tax-deductible as allowed by law.", copyright year, and tagline. Do not include the EIN in the footer.
 
 ---
 
@@ -313,26 +313,34 @@ Navy background, white/sky text. Columns: on-dark badge or horizontal logo + one
 
 ## 8. Page content
 
-Copy below is drawn from the Mission Statement, Brand Guidelines, 2025 Impact Review, the October 2026 grant application, and Courier Missions' own Facebook posts. It may be edited for length, but facts and numbers must not change. Figures change as programs grow; label current figures "as of 2026" where the page might be read later.
+Copy below is drawn from the Mission Statement, Brand Guidelines, 2025 Impact Review, the October 2026 grant application, the Nov 2, 2026 director conversation, and Courier Missions' own Facebook posts. Where the later director conversation updates an earlier goal or giving metric, use the newer value; preserve year-specific results and distinguish estimates from measured outcomes. Figures change as programs grow; label current figures "as of 2026" where the page might be read later.
 
 **Key facts (single source for numbers):**
 | Fact | Value | Source |
 |---|---|---|
 | Students in school feeding programs | 375: 100 at Kakamega School for the Deaf, 275 at Shiongo Primary School | Grant application |
 | Feeding program goal | 2 more schools, about 500 more children: about 875 students at 4 schools | Grant application |
-| Harvest of Hope farm | 2 leased acres; goal of 12 | Grant application |
-| Farm day laborers employed | 50, prioritizing people facing unemployment and hardship | Grant application |
-| Farm first season | Profitable; corn and beans grown; a well dug | Grant application |
+| Harvest of Hope farm | 2 leased acres; goal is to expand to 10 total acres | Grant application; director conversation, Nov 2, 2026 |
+| Farm day laborers employed | 50, prioritizing people facing unemployment and hardship; daily wages and breakfast | Grant application; director conversation, Nov 2, 2026 |
+| Farm operations | Two harvests per year; irrigation may allow a third when weather permits | Director conversation, Nov 2, 2026 |
+| Farm produce | Supports school feeding, local pastors in need, and community members facing food insecurity; surplus sales fund future seed and plowing | Director conversation, Nov 2, 2026 |
+| Farm first season | Profitable; corn and beans grown | Grant application |
 | Farm well | Hand-dug, 14 ft, brick-lined, diesel irrigation pump | Facebook post |
-| Medical clinics | Quarterly in Kakamega; a 2025 multi-day clinic served 1,000+ people | Grant application; 2025 Impact Review |
+| Medical clinics | Quarterly in Kakamega; directors cited about 1,000–1,500 people served, a five-person local medical team, and about $1,200 per clinic. Separately, a 2025 multi-day clinic served 1,000+ people. Confirm the range applies per clinic before publishing it that way. | Director conversation, Nov 2, 2026; 2025 Impact Review |
+| Church projects | Directors reported five completed churches and one current project, Shiango, as of Nov 2, 2026; confirm names and spellings below | Director conversation, Nov 2, 2026 |
 | Countries | United States, Kenya, Sierra Leone | Grant application |
 | Volunteers | 12, plus 3 Co-Directors; no paid U.S. staff | Grant application |
-| School lunch giving figure | "$10 a month provides lunch for 2 students" (Shiongo school lunch program; Facebook spells it "Shihingo") | Facebook post |
+| Standardized meal giving figures | $10 a month supports one student with one meal a day; $50 a month supports five students with one meal a day each | Director conversation, Nov 2, 2026 |
+| School security | $150 a month supports daily security guard coverage at the Kakamega School for the Deaf | Director conversation, Nov 2, 2026 |
+| Bible cost | $12 per Bible | Director conversation, Nov 2, 2026 |
+| Church facility cost | About $15,000 for a church and restroom facility | Director conversation, Nov 2, 2026 |
+
+Use the agreed giving figures as approximate program-cost examples, not as a promise that a gift is restricted to that use. The current donation link goes to the general fund; only describe gifts as designated if the giving processor supports that designation.
 
 ### 8.1 Home
 1. **Hero** (7.2). Lead: "We partner with local leaders in Kenya, Sierra Leone and the U.S. to feed children, build churches, and bring help and hope when it's needed most."
 2. **What we do** — eyebrow "Our mission", H2 "Practical help and spiritual hope.", mission statement (8.2). Then three pillar cards (Empower, Respond, Transform).
-3. **Our work** — the 4 ministry area cards (8.3, photos per 6.2): Feeding Programs · Kakamega School for the Deaf · Church Building · Ministry Support. Link "See all our work →" to Our Work.
+3. **Our work** — the five ministry area cards (8.3, photos per 6.2): Feeding Programs · Kakamega School for the Deaf · Church Building · Medical Clinics · Ministry Support. Link "See all our work →" to Our Work.
 4. **Right now** — stats row on navy: **375** students fed at school · **50** farm workers employed · **4** medical clinics a year · **3** countries served.
 5. **Harvest of Hope feature** — split row: farm sign photo; H2 "Food, jobs and a future, from the same field."; 2–3 sentences on the cycle (8.4); link to the Harvest of Hope section on Feeding Programs.
 6. **Story / quote** block (TODO: a real quote from a pastor, teacher, farm worker or volunteer).
@@ -376,14 +384,16 @@ Every ministry area page uses the same layout: page header (photo, eyebrow, H1, 
 ### 8.4 Feeding Programs
 - **Header:** eyebrow "Feeding Programs · Kenya & Sierra Leone". H1 "No child should have to learn hungry." Lead: "We provide school meals in Kakamega, Kenya, support food programs in Sierra Leone, and grow food on our own farm to keep it going."
 - **Why it matters:** Many schools in Kakamega don't offer meals, so children come to school hungry and struggle to learn. Where our programs run, enrollment has grown because families know their children will eat.
-- **Kenya: school meals.** 375 students in two schools: 275 at Shiongo Primary School and 100 at the Kakamega School for the Deaf (link to 8.5). Giving line: "$10 a month provides lunch for 2 students."
+- **Kenya: school meals.** 375 students in two schools: 275 at Shiongo Primary School and 100 at the Kakamega School for the Deaf (link to 8.5). Standardized giving line: "$10 a month supports one student with one meal a day."
 - **Harvest of Hope farm** (the largest section on the page): eyebrow "Harvest of Hope", H2 "Planting seeds of faith, food and future." (the farm's sign line).
   - Lead: "Instead of only buying food, we grow it. Our farm feeds students, employs people who need work, and earns income to keep going."
   - **How it works:** a 4-step cycle diagram (a circle, the one place numbered steps make sense here): 1 **Grow** corn, beans and vegetables on leased farmland → 2 **Feed** our school programs and families in need through local churches → 3 **Employ** 50 local day laborers, prioritizing people facing unemployment and hardship → 4 **Reinvest** by selling part of each harvest at local markets to pay for seed, labor, land and the next planting.
   - **So far:** 2 acres · 50 workers · a profitable first harvest · a hand-dug well.
   - **The well:** "When the rains didn't come, we dug a well." A 14 ft, hand-dug, brick-lined well with a diesel pump keeps crops watered through dry seasons.
   - **Who runs it:** Project Manager Mark Abungana and a local agricultural specialist trained in farming, advised by Co-Director Sam Fox, an experienced U.S. farmer.
-  - **Where it's going (a goal):** grow from 2 to 12 acres, with more wells, irrigation and storage, to start lunch programs at two more schools (about 500 more children, about 875 in all), employ more people, and become self-sustaining.
+  - **Where it's going (a goal):** expand from 2 to 10 acres, with additional irrigation, to lower food costs and support year-round lunch programs at at least two more schools (about 500 more children, about 875 in all), employ more people, and move toward self-sufficiency.
+  - The farm produces two harvests a year; with favorable weather and the wells, diesel pump, and irrigation, a third harvest may be possible.
+  - Pay local day laborers daily and provide breakfast. Use harvests for the two school feeding programs, local pastors in need, and community members experiencing food insecurity; sell surplus at market and reinvest proceeds in plowing and seed.
 - **Sierra Leone.** Through local partners, we help provide nutritious meals to children and families facing poverty and food insecurity. (TODO: partner/location, numbers, photo.)
 - **Community meals:** a small row using the Kibera outreach photos. Per the Courier Missions post of Aug 21, 2026, Courier Missions took part in an outreach in Katwekera, Kibera (Nairobi), where 8 volunteers helped feed more than 600 people.
 - **Gallery:** serving line, volunteers serving lunch, farm photos.
@@ -394,9 +404,10 @@ Every ministry area page uses the same layout: page header (photo, eyebrow, H1, 
 - **Why it matters:** TODO one or two sentences from the team on the school and its students (don't invent).
 - **What we do** (list with icons):
   - **Daily meals:** a feeding program for the school's 100 students; in 2025 we began providing two meals a day.
+  - **School security:** Daily security guard coverage helps protect students and food when teachers are away; the agreed approximate cost is $150 a month. Do not describe this as 24/7 coverage.
   - **Monthly food deliveries,** including fresh vegetables from the Harvest of Hope farm and special meals with meat.
   - **Beds and blankets:** 85 mattresses and blankets provided in 2025.
-  - TODO confirm with the team: any other support to list (e.g. help with school security).
+  - Confirm with the team whether there is additional school support beyond meals, food deliveries, mattresses/blankets, and security.
 - **Gallery:** food delivery, team dishing up meals, students at long tables and the mattress delivery.
 - **CTA:** "Support the students." Donate.
 
@@ -409,14 +420,18 @@ Every ministry area page uses the same layout: page header (photo, eyebrow, H1, 
   3. **Roof:** trusses and roofing make the building usable in every season.
   4. **Complete:** finishing work, then the congregation dedicates the building.
   Then a short paragraph on the partnership: the congregation and local leaders lead the project, Courier Missions provides funding and support, and progress is documented with photos, video updates and receipts.
-- **Church projects:** a list of projects, not separate pages. Each project includes its name, community/location, status (Planned / Under construction / Completed), year, 1–3 sentences, and optional photos. Display projects as cards with a status badge; completed projects first. Until the team supplies names, locations and status, show "1 church completed in 2025" and "more construction and renovation projects underway" as clearly marked TODO entries. Draft project entries from Courier Missions' own Facebook posts (photos in 6.1b); the team confirms names, spellings and status before publishing:
+- **Church projects:** a list of projects, not separate pages. Each project includes its name, community/location, status (Planned / Under construction / Completed), year, 1–3 sentences, and optional photos. Display projects as cards with a status badge; completed projects first. Use the directors' Nov 2, 2026 update of five completed churches and Shiango as the current project; confirm names, locations, and photo matches before publishing. The 2025 Impact Review's "1 church completed" remains a year-specific 2025 figure. Draft project entries from Courier Missions' own Facebook posts (photos in 6.1b):
+  - The directors reported five completed church projects as of Nov 2, 2026: Believers Revival Mission, Imarira (spelled aloud in the meeting), Wetai (called "Waytie" in the meeting), Mayungu (called "Mayongu" in the meeting), and Moamba (also rendered as "Mwamba" on a sign). Treat this as the latest status update, but resolve naming and project-to-photo matches before publishing the project list.
   - **Wetai Church:** Completed, July 2026. The fourth church building project in Kakamega, with new flushing restroom facilities; built in three phases.
   - **Mayungu Church:** Completed and dedicated October 4, 2026; a meal for over 600 people (130 children) followed. (An April 2026 post calls a church "Mayungo Church", remodeled and almost complete; confirm whether it's the same one.)
-  - **Church in the Slums:** Completed, April 2026, with electricity, inside lights and security lights; the community calls it "The City on the Hill". Its sign reads "The Mwamba Church".
-  - **Imarira Church:** Under construction. Phase One (foundation, block walls) began July 2026; roofing began August 2026. The congregation's current building will be replaced. (Possibly the same church as "Emarira Church" below; confirm.)
-  - **Emarira Church:** Announced July 2026 as a new project in Emarira Village, Kakamega County. Founded after a 2019 crusade at Emusala Market; the congregation first met under a tree; more than 80 members.
-  - **The Believers Revival Mission:** Courier Missions helped complete their building (roof and walls, September 2025). Whether the October 6, 2025 dedication was this church is unconfirmed.
+  - **Church in the Slums:** Completed, April 2026, with electricity, inside lights and security lights; the community calls it "The City on the Hill". Its sign reads "The Mwamba Church"; the directors referred to this project as Moamba Church. Confirm the official name before publishing.
+  - **Imarira Church:** The directors described it as completed by Nov 2, 2026. Earlier posts document Phase One (foundation and block walls) in July and roofing in August. Confirm the final name and whether this matches the "Emarira Church" posts.
+  - **Emarira Church:** Announced July 2026 as a new project in Emarira Village, Kakamega County. Do not count it as a separate project until the team confirms whether it is the same church referred to as Imarira.
+  - **The Believers Revival Mission:** Included in the directors' list of five completed projects. A September 2025 post documents help completing the roof and walls. Whether the October 6, 2025 dedication was this church is unconfirmed.
+  - **Shiango Church:** The directors identified this as the only current new church project on Nov 2, 2026. The congregation had a temporary structure of sticks and tarps; Courier Missions announced plans to build a permanent church and began the corner foundation during an October visit.
   - A July 2026 post says Courier Missions "completed our third church in early June" 2026; which church that is isn't stated.
+- **Construction model and cost:** About $15,000 for a church and restroom facility. A typical facility includes a water tank, two or three lockable stalls with a sink, toilet, and shower head in each, handwashing stations, and electricity. Work is divided into three phases: foundation and walls to lintel level; roofing and floor screeding; then windows, doors, plastering and painting. Hire local contractors at daily wages to create local jobs and support families and the local economy.
+- **Possible school project:** A land donor associated with the Imara/Imarira church asked Courier Missions to explore building a school on the property. Planning is preliminary; confirm the project, name/location, and what details can be shared before publishing.
 - **Gallery:** ribbon-cutting, full church, the dedication plaque group. Project galleries come from 6.1b.
 - **CTA:** "Help build a church." Donate.
 
@@ -425,6 +440,7 @@ Every ministry area page uses the same layout: page header (photo, eyebrow, H1, 
 - **Disaster Relief:** When floods and other disasters hit, work with local organizations and volunteers to collect and distribute essential supplies and help families through emergencies and recovery. Example (per the Courier Missions post of Aug 19, 2026): donated supplies filled over 25 totes for residents affected by flooding in Connersville and Metamora, Indiana. Photos: flood relief (6.1a).
 - **LHS Closet (Lawrenceburg, Indiana):** hygiene products, personal care items, snacks and essentials for students in need, so they can come to school with dignity and ready to learn.
 - **Pastors and Bibles:** pastoral training, discipleship, and Bibles for pastors and families. Photo: `bible-campaign-men-holding-bibles`; also `eshiongo-church-bible-delivery-01` (30 Bibles delivered to Eshiongo Church, July 2026).
+  - The directors cited an approximate cost of $12 per Bible; present it as an approximate price, not a designated-gift promise.
 - **Scholarships:** educational help, including nursing school, for students facing financial hardship.
 - **How to help right now:** a simple, editable "Current needs" block that the team can turn on during a disaster, with what's needed and where to drop it off; hidden when empty.
 - **CTA:** "Your gift delivers hope." Donate.
@@ -432,7 +448,8 @@ Every ministry area page uses the same layout: page header (photo, eyebrow, H1, 
 ### 8.8 Medical Clinics
 - **Header:** photo = blood-pressure check. Eyebrow "Kakamega, Kenya". H1 "Medical clinics in Kakamega." Lead: quarterly outreach clinics offer consultations, medicines, screenings and health education; a 2025 multi-day clinic served more than 1,000 people.
 - **Highlights:** "Quarterly" outreach clinics in Kakamega; "1,000+" people served at a multi-day clinic in 2025.
-- **What clinics provide:** consultations, medicines, screenings, and health education.
+- **What clinics provide:** wound care, vision and dental checks, consultations, medicines, screenings, and health education.
+- The directors reported that a clinic costs about $1,200, serves approximately 1,000–1,500 people, and works with a five-person local medical team. Confirm whether the 1,000–1,500 range applies to each quarterly clinic before publishing it as a per-clinic claim.
 - **Gallery:** blood-pressure check, patient consultation, mother and baby, pharmacy table.
 - **CTA:** "Support medical clinics." Donate.
 
@@ -449,7 +466,8 @@ Web version of the 2025 Impact Review:
 
 ### 8.10 Get Involved
 Four cards/sections:
-- **Give** — one-time or monthly giving; primary Donate. Use only confirmed giving figures: "$10 a month provides lunch for 2 students." Add others only when the team confirms them.
+- **Give** — one-time or monthly giving; primary Donate. Confirmed examples from the directors' Nov 2, 2026 discussion: $10/month supports one student with one meal a day; $50/month supports five students with one meal a day each; $150/month supports daily school security; about $1,200 funds a medical clinic; about $15,000 funds a church and restroom facility; $12 buys a Bible. Present these as approximate program costs, not restricted-fund promises, unless designated giving is available.
+- Include a contact-form invitation for donors interested in stock or legacy gifts through donor-advised funds.
 - **Pray** — invitation to pray; optional email signup for prayer updates (TODO provider).
 - **Go** — the annual mission trip to Kenya; contact form preselected to "Go on a trip". Photo: `team-group-with-luggage` (wide strip). TODO trip dates.
 - **Partner as a church** — invite churches to partner; contact form preselected to "Partner as a church".
@@ -473,10 +491,11 @@ H1 "Get in touch", short line, contact form (7.11), Facebook. Do not publish a c
 | Facebook source links | Record the post URLs and dates for the photos in 6.1a. |
 | More field photos | See section 6 "Still needed": Sierra Leone (needs partner permission), pastoral training, farm well, LHS Closet, scholarships, leadership headshots. |
 | Church project list | Confirm the draft entries in 8.6: names, communities, status and year. |
-| Church name spellings | Imarira vs. Emarira (and "Imarira Believers Church"); Mayungo vs. Mayungu; "Church in the Slums" vs. "The Mwamba Church" on its sign. Which church was "our third church" (completed June 2026), and which was dedicated on Oct 6, 2025. |
+| Church names, spellings, and project mapping | Reconcile Imarira/Emarira/Imara, Waytie/Wetai, Mayongu/Mayungu, and Moamba/Moambo/Mwamba; confirm which photos and previous social posts correspond to each. Identify which project was "our third church" completed in June 2026 and which church was dedicated Oct 6, 2025. |
+| Proposed school project | Confirm whether the school requested on land associated with the Imara/Imarira church is proceeding, and what name, location, status, and details may be published. |
 | Deaf school details | A short description of the school and any other support to list (8.5). |
 | A real story/quote | Home and Impact pages. |
-| Other giving amounts | Only if the team confirms figures. |
+| Additional giving amounts | Confirm any giving examples beyond those agreed in the Nov 2, 2026 director conversation. |
 | Trip dates / how to apply | Get Involved page. |
 | Vector (SVG) logo files | Ask the brand designer; PNGs work meanwhile. |
 | Email newsletter provider (optional) | Prayer and updates signup. |

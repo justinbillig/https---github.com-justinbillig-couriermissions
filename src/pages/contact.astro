@@ -32,6 +32,7 @@ const interest = Astro.url.searchParams.get("interest") ?? "General question";
           <select id="interest" name="interest">
             <option value="General question" selected={interest === "General question"}>General question</option>
             <option value="Give" selected={interest === "Give"}>Give</option>
+            <option value="Stock or legacy gift" selected={interest === "Stock or legacy gift"}>Stock or legacy gift</option>
             <option value="Go on a trip" selected={interest === "Go on a trip"}>Go on a trip</option>
             <option value="Partner as a church" selected={interest === "Partner as a church"}>Partner as a church</option>
             <option value="Pray" selected={interest === "Pray"}>Pray</option>

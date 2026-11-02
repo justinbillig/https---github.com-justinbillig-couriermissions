@@ -8,12 +8,15 @@ import medicalPhoto from "../../assets/photos/courier-missions-medical-blood-pre
 import farmPhoto from "../../assets/photos/courier-missions-farm-harvest-of-hope-sign.jpg";
 import { homePage } from "../data/home.js";
 import { site } from "../data/site.js";
+import schoolPhoto from "../../assets/photos/courier-missions-feeding-food-delivery-to-school.jpg";
+import supportPhoto from "../../assets/photos/flood-relief-supply-table.jpg";
 
 const programPhotos = {
   feeding: feedingPhoto,
+  school: schoolPhoto,
   church: churchPhoto,
   medical: medicalPhoto,
-  farm: farmPhoto,
+  support: supportPhoto,
 };
 
 const heroPhoto = await getImage({
@@ -84,7 +87,7 @@ const heroPhoto = await getImage({
                 src={programPhotos[program.image]}
                 formats={["avif", "webp"]}
                 widths={[320, 480, 640]}
-                sizes="(max-width: 599px) 100vw, (max-width: 899px) 50vw, 25vw"
+                sizes="(max-width: 599px) 100vw, (max-width: 899px) 50vw, 33vw"
                 alt={program.alt}
                 loading="lazy"
               />
@@ -101,10 +104,30 @@ const heroPhoto = await getImage({
     </div>
   </section>
 
+  <section class="page-section" style="background: var(--cm-cream);">
+    <div class="container content-grid content-grid--split">
+      <div>
+        <p class="eyebrow">Harvest of Hope</p>
+        <h2>{homePage.farmFeature.title}</h2>
+        <p>{homePage.farmFeature.description}</p>
+        <a class="text-link" href="/our-work/feeding/#harvest-of-hope">{homePage.farmFeature.linkLabel} <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="page-hero__media">
+        <img
+          src={farmPhoto.src}
+          alt="The Harvest of Hope farm sign standing in a maize field in Kakamega."
+          width={farmPhoto.width}
+          height={farmPhoto.height}
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
   <section class="impact section" aria-labelledby="impact-title">
     <div class="container">
-      <p class="eyebrow">2025 at a glance</p>
-      <h2 id="impact-title">A year of faith and impact.</h2>
+      <p class="eyebrow">As reported in 2026</p>
+      <h2 id="impact-title">Practical help, rooted in local partnership.</h2>
       <ul class="impact__grid">
         {homePage.impact.map((stat) => (
           <li class="impact-stat">
@@ -115,17 +138,6 @@ const heroPhoto = await getImage({
         ))}
       </ul>
       <a class="text-link" href="/impact/">Read the 2025 Impact Review <span aria-hidden="true">→</span></a>
-    </div>
-  </section>
-
-  <section class="story section" aria-labelledby="story-title">
-    <div class="container">
-      <div class="story__card">
-        <p class="eyebrow">A story from the field</p>
-        <p class="story__mark" aria-hidden="true">“</p>
-        <h2 id="story-title">The people and stories behind the work matter.</h2>
-        <p class="story__placeholder">{homePage.storyTodo}</p>
-      </div>
     </div>
   </section>
 
