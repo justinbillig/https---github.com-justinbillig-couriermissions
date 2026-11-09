@@ -1,11 +1,11 @@
 # Courier Missions Website — Business & Design Spec
 
-Version 1.4 · November 2026
+Version 1.5 · November 2026
 Source material: Courier Missions Brand Guidelines, Final Mission Statement, 2025 Impact Review, the October 2026 grant application (organization overview, programs, leadership, Harvest of Hope), the November 2, 2026 director conversation (`assets/docs/Initial Business Conversation.pdf`; use the transcript where generated notes conflict), the Courier Missions Facebook page, and the temporary homepage currently live at couriermissions.com (`reference-temporary-homepage.html`).
 
 **Do not publish** anything from the grant application that isn't in this spec: no phone numbers, bank details, personal email addresses, the funder's name, grant amounts, or the organizational budget.
 
-This document defines the business content and design direction for the site. Open content decisions are marked **TODO** and listed in section 9. Implementation requirements are in [TECH-SPEC.md](./TECH-SPEC.md).
+This document defines the business content and design direction for the site. Open content decisions are marked **TODO** and listed in section 10. Implementation requirements are in [TECH-SPEC.md](./TECH-SPEC.md).
 
 ---
 
@@ -45,12 +45,13 @@ Framework, routing, hosting, data organization, form integration, accessibility 
 | Ministry Support | Disaster response, student essentials, Bible and pastoral support, and scholarships (8.7) |
 | Impact | 2025 Impact Review in web form, yearly updates over time (8.9) |
 | Get Involved | Give, pray, go, partner as a church |
+| Giving Tuesday 2026 | Time-limited campaign page at `/giving-tuesday/2026`; not in header navigation |
 | Contact | Contact form and Facebook |
 | Not found | A friendly message with links home and to Donate |
 
 **Header navigation:** logo, About, Our Work with links to Feeding Programs, Kakamega School for the Deaf, Church Building, Medical Clinics, and Ministry Support, Impact, Get Involved, Contact, and a prominent Donate button. On mobile, keep Donate visible outside the menu and nest the ministry links under Our Work.
 
-All Donate buttons link to the confirmed Zeffy donation form: https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-2964.
+Donate buttons link to the confirmed Zeffy donation form: https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-2964. Buttons on campaign pages that name another giving platform link to that campaign's confirmed platform instead.
 
 **Footer:** on-dark logo, one-line mission, repeated navigation, Facebook link to https://facebook.com/couriermissions, contact form link, "Courier Missions is a 501(c)(3) nonprofit organization. Gifts are tax-deductible as allowed by law.", copyright year, and tagline. Do not include the EIN in the footer.
 
@@ -463,7 +464,7 @@ Web version of the 2025 Impact Review:
 
 ### 8.10 Get Involved
 Four cards/sections:
-- **Give** — one-time or monthly giving; primary Donate. Confirmed examples from the directors' Nov 2, 2026 discussion: $10/month supports one student with one meal a day; $50/month supports five students with one meal a day each; $150/month supports daily school security; about $1,200 funds a medical clinic; about $15,000 funds a church and restroom facility; $12 buys a Bible. Present these as approximate program costs.
+- **Give** — a time-limited Giving Tuesday 2026 panel appears above the giving content and hides after December 1, 2026. One-time or monthly giving; primary Donate. Confirmed examples from the directors' Nov 2, 2026 discussion: $10/month supports one student with one meal a day; $50/month supports five students with one meal a day each; $150/month supports daily school security; about $1,200 funds a medical clinic; about $15,000 funds a church and restroom facility; $12 buys a Bible. Present these as approximate program costs.
 - Include a contact-form invitation for donors interested in stock or legacy gifts through donor-advised funds.
 - **Pray** — invitation to pray; optional email signup for prayer updates (TODO provider).
 - **Go** — the annual mission trip to Kenya; contact form preselected to "Go on a trip". Photo: `team-group-with-luggage` (wide strip). TODO trip dates.
@@ -478,7 +479,14 @@ H1 "Get in touch", short line, contact form (7.11), Facebook. Do not publish a c
 
 ---
 
-## 9. Open business and content items (TODO)
+## 9. Completed feature specs
+
+Every feature spec is listed here once it's done. Update this table in the same branch as the feature, right before that branch is merged into main. A feature spec is not complete until it's listed here.
+
+| Feature spec | Completed (date merged) | Version | What changed in this business spec |
+|---|---|---|---|
+
+## 10. Open business and content items (TODO)
 | Item | Notes |
 |---|---|
 | School name spelling | Using "Shiongo Primary School" (grant spelling). Double-check before launch. |
