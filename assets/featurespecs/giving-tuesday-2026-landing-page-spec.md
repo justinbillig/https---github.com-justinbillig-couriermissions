@@ -4,7 +4,7 @@ Nov 9, 2026 · @Justin Billig
 
 ## Summary
 
-**Status:** Draft · **Version:** 0.4 · **Ships before:** November 17, 2026 (first email send, two weeks before Giving Tuesday)
+**Status:** Draft · **Version:** 0.5 · **Ships before:** November 17, 2026 (first email send, two weeks before Giving Tuesday)
 
 Build a single landing page at `/giving-tuesday/2026` that explains Courier Missions' Giving Tuesday goal and sends visitors to Courier Missions' listing on Thrivent's giving platform. Gifts made there on Tuesday, December 1, 2026 can receive a boost from Thrivent; gifts made through Zeffy cannot. The page is the destination for a 3-touchpoint email campaign (out of scope here). Also add a short Giving Tuesday section to the giving area of the site that hides itself after December 1, 2026.
 
@@ -52,7 +52,7 @@ The page copy may only use facts in this table. They come from [Thrivent's Givin
 
 - The landing page at `/giving-tuesday/2026`.
 - A Giving Tuesday section in the site's giving area (see "Giving area section"), hidden by JavaScript after December 1, 2026.
-- Every give button on the landing page links to Courier Missions' Thrivent listing, not Zeffy.
+- Every give button on the landing page links to Thrivent's Giving Tuesday page, where donors can choose Courier Missions, not Zeffy.
 
 **Out of scope**
 
@@ -77,34 +77,34 @@ The page has six sections, top to bottom. The boost is the reason to give on Dec
 
 1. **Page header** (design spec 7.3, photo version)
    - Eyebrow: Giving Tuesday · December 1, 2026
-   - H1: Give on December 1, and Thrivent can boost your gift.
-   - Lead: Our goal is $50,000 in one day. Give through Thrivent on December 1, and Thrivent can add up to $1 for every $1 you give. A $50 gift could become up to $100 for the farm, the Deaf school and our clinics.
+   - H1: Give on December 1, and your gift can go up to twice as far.
+   - Lead: Help us reach our $50,000 goal in one day. Give through Thrivent on December 1, and Thrivent can add up to $1 for every $1 you give. A $50 gift could bring up to $50 more for the farm, the Deaf school and our clinics.
    - Primary button: Give through Thrivent
    - Under the button (small): Gifts count from midnight to 11:59 p.m. your time on December 1.
 2. **Why give through Thrivent on December 1** (three-up benefit row, right under the header)
-   - Benefit 1, *Up to twice the impact.* Thrivent can add up to $1 for every $1 you give.
-   - Benefit 2, *All of your gift goes to the work.* Thrivent covers the processing fees.
+   - Benefit 1, *Your gift can go up to twice as far.* Thrivent can add up to $1 for every $1 you give.
+   - Benefit 2, *Your whole gift goes to the work.* Thrivent covers the processing fees.
    - Benefit 3, *Anyone can give.* You don't need to be a Thrivent member.
-   - Line under the row: The boost only comes with gifts made through Thrivent on December 1. That's why we're asking you to give that day.
+   - Line under the row: On December 1, a gift through Thrivent can receive up to $1 for every $1 you give. That's why we're asking you to give that day.
 3. **Where your gift goes** (three program cards, design spec 7.6)
-   - Intro: Your gift, and Thrivent's boost, go toward three goals for 2027.
-   - Card 1, Harvest of Hope farm. The farm grows corn, beans and vegetables on 2 leased acres and gives work to 50 local day laborers. The goal is 10 acres. Your gift helps the farm grow. Photo: `courier-missions-farm-harvest-of-hope-sign.jpg`.
-   - Card 2, Kakamega School for the Deaf. Every school day, 100 students at the Deaf school sit down to two meals. Your gift helps fully fund those meals for 2027. Photo: `kakamega-school-for-the-deaf-students-eating-in-meal-hall.jpg` (follow design spec 6.4).
-   - Card 3, Medical clinics. Four times a year, clinics in Kakamega offer consultations, medicines, screenings and health education. One clinic in 2025 served more than 1,000 people. Your gift helps fully fund the clinics planned for 2027. Photo: `courier-missions-medical-blood-pressure-check.jpg`.
+   - Intro: Your gift can help grow the farm, keep meals going at the Deaf school and fund next year's medical clinics.
+   - Card 1, Harvest of Hope farm. On 2 leased acres, Harvest of Hope grows corn, beans and vegetables. The farm pays daily wages to 50 local day laborers. The goal is 10 acres. Your gift can help it grow. Photo: `courier-missions-farm-harvest-of-hope-sign.jpg`.
+   - Card 2, Kakamega School for the Deaf. Every school day, 100 students at Kakamega School for the Deaf sit down to two meals. Your gift can help fully fund those meals in 2027. Photo: `kakamega-school-for-the-deaf-students-eating-in-meal-hall.jpg` (follow design spec 6.4).
+   - Card 3, Medical clinics. Four times a year, clinics in Kakamega offer consultations, medicines, screenings and health education. In 2025, one clinic served more than 1,000 people. Your gift can help fully fund the clinics planned for 2027. Photo: `courier-missions-medical-blood-pressure-check.jpg`.
 4. **How to give on December 1** (numbered steps)
    1. On December 1, tap Give through Thrivent. On the Thrivent Giving Tuesday page, choose Courier Missions.
-   2. Give by card, Apple Pay or Google Pay, any time from midnight to 11:59 p.m. your time.
-   3. Thrivent emails your receipt. The boost is added after Giving Tuesday, so there's nothing more to do.
+   2. Give by card, Apple Pay or Google Pay, any time from midnight to 11:59 p.m. in your time zone.
+   3. Thrivent will email your receipt. If your gift gets a boost, up to $1 for every $1 you give will be added after Giving Tuesday. You don't need to do anything else.
 5. **Good to know** (short questions and answers)
    - *Do I need to be a Thrivent member?* No. Anyone can give.
-   - *Will my gift be matched dollar for dollar?* Thrivent boosts gifts by up to $1 for every $1, from a pool shared by every participating organization. If more is given than the pool covers, each boost is smaller. Thrivent sets the final amount after Giving Tuesday.
-   - *Can I give by check, bank transfer, donor-advised fund or IRA distribution?* Those won't receive the boost. Only online gifts through Thrivent on December 1 qualify.
+   - *How much can Thrivent add?* Thrivent can add up to $1 for every $1 you give, from a pool shared by all participating organizations. If total giving is more than the pool, the boost is smaller for everyone. Thrivent sets each boost after Giving Tuesday.
+   - *Can I give by check, bank transfer, donor-advised fund or qualified charitable distribution?* Only online gifts made through Thrivent on December 1 can get a boost of up to $1 for every $1 you give. Checks, bank transfers, donor-advised funds and qualified charitable distributions aren't eligible.
    - *Are there fees?* Thrivent covers the processing fees, so all of your gift goes to Courier Missions.
-   - *Who sends my receipt?* Thrivent Charitable emails it to you. Your bank statement will show "Thrivent Charitable." For tax questions, talk with your tax advisor.
-   - *Will Courier Missions know I gave?* Yes. Thrivent shares your name, contact information and gift with us, so we can thank you.
+   - *Who sends my receipt?* Thrivent Charitable will email your receipt. Your statement will show "Thrivent Charitable." For tax questions, ask your tax advisor.
+   - *Will Courier Missions know I gave?* Yes. Thrivent shares your name, contact info and gift amount with us, so we can thank you.
 6. **Closing band** (design spec 7.10, with the button pointed at Thrivent)
    - H2: Your gift delivers hope.
-   - Line: Mark December 1. Give through Thrivent that day, and your gift can go up to twice as far.
+   - Line: Mark December 1 on your calendar. Give through Thrivent that day, and your gift can go up to twice as far.
    - Primary button: Give through Thrivent
 
 ## Giving area section
@@ -114,8 +114,8 @@ The design spec has no Donate page; its Donate buttons go straight to Zeffy, and
 **Copy**
 
 - Eyebrow: Giving Tuesday · December 1
-- H3: Give through Thrivent on December 1, and your gift can go further.
-- Text: On December 1, Thrivent can add up to $1 for every $1 you give through its giving platform. Help us reach $50,000 for the Harvest of Hope farm, meals at the Deaf school and our medical clinics in 2027.
+- H3: Give through Thrivent on December 1, and your gift can go up to twice as far.
+- Text: You can help us reach $50,000 for 2027: a larger Harvest of Hope farm, meals at the Deaf school and our medical clinics. On December 1, Thrivent can add up to $1 for every $1 you give through its giving platform.
 - Text link (design spec 7.1): See how to give on Giving Tuesday → (links to `/giving-tuesday/2026`)
 
 **Hide rule**

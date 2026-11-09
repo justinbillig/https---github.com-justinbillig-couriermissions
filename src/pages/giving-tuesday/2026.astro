@@ -47,7 +47,7 @@ const programImages = {
   <section class="giving-tuesday-benefits section" aria-labelledby="giving-tuesday-benefits-title">
     <div class="container">
       <h2 class="visually-hidden" id="giving-tuesday-benefits-title">
-        Why give through Thrivent on December 1
+        {givingTuesday2026.benefitsTitle}
       </h2>
       <ul class="giving-tuesday-benefits__grid">
         {givingTuesday2026.benefits.map((benefit) => (
@@ -63,13 +63,9 @@ const programImages = {
 
   <section class="page-section" aria-labelledby="giving-tuesday-programs-title">
     <div class="container">
-      <p class="eyebrow">Where your gift goes</p>
-      <h2 class="section-heading" id="giving-tuesday-programs-title">
-        Three goals for 2027.
-      </h2>
-      <p class="section-lead">
-        Your gift, and Thrivent's boost, go toward three goals for 2027.
-      </p>
+      <p class="eyebrow">{givingTuesday2026.programsEyebrow}</p>
+      <h2 class="section-heading" id="giving-tuesday-programs-title">{givingTuesday2026.programsTitle}</h2>
+      <p class="section-lead">{givingTuesday2026.programsIntro}</p>
       <div class="program-grid giving-tuesday-program-grid">
         {givingTuesday2026.programs.map((program) => (
           <article class="program-card">
@@ -95,10 +91,8 @@ const programImages = {
 
   <section class="page-section giving-tuesday-steps" aria-labelledby="giving-tuesday-steps-title">
     <div class="container narrow">
-      <p class="eyebrow">How to give on December 1</p>
-      <h2 class="section-heading" id="giving-tuesday-steps-title">
-        Three steps. That's all.
-      </h2>
+      <p class="eyebrow">{givingTuesday2026.stepsEyebrow}</p>
+      <h2 class="section-heading" id="giving-tuesday-steps-title">{givingTuesday2026.stepsTitle}</h2>
       <ol class="giving-tuesday-steps__list">
         {givingTuesday2026.steps.map((step) => <li>{step}</li>)}
       </ol>
@@ -107,10 +101,8 @@ const programImages = {
 
   <section class="page-section giving-tuesday-faq" aria-labelledby="giving-tuesday-faq-title">
     <div class="container narrow">
-      <p class="eyebrow">Good to know</p>
-      <h2 class="section-heading" id="giving-tuesday-faq-title">
-        A few common questions.
-      </h2>
+      <p class="eyebrow">{givingTuesday2026.questionsEyebrow}</p>
+      <h2 class="section-heading" id="giving-tuesday-faq-title">{givingTuesday2026.questionsTitle}</h2>
       <div class="giving-tuesday-faq__list">
         {givingTuesday2026.questions.map((item) => (
           <details>
