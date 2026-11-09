@@ -661,6 +661,171 @@ h3 {
   object-fit: cover;
 }
 
+.giving-tuesday-hero {
+  padding-top: 4rem;
+}
+
+.giving-tuesday-hero .page-hero__inner {
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+  gap: var(--space-7);
+  padding-block: var(--space-5);
+}
+
+.giving-tuesday-hero .page-hero__content {
+  max-width: 44rem;
+}
+
+.giving-tuesday-hero .page-hero__media {
+  min-height: 24rem;
+  aspect-ratio: 4 / 3;
+}
+
+.giving-tuesday-hero .page-hero__content .section-lead {
+  margin-bottom: var(--space-5);
+}
+
+.giving-tuesday-hero__timing {
+  margin: var(--space-3) 0 0;
+  color: rgb(255 255 255 / 84%);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}
+
+.giving-tuesday-benefits {
+  background: var(--cm-navy);
+  color: var(--cm-white);
+}
+
+.giving-tuesday-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.giving-tuesday-benefits__grid h3 {
+  margin-bottom: var(--space-2);
+  color: var(--cm-orange);
+}
+
+.giving-tuesday-benefits__grid p {
+  margin-bottom: 0;
+}
+
+.giving-tuesday-benefits__note {
+  max-width: 68ch;
+  margin: var(--space-6) auto 0;
+  color: var(--cm-sky);
+  text-align: center;
+}
+
+.giving-tuesday-program-grid {
+  margin-top: var(--space-6);
+}
+
+.giving-tuesday-program-grid .program-card__image {
+  min-height: 0;
+}
+
+.giving-tuesday-program-grid .program-card__image img {
+  aspect-ratio: 4 / 3;
+}
+
+.giving-tuesday-steps {
+  background: var(--cm-cream);
+}
+
+.giving-tuesday-steps__list {
+  display: grid;
+  gap: var(--space-5);
+  margin: 0;
+  padding-left: 2rem;
+  font-size: var(--fs-lead);
+}
+
+.giving-tuesday-steps__list li {
+  padding-left: var(--space-2);
+}
+
+.giving-tuesday-steps__list li::marker {
+  color: var(--cm-orange-ink);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.giving-tuesday-faq__list {
+  border-top: 1px solid var(--cm-line);
+}
+
+.giving-tuesday-faq__list details {
+  border-bottom: 1px solid var(--cm-line);
+  padding-block: var(--space-4);
+}
+
+.giving-tuesday-faq__list summary {
+  min-height: 48px;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.giving-tuesday-faq__list details p {
+  max-width: 68ch;
+  margin: var(--space-3) 0 0;
+}
+
+.giving-tuesday-closing {
+  padding-block: var(--space-8);
+}
+
+.giving-tuesday-teaser {
+  padding-block: var(--space-5);
+  background: var(--cm-cream);
+}
+
+.giving-tuesday-teaser[hidden] {
+  display: none;
+}
+
+.giving-tuesday-teaser__panel {
+  border: 1px solid var(--cm-line);
+  border-radius: var(--radius-md);
+  background: var(--cm-white);
+  padding: var(--space-5);
+}
+
+.giving-tuesday-teaser__panel h2 {
+  max-width: 28ch;
+  margin-bottom: var(--space-3);
+  font-size: var(--fs-h3);
+  line-height: 1.3;
+}
+
+.giving-tuesday-teaser__panel > p:not(.eyebrow) {
+  max-width: 68ch;
+}
+
+.giving-tuesday-teaser__panel .text-link {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
 .get-involved-hero {
   padding-top: 5rem;
 }
@@ -1147,6 +1312,20 @@ h3 {
 }
 
 @media (max-width: 899px) {
+  .giving-tuesday-hero .page-hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .giving-tuesday-hero .page-hero__media {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .giving-tuesday-benefits__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
   .photo-carousel__track {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1172,6 +1351,23 @@ h3 {
 
   .page-hero {
     padding-top: 5rem;
+  }
+
+  .giving-tuesday-hero {
+    padding-top: 3.75rem;
+  }
+
+  .giving-tuesday-hero .page-hero__inner {
+    gap: var(--space-4);
+    padding-block: var(--space-4);
+  }
+
+  .giving-tuesday-hero .page-hero__content h1 {
+    margin-bottom: var(--space-3);
+  }
+
+  .giving-tuesday-hero .page-hero__content .section-lead {
+    margin-bottom: var(--space-4);
   }
 
   .page-hero__inner {

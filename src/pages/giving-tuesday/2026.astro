@@ -1,0 +1,140 @@
+---
+import { Picture } from "astro:assets";
+import SiteLayout from "../../layouts/BaseLayout.astro";
+import { givingTuesday2026 } from "../../data/giving-tuesday-2026.js";
+import farmImage from "../../../assets/photos/courier-missions-farm-workers-tending-crops.jpg";
+import farmSignImage from "../../../assets/photos/courier-missions-farm-harvest-of-hope-sign.jpg";
+import schoolImage from "../../../assets/photos/kakamega-school-for-the-deaf-students-eating-in-meal-hall.jpg";
+import clinicImage from "../../../assets/photos/courier-missions-medical-blood-pressure-check.jpg";
+
+const programImages = {
+  farm: farmSignImage,
+  school: schoolImage,
+  clinics: clinicImage,
+};
+---
+
+<SiteLayout
+  title={givingTuesday2026.title}
+  description={givingTuesday2026.description}
+  heroImage={farmImage}
+>
+  <section class="page-hero page-hero--navy giving-tuesday-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__content">
+        <p class="eyebrow">{givingTuesday2026.hero.eyebrow}</p>
+        <h1>{givingTuesday2026.hero.title}</h1>
+        <p class="section-lead">{givingTuesday2026.hero.lead}</p>
+        <a class="button button--primary" href={givingTuesday2026.giveHref}>
+          {givingTuesday2026.giveLabel}
+        </a>
+        <p class="giving-tuesday-hero__timing">{givingTuesday2026.hero.timing}</p>
+      </div>
+      <div class="page-hero__media">
+        <Picture
+          src={farmImage}
+          formats={["avif", "webp"]}
+          widths={[480, 720, 960, 1200]}
+          sizes="(max-width: 899px) 100vw, 48vw"
+          alt="Farm workers tending young maize at the Harvest of Hope farm."
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="giving-tuesday-benefits section" aria-labelledby="giving-tuesday-benefits-title">
+    <div class="container">
+      <h2 class="visually-hidden" id="giving-tuesday-benefits-title">
+        Why give through Thrivent on December 1
+      </h2>
+      <ul class="giving-tuesday-benefits__grid">
+        {givingTuesday2026.benefits.map((benefit) => (
+          <li>
+            <h3>{benefit.title}</h3>
+            <p>{benefit.description}</p>
+          </li>
+        ))}
+      </ul>
+      <p class="giving-tuesday-benefits__note">{givingTuesday2026.benefitsNote}</p>
+    </div>
+  </section>
+
+  <section class="page-section" aria-labelledby="giving-tuesday-programs-title">
+    <div class="container">
+      <p class="eyebrow">Where your gift goes</p>
+      <h2 class="section-heading" id="giving-tuesday-programs-title">
+        Three goals for 2027.
+      </h2>
+      <p class="section-lead">
+        Your gift, and Thrivent's boost, go toward three goals for 2027.
+      </p>
+      <div class="program-grid giving-tuesday-program-grid">
+        {givingTuesday2026.programs.map((program) => (
+          <article class="program-card">
+            <div class="program-card__image">
+              <Picture
+                src={programImages[program.image]}
+                formats={["avif", "webp"]}
+                widths={[480, 720, 960]}
+                sizes="(max-width: 599px) 90vw, (max-width: 899px) 45vw, 30vw"
+                alt={program.imageAlt}
+                loading="lazy"
+              />
+            </div>
+            <div class="program-card__body">
+              <h3>{program.title}</h3>
+              <p>{program.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section giving-tuesday-steps" aria-labelledby="giving-tuesday-steps-title">
+    <div class="container narrow">
+      <p class="eyebrow">How to give on December 1</p>
+      <h2 class="section-heading" id="giving-tuesday-steps-title">
+        Three steps. That's all.
+      </h2>
+      <ol class="giving-tuesday-steps__list">
+        {givingTuesday2026.steps.map((step) => <li>{step}</li>)}
+      </ol>
+    </div>
+  </section>
+
+  <section class="page-section giving-tuesday-faq" aria-labelledby="giving-tuesday-faq-title">
+    <div class="container narrow">
+      <p class="eyebrow">Good to know</p>
+      <h2 class="section-heading" id="giving-tuesday-faq-title">
+        A few common questions.
+      </h2>
+      <div class="giving-tuesday-faq__list">
+        {givingTuesday2026.questions.map((item) => (
+          <details>
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="donate-cta section giving-tuesday-closing">
+    <div class="container">
+      <div class="donate-cta__inner">
+        <div>
+          <h2>{givingTuesday2026.closing.title}</h2>
+          <p class="donate-cta__copy">{givingTuesday2026.closing.description}</p>
+        </div>
+        <div class="donate-cta__actions">
+          <a class="button button--primary" href={givingTuesday2026.giveHref}>
+            {givingTuesday2026.giveLabel}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</SiteLayout>
