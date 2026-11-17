@@ -343,6 +343,7 @@ Use the agreed giving figures as approximate program-cost examples.
 5. **Harvest of Hope feature** — split row: farm sign photo; H2 "Food, jobs and a future, from the same field."; 2–3 sentences on the cycle (8.4); link to the Harvest of Hope section on Feeding Programs.
 6. **Story / quote** block (TODO: a real quote from a pastor, teacher, farm worker or volunteer).
 7. **Donate CTA band** (7.10).
+8. **Giving Tuesday popup** — a non-modal popup appears two seconds after the home page loads through December 1, 2026. Visitors can close it to minimize it to a floating Giving Tuesday button and reopen it. The popup briefly explains the Thrivent program and links to `/giving-tuesday/2026`.
 
 ### 8.2 About
 - Page header: H1 "About Courier Missions".
@@ -464,7 +465,7 @@ Web version of the 2025 Impact Review:
 
 ### 8.10 Get Involved
 Four cards/sections:
-- **Give** — a time-limited Giving Tuesday 2026 panel appears above the giving content and hides after December 1, 2026. One-time or monthly giving; primary Donate. Confirmed examples from the directors' Nov 2, 2026 discussion: $10/month supports one student with one meal a day; $50/month supports five students with one meal a day each; $150/month supports daily school security; about $1,200 funds a medical clinic; about $15,000 funds a church and restroom facility; $12 buys a Bible. Present these as approximate program costs.
+- **Give** — a time-limited Giving Tuesday 2026 panel appears above the giving content and hides from December 2, 2026. One-time or monthly giving; primary Donate. Confirmed examples from the directors' Nov 2, 2026 discussion: $10/month supports one student with one meal a day; $50/month supports five students with one meal a day each; $150/month supports daily school security; about $1,200 funds a medical clinic; about $15,000 funds a church and restroom facility; $12 buys a Bible. Present these as approximate program costs.
 - Include a contact-form invitation for donors interested in stock or legacy gifts through donor-advised funds.
 - **Pray** — invitation to pray; optional email signup for prayer updates (TODO provider).
 - **Go** — the annual mission trip to Kenya; contact form preselected to "Go on a trip". Photo: `team-group-with-luggage` (wide strip). TODO trip dates.
@@ -485,6 +486,7 @@ Every feature spec is listed here once it's done. Update this table in the same 
 
 | Feature spec | Completed (date merged) | Version | What changed in this business spec |
 |---|---|---|---|
+| [Giving Tuesday 2026 Landing Page](./assets/featurespecs/giving-tuesday-2026-landing-page-spec.md) | 2026-11-17 | 0.5 | §3, §8.1, §8.10 |
 
 ## 10. Open business and content items (TODO)
 | Item | Notes |

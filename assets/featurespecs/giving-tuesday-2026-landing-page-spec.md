@@ -4,7 +4,7 @@ Nov 9, 2026 · @Justin Billig
 
 ## Summary
 
-**Status:** Draft · **Version:** 0.5 · **Ships before:** the first email send date (TODO: date)
+**Status:** Complete · **Version:** 0.5 · **Ships before:** the first email send date (TODO: date)
 
 Build a single landing page at `/giving-tuesday/2026` that explains Courier Missions' Giving Tuesday goal and sends visitors to Courier Missions' listing on Thrivent's giving platform. Gifts made there on Giving Tuesday, December 1, 2026 can receive a boost from Thrivent; gifts made through Zeffy cannot. The page is the destination for a 3-touchpoint email campaign (out of scope here). Also add a short Giving Tuesday section to the giving area of the site that hides itself after December 1, 2026.
 
@@ -26,7 +26,7 @@ Build a single landing page at `/giving-tuesday/2026` that explains Courier Miss
 
 ## Thrivent program facts
 
-The page copy may only use facts in this table. They come from [Thrivent's Giving Tuesday page](https://www.thrivent.com/offers/giving-tuesday), checked November 9, 2026. On November 13, Henry Hampton (Thrivent) said Thrivent is making these details more public. **Recheck every row before launch**, and update the copy if anything changed.
+The page copy may only use facts in this table. They come from [Thrivent's Giving Tuesday page](https://www.thrivent.com/offers/giving-tuesday), checked November 17, 2026. **Recheck every row before launch**, and update the copy if anything changed.
 
 | Fact | What Thrivent says | Can it go on our page? |
 | --- | --- | --- |
@@ -39,7 +39,7 @@ The page copy may only use facts in this table. They come from [Thrivent's Givin
 | Payment | Credit or debit card, Apple Pay, Google Pay. No ACH on Giving Tuesday. | Yes |
 | Not eligible for the boost | Checks, donor-advised funds, qualified charitable distributions, or any method other than Thrivent's online platform | Yes |
 | Minimum gift | $1 | Optional |
-| Fees | Thrivent covers online processing fees, so all of the gift goes to the organization | Yes |
+| Fees | Thrivent covers online processing fees for personal donations, up to $1 million per calendar year | Yes |
 | Receipt | Email and tax receipt come from Thrivent Charitable | Yes |
 | Bank statement | The charge shows as "Thrivent Charitable" | Yes |
 | Donor info | Thrivent shares the donor's name, contact info, date and amount with the organization | Yes |
@@ -201,13 +201,13 @@ The page uses existing tokens and components only. Nothing new is added to the d
 
 | Question | Why it matters | Blocks build? |
 | --- | --- | --- |
-| Does the direct Thrivent link open Courier Missions' donation page on a phone and a computer? | Henry built it and said it "appears to work"; every give button uses it | Yes |
 | When does the first email go out? | Sets the ship date | Yes |
-| Is Thrivent's Giving Tuesday page public yet, so our page can go live? | Henry said on November 13 that Thrivent is making the details more public; confirm before launch | Yes |
 | Should a visitor who arrives after December 1 see anything different? | Gifts made after December 1 get no boost, but the page will still say they can | No |
 | Is there a link for people who can't give on December 1 (for example, Zeffy in small text)? | Out of the main CTA, but it could keep a late visitor from leaving | No |
 | Does the site have analytics to count clicks to Thrivent? | Secondary success measure | No |
 | Which photo leads the humanitarian aid card: the August flood relief photos, or one from the September Masters of Disaster event? | A September photo would need the date and team approval before use | No |
+
+**Verified November 17, 2026:** Thrivent's Giving Tuesday page is public. The direct donation link opened Courier Missions' Thrivent donation form in a desktop browser and at a 375px mobile viewport.
 
 ## Changes to the design spec
 
