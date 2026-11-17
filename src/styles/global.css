@@ -781,7 +781,12 @@ h3 {
 }
 
 .giving-tuesday-popup {
+  position: fixed;
+  right: var(--space-5);
+  bottom: var(--space-5);
+  z-index: 100;
   width: min(calc(100% - 2rem), 32rem);
+  margin: 0;
   border: 0;
   border-radius: var(--radius-lg);
   padding: 0;
@@ -790,8 +795,9 @@ h3 {
   box-shadow: var(--shadow-card);
 }
 
-.giving-tuesday-popup::backdrop {
-  background: rgb(24 48 68 / 72%);
+.giving-tuesday-popup[hidden],
+.giving-tuesday-popup__open[hidden] {
+  display: none;
 }
 
 .giving-tuesday-popup__content {
@@ -822,6 +828,40 @@ h3 {
   cursor: pointer;
   font-size: 2rem;
   line-height: 1;
+}
+
+.giving-tuesday-popup__open {
+  position: fixed;
+  right: var(--space-5);
+  bottom: var(--space-5);
+  z-index: 100;
+  min-height: 48px;
+  border: 0;
+  border-radius: 999px;
+  padding-inline: var(--space-4);
+  color: var(--cm-navy);
+  background: var(--cm-orange);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+@media (max-width: 599px) {
+  .giving-tuesday-popup {
+    right: var(--space-3);
+    bottom: var(--space-3);
+  }
+
+  .giving-tuesday-popup__open {
+    right: var(--space-3);
+    bottom: var(--space-3);
+  }
+
+  .giving-tuesday-popup__content {
+    padding: var(--space-5);
+    padding-top: var(--space-6);
+  }
 }
 
 .giving-tuesday-teaser {
