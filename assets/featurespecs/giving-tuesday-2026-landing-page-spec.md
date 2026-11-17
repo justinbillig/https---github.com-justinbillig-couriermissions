@@ -6,11 +6,11 @@ Nov 9, 2026 · @Justin Billig
 
 **Status:** Draft · **Version:** 0.5 · **Ships before:** the first email send date (TODO: date)
 
-Build a single landing page at `/giving-tuesday/2026` that explains Courier Missions' Giving Tuesday goal and sends visitors to Courier Missions' listing on Thrivent's giving platform. Gifts made there on Tuesday, December 1, 2026 can receive a boost from Thrivent; gifts made through Zeffy cannot. The page is the destination for a 3-touchpoint email campaign (out of scope here). Also add a short Giving Tuesday section to the giving area of the site that hides itself after December 1, 2026.
+Build a single landing page at `/giving-tuesday/2026` that explains Courier Missions' Giving Tuesday goal and sends visitors to Courier Missions' listing on Thrivent's giving platform. Gifts made there on Giving Tuesday, December 1, 2026 can receive a boost from Thrivent; gifts made through Zeffy cannot. The page is the destination for a 3-touchpoint email campaign (out of scope here). Also add a short Giving Tuesday section to the giving area of the site that hides itself after December 1, 2026.
 
 ## Goal, audience and success
 
-**Goal:** $50,000 given to Courier Missions through Thrivent's giving platform on December 1, 2026. If Thrivent's boost comes through at the full $1 for $1, that becomes $100,000. The boost is not guaranteed, so the page states the $50,000 goal and never promises $100,000.
+**Goal:** $100,000 given to Courier Missions through Thrivent's giving platform on Giving Tuesday, December 1, 2026. Thrivent boosts eligible gifts by up to $1 for every $1, but the boost is not guaranteed.
 
 **What the money is for:** three 2027 goals.
 
@@ -22,7 +22,7 @@ Build a single landing page at `/giving-tuesday/2026` that explains Courier Miss
 
 **Site priority served:** #1, make giving easy (design spec §1).
 
-**Success measure:** total given through Thrivent on December 1. Courier Missions learns this from Thrivent's payment on December 9 and the boost on or before December 16. Clicks from the page to Thrivent are a secondary measure, if the site has analytics (open question).
+**Success measure:** total given through Thrivent on Giving Tuesday. Courier Missions learns this from Thrivent's payment on December 9 and the boost on or before December 16. Clicks from the page to Thrivent are a secondary measure, if the site has analytics (open question).
 
 ## Thrivent program facts
 
@@ -69,7 +69,7 @@ The page copy may only use facts in this table. They come from [Thrivent's Givin
 
 **Page title:** Giving Tuesday 2026 | Courier Missions
 
-**Meta description:** Give through Thrivent on December 1, 2026, and your gift to Courier Missions can go up to twice as far. Help us reach $50,000 for 2027.
+**Meta description:** Give through Thrivent on Giving Tuesday, and your gift to Courier Missions can go up to twice as far. Help us reach $100,000 for 2027.
 
 **Give button target (every give button on the page):** the link changes on Giving Tuesday, by the visitor's own date.
 
@@ -91,38 +91,38 @@ if (new Date() >= switchDate) {
 }
 ```
 
-The page has six sections, top to bottom. The boost is the reason to give on December 1, so it shows up in the header, its own benefit row, and the closing band, while the three 2027 goals stay the reason to give at all. Draft copy is below; facts come from the project files and the Thrivent table above.
+The page has six sections, top to bottom. The boost is the reason to give on Giving Tuesday, so it shows up in the header, its own benefit row, and the closing band, while the three 2027 goals stay the reason to give at all. Draft copy is below; facts come from the project files and the Thrivent table above.
 
 1. **Page header** (design spec 7.3, photo version)
    - Eyebrow: Giving Tuesday · December 1, 2026
-   - H1: Give on December 1, and Thrivent can boost your gift.
-   - Lead: Our goal is $50,000 in one day. Give through Thrivent on December 1, and Thrivent can add up to $1 for every $1 you give. A $50 gift could become up to $100 for the farm, our clinics and neighbors in need here at home.
+   - H1: Give on Giving Tuesday, and Thrivent can boost your gift.
+   - Lead: Our goal is $100,000 in one day. Give through Thrivent on Giving Tuesday, and Thrivent can add up to $1 for every $1 you give. A $50 gift could become up to $100 for the farm, our clinics and neighbors in need here at home.
    - Primary button: Give through Thrivent
-   - Under the button (small): Gifts count from midnight to 11:59 p.m. your time on December 1.
-2. **Why give through Thrivent on December 1** (three-up benefit row, right under the header)
+   - Under the button (small): Gifts count from midnight to 11:59 p.m. your time on Giving Tuesday.
+2. **Why give through Thrivent on Giving Tuesday** (three-up benefit row, right under the header)
    - Benefit 1, *Up to twice the impact.* Thrivent can add up to $1 for every $1 you give.
    - Benefit 2, *All of your gift goes to the work.* Thrivent covers the processing fees.
    - Benefit 3, *Anyone can give.* You don't need to be a Thrivent member.
-   - Line under the row: The boost only comes with gifts made through Thrivent on December 1. That's why we're asking you to give that day.
+   - Line under the row: The boost only comes with gifts made through Thrivent on Giving Tuesday. That's why we're asking you to give that day.
 3. **Where your gift goes** (three program cards, design spec 7.6)
    - Intro: Your gift, and Thrivent's boost, go toward three goals for 2027.
    - Card 1, Harvest of Hope farm. The farm grows corn, beans and vegetables on 2 leased acres and gives work to 50 local day laborers. The goal is 12 acres. Your gift helps the farm grow. Photo: `courier-missions-farm-harvest-of-hope-sign.jpg`.
    - Card 2, Medical clinics. Four times a year, clinics in Kakamega offer consultations, medicines, screenings and health education. One clinic in 2025 served more than 1,000 people. Your gift helps fully fund the clinics planned for 2027. Photo: `courier-missions-medical-blood-pressure-check.jpg`.
    - Card 3, Humanitarian aid at home. When floods hit Connersville and Metamora, Indiana in August 2026, donated supplies filled more than 25 totes for families. Your gift helps us show up for neighbors here in the U.S. when they need it most. Photo: `flood-relief-volunteers-group.jpg`, or one from the September Masters of Disaster event if the team approves it.
-4. **How to give on December 1** (numbered steps)
-   1. On December 1, tap Give through Thrivent. It opens Courier Missions' page on Thrivent's giving platform.
+4. **How to give on Giving Tuesday** (numbered steps)
+   1. On Giving Tuesday, tap Give through Thrivent. It opens Courier Missions' page on Thrivent's giving platform.
    2. Give by card, Apple Pay or Google Pay, any time from midnight to 11:59 p.m. your time.
    3. Thrivent emails your receipt. The boost is added after Giving Tuesday, so there's nothing more to do.
 5. **Good to know** (short questions and answers)
    - *Do I need to be a Thrivent member?* No. Anyone can give.
    - *Will my gift be matched dollar for dollar?* Thrivent boosts gifts by up to $1 for every $1, from a pool shared by every participating organization. If more is given than the pool covers, each boost is smaller. Thrivent sets the final amount after Giving Tuesday.
-   - *Can I give by check, bank transfer, donor-advised fund or IRA distribution?* Those won't receive the boost. Only online gifts through Thrivent on December 1 qualify.
+   - *Can I give by check, bank transfer, donor-advised fund or IRA distribution?* Those won't receive the boost. Only online gifts through Thrivent on Giving Tuesday qualify.
    - *Are there fees?* Thrivent covers the processing fees, so all of your gift goes to Courier Missions.
    - *Who sends my receipt?* Thrivent Charitable emails it to you. Your bank statement will show "Thrivent Charitable." For tax questions, talk with your tax advisor.
    - *Will Courier Missions know I gave?* Yes. Thrivent shares your name, contact information and gift with us, so we can thank you.
 6. **Closing band** (design spec 7.10, with the button pointed at Thrivent)
    - H2: Your gift delivers hope.
-   - Line: Mark December 1. Give through Thrivent that day, and your gift can go up to twice as far.
+   - Line: Mark Giving Tuesday. Give through Thrivent that day, and your gift can go up to twice as far.
    - Primary button: Give through Thrivent
 
 ## Giving area section
@@ -131,9 +131,9 @@ The design spec has no Donate page; its Donate buttons go straight to Zeffy, and
 
 **Copy**
 
-- Eyebrow: Giving Tuesday · December 1
-- H3: Give through Thrivent on December 1, and your gift can go further.
-- Text: On December 1, Thrivent can add up to $1 for every $1 you give through its giving platform. Help us reach $50,000 for the Harvest of Hope farm, our medical clinics and humanitarian aid here at home in 2027.
+- Eyebrow: Giving Tuesday
+- H3: Give through Thrivent on Giving Tuesday, and your gift can go further.
+- Text: On Giving Tuesday, Thrivent can add up to $1 for every $1 you give through its giving platform. Help us reach $100,000 for the Harvest of Hope farm, our medical clinics and humanitarian aid here at home in 2027.
 - Text link (design spec 7.1): See how to give on Giving Tuesday → (links to `/giving-tuesday/2026`)
 
 **Hide rule**
@@ -177,7 +177,7 @@ The page uses existing tokens and components only. Nothing new is added to the d
 - [ ] With the device clock set to November 30, 2026, every give button opens Thrivent's Giving Tuesday page. With the clock set to December 1, 2026, every give button opens Courier Missions' direct Thrivent donation page. Both tested on a phone and a computer. No button on the page body links to Zeffy.
 - [ ] The site header and footer still show the normal Donate button, linking to Zeffy.
 - [ ] The page is not in the header navigation.
-- [ ] The copy never states the $3 million pool and never promises $100,000 or a guaranteed match. "Up to $1 for every $1" appears wherever the boost is described.
+- [ ] The copy never states the $3 million pool and never guarantees the match. It states the $100,000 goal and "up to $1 for every $1" wherever the boost is described.
 - [ ] The boost appears as a benefit in four places: the header lead, the benefit row, the closing band and the giving area section. Every mention says "up to" ("up to $1 for every $1" or "up to twice as far").
 - [ ] Every fact on the page matches the Thrivent facts table, rechecked after Thrivent's page goes public.
 - [ ] Every program fact matches the project files (2 acres, 50 workers, 12-acre goal, quarterly clinics, 1,000+ at a 2025 clinic, 25+ totes for the August 2026 flood relief). The Kakamega School for the Deaf is not one of this campaign's goals and does not appear on the page.

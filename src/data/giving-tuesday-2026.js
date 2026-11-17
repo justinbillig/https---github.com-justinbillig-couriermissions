@@ -1,7 +1,7 @@
 export const givingTuesday2026 = {
   title: "Giving Tuesday 2026",
   description:
-    "Give through Thrivent on December 1, 2026, and your gift to Courier Missions can go up to twice as far. Help us reach $50,000 for 2027.",
+    "Give through Thrivent on Giving Tuesday, and your gift to Courier Missions can go up to twice as far. Help us reach $100,000 for 2027.",
   giveHref:
     "https://www.thrivent.com/offers/giving-tuesday?utm_source=vanity&utm_campaign=2026_Giving_Tuesday&utm_medium=Donor&utm_content=give",
   directGiveHref:
@@ -10,10 +10,10 @@ export const givingTuesday2026 = {
   date: "December 1, 2026",
   hero: {
     eyebrow: "Giving Tuesday · December 1, 2026",
-    title: "Give on December 1, and Thrivent can boost your gift.",
+    title: "Give on Giving Tuesday, and Thrivent can boost your gift.",
     lead:
-      "Our goal is $50,000 in one day. Give through Thrivent on December 1, and Thrivent can add up to $1 for every $1 you give. A $50 gift could become up to $100 for the farm, our clinics and neighbors in need here at home.",
-    timing: "Gifts count from midnight to 11:59 p.m. your time on December 1.",
+      "Our goal is $100,000 in one day. Give through Thrivent on Giving Tuesday, and Thrivent can add up to $1 for every $1 you give. A $50 gift could become up to $100 for the farm, our clinics and neighbors in need here at home.",
+    timing: "Gifts count from midnight to 11:59 p.m. your time on Giving Tuesday.",
   },
   benefits: [
     {
@@ -30,13 +30,13 @@ export const givingTuesday2026 = {
     },
   ],
   benefitsNote:
-    "The boost only comes with gifts made through Thrivent on December 1. That's why we're asking you to give that day.",
-  benefitsTitle: "Why give through Thrivent on December 1",
+    "The boost only comes with gifts made through Thrivent on Giving Tuesday. That's why we're asking you to give that day.",
+  benefitsTitle: "Why give through Thrivent on Giving Tuesday",
   programsEyebrow: "Where your gift goes",
   programsTitle: "Three goals for 2027.",
   programsIntro:
     "Your gift, and Thrivent's boost, go toward three goals for 2027.",
-  stepsEyebrow: "How to give on December 1",
+  stepsEyebrow: "How to give on Giving Tuesday",
   stepsTitle: "Giving is simple.",
   questionsEyebrow: "Good to know",
   questionsTitle: "A few common questions.",
@@ -67,7 +67,7 @@ export const givingTuesday2026 = {
     },
   ],
   steps: [
-    "On December 1, tap Give through Thrivent. It opens Courier Missions' page on Thrivent's giving platform.",
+    "On Giving Tuesday, tap Give through Thrivent. It opens Courier Missions' page on Thrivent's giving platform.",
     "Give by card, Apple Pay or Google Pay, any time from midnight to 11:59 p.m. your time.",
     "Thrivent emails your receipt. The boost is added after Giving Tuesday, so there's nothing more to do.",
   ],
@@ -85,7 +85,7 @@ export const givingTuesday2026 = {
       question:
         "Can I give by check, bank transfer, donor-advised fund or IRA distribution?",
       answer:
-        "Those won't receive the boost. Only online gifts through Thrivent on December 1 qualify.",
+        "Those won't receive the boost. Only online gifts through Thrivent on Giving Tuesday qualify.",
     },
     {
       question: "Are there fees?",
@@ -106,15 +106,15 @@ export const givingTuesday2026 = {
   closing: {
     title: "Your gift delivers hope.",
     description:
-      "Mark December 1 on your calendar. Give through Thrivent that day, and your gift can go up to twice as far.",
+      "Mark Giving Tuesday on your calendar. Give through Thrivent that day, and your gift can go up to twice as far.",
   },
 };
 
 export const givingTuesdayTeaser = {
-  eyebrow: "Giving Tuesday · December 1",
-  title: "Give through Thrivent on December 1, and your gift can go up to twice as far.",
+  eyebrow: "Giving Tuesday",
+  title: "Give through Thrivent on Giving Tuesday, and your gift can go up to twice as far.",
   description:
-    "On December 1, Thrivent can add up to $1 for every $1 you give through its giving platform. Help us reach $50,000 for the Harvest of Hope farm, our medical clinics and humanitarian aid here at home in 2027.",
+    "On Giving Tuesday, Thrivent can add up to $1 for every $1 you give through its giving platform. Help us reach $100,000 for the Harvest of Hope farm, our medical clinics and humanitarian aid here at home in 2027.",
   linkLabel: "See how to give on Giving Tuesday",
   href: "/giving-tuesday/2026",
 };
