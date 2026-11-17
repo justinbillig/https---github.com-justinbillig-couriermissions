@@ -780,6 +780,50 @@ h3 {
   padding-block: var(--space-8);
 }
 
+.giving-tuesday-popup {
+  width: min(calc(100% - 2rem), 32rem);
+  border: 0;
+  border-radius: var(--radius-lg);
+  padding: 0;
+  color: var(--cm-navy);
+  background: var(--cm-cream);
+  box-shadow: var(--shadow-card);
+}
+
+.giving-tuesday-popup::backdrop {
+  background: rgb(24 48 68 / 72%);
+}
+
+.giving-tuesday-popup__content {
+  padding: var(--space-7);
+  padding-top: var(--space-6);
+}
+
+.giving-tuesday-popup__content h2 {
+  margin-bottom: var(--space-3);
+}
+
+.giving-tuesday-popup__content p:not(.eyebrow) {
+  margin-bottom: var(--space-5);
+}
+
+.giving-tuesday-popup__close {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  display: inline-grid;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 999px;
+  place-items: center;
+  color: var(--cm-navy);
+  background: transparent;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+}
+
 .giving-tuesday-teaser {
   padding-block: var(--space-5);
   background: var(--cm-cream);

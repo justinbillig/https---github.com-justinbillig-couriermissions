@@ -10,6 +10,7 @@ import { homePage } from "../data/home.js";
 import { site } from "../data/site.js";
 import schoolPhoto from "../../assets/photos/courier-missions-feeding-food-delivery-to-school.jpg";
 import supportPhoto from "../../assets/photos/flood-relief-supply-table.jpg";
+import { givingTuesdayHomePopup } from "../data/giving-tuesday-2026.js";
 
 const programPhotos = {
   feeding: feedingPhoto,
@@ -54,6 +55,29 @@ const heroPhoto = await getImage({
       </div>
     </div>
   </section>
+
+  <dialog
+    class="giving-tuesday-popup"
+    id="giving-tuesday-popup"
+    aria-labelledby="giving-tuesday-popup-title"
+  >
+    <button
+      class="giving-tuesday-popup__close"
+      type="button"
+      aria-label="Close Giving Tuesday message"
+      data-giving-tuesday-popup-close
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="giving-tuesday-popup__content">
+      <p class="eyebrow">{givingTuesdayHomePopup.eyebrow}</p>
+      <h2 id="giving-tuesday-popup-title">{givingTuesdayHomePopup.title}</h2>
+      <p>{givingTuesdayHomePopup.description}</p>
+      <a class="button button--primary" href={givingTuesdayHomePopup.href}>
+        {givingTuesdayHomePopup.linkLabel}
+      </a>
+    </div>
+  </dialog>
 
   <section class="mission section" aria-labelledby="mission-title">
     <div class="container">
@@ -156,3 +180,19 @@ const heroPhoto = await getImage({
     </div>
   </section>
 </SiteLayout>
+
+<script>
+  const popup = document.getElementById("giving-tuesday-popup");
+  const closeButton = document.querySelector("[data-giving-tuesday-popup-close]");
+  const cutoff = new Date(2026, 11, 2);
+
+  if (popup instanceof HTMLDialogElement && new Date() < cutoff) {
+    popup.showModal();
+  }
+
+  closeButton?.addEventListener("click", () => {
+    if (popup instanceof HTMLDialogElement) {
+      popup.close();
+    }
+  });
+</script>
