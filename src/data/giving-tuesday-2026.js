@@ -118,3 +118,12 @@ export const givingTuesdayTeaser = {
   linkLabel: "See how to give on Giving Tuesday",
   href: "/giving-tuesday/2026",
 };
+
+export const givingTuesdayHomePopup = {
+  eyebrow: "Giving Tuesday",
+  title: "Your gift can go up to twice as far.",
+  description:
+    "Give through Thrivent on Giving Tuesday, and help us reach $100,000 for the Harvest of Hope farm, our medical clinics and humanitarian aid in the U.S.",
+  linkLabel: "See Giving Tuesday",
+  href: "/giving-tuesday/2026",
+};
