@@ -4,13 +4,13 @@ import SiteLayout from "../../layouts/BaseLayout.astro";
 import { givingTuesday2026 } from "../../data/giving-tuesday-2026.js";
 import farmImage from "../../../assets/photos/courier-missions-farm-workers-tending-crops.jpg";
 import farmSignImage from "../../../assets/photos/courier-missions-farm-harvest-of-hope-sign.jpg";
-import schoolImage from "../../../assets/photos/kakamega-school-for-the-deaf-students-eating-in-meal-hall.jpg";
 import clinicImage from "../../../assets/photos/courier-missions-medical-blood-pressure-check.jpg";
+import humanitarianImage from "../../../assets/photos/flood-relief-volunteers-group.jpg";
 
 const programImages = {
   farm: farmSignImage,
-  school: schoolImage,
   clinics: clinicImage,
+  humanitarian: humanitarianImage,
 };
 ---
 
@@ -25,7 +25,7 @@ const programImages = {
         <p class="eyebrow">{givingTuesday2026.hero.eyebrow}</p>
         <h1>{givingTuesday2026.hero.title}</h1>
         <p class="section-lead">{givingTuesday2026.hero.lead}</p>
-        <a class="button button--primary" href={givingTuesday2026.giveHref}>
+        <a class="button button--primary" href={givingTuesday2026.giveHref} data-give-thrivent>
           {givingTuesday2026.giveLabel}
         </a>
         <p class="giving-tuesday-hero__timing">{givingTuesday2026.hero.timing}</p>
@@ -122,7 +122,7 @@ const programImages = {
           <p class="donate-cta__copy">{givingTuesday2026.closing.description}</p>
         </div>
         <div class="donate-cta__actions">
-          <a class="button button--primary" href={givingTuesday2026.giveHref}>
+          <a class="button button--primary" href={givingTuesday2026.giveHref} data-give-thrivent>
             {givingTuesday2026.giveLabel}
           </a>
         </div>
@@ -130,3 +130,14 @@ const programImages = {
     </div>
   </section>
 </SiteLayout>
+
+<script>
+  const switchDate = new Date(2026, 11, 1);
+  const directLink = "https://donate.thrivent.com/flows/7ec5878a-2e79-4fd6-9835-6186c3f4f048";
+
+  if (new Date() >= switchDate) {
+    document.querySelectorAll("a[data-give-thrivent]").forEach((link) => {
+      link.href = directLink;
+    });
+  }
+</script>
