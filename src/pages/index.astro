@@ -56,10 +56,11 @@ const heroPhoto = await getImage({
     </div>
   </section>
 
-  <dialog
+  <aside
     class="giving-tuesday-popup"
     id="giving-tuesday-popup"
     aria-labelledby="giving-tuesday-popup-title"
+    hidden
   >
     <button
       class="giving-tuesday-popup__close"
@@ -77,7 +78,18 @@ const heroPhoto = await getImage({
         {givingTuesdayHomePopup.linkLabel}
       </a>
     </div>
-  </dialog>
+  </aside>
+  <button
+    class="giving-tuesday-popup__open"
+    type="button"
+    aria-label="Open Giving Tuesday message"
+    aria-controls="giving-tuesday-popup"
+    aria-expanded="false"
+    data-giving-tuesday-popup-open
+    hidden
+  >
+    <span>Giving Tuesday</span>
+  </button>
 
   <section class="mission section" aria-labelledby="mission-title">
     <div class="container">
@@ -184,15 +196,30 @@ const heroPhoto = await getImage({
 <script>
   const popup = document.getElementById("giving-tuesday-popup");
   const closeButton = document.querySelector("[data-giving-tuesday-popup-close]");
+  const openButton = document.querySelector("[data-giving-tuesday-popup-open]");
   const cutoff = new Date(2026, 11, 2);
 
-  if (popup instanceof HTMLDialogElement && new Date() < cutoff) {
-    popup.showModal();
+  const openPopup = () => {
+    if (!(popup instanceof HTMLElement) || !(openButton instanceof HTMLButtonElement)) return;
+    popup.hidden = false;
+    openButton.hidden = true;
+    openButton.setAttribute("aria-expanded", "true");
+  };
+
+  const closePopup = () => {
+    if (!(popup instanceof HTMLElement) || !(openButton instanceof HTMLButtonElement)) return;
+    popup.hidden = true;
+    openButton.hidden = false;
+    openButton.setAttribute("aria-expanded", "false");
+  };
+
+  if (popup instanceof HTMLElement && openButton instanceof HTMLButtonElement && new Date() < cutoff) {
+    window.setTimeout(openPopup, 2000);
   }
 
   closeButton?.addEventListener("click", () => {
-    if (popup instanceof HTMLDialogElement) {
-      popup.close();
-    }
+    closePopup();
   });
+
+  openButton?.addEventListener("click", openPopup);
 </script>
