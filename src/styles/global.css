@@ -796,7 +796,7 @@ h3 {
   padding: var(--space-5);
 }
 
-.giving-tuesday-teaser__panel h2 {
+.giving-tuesday-teaser__panel h3 {
   max-width: 28ch;
   margin-bottom: var(--space-3);
   font-size: var(--fs-h3);
